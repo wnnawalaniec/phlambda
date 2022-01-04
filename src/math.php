@@ -1,34 +1,36 @@
 <?php
 declare(strict_types=1);
 
+namespace Wojciech\Phlambda;
+
 use JetBrains\PhpStorm\Pure;
 
-#[Pure] function add(float|null $a, float|null $b): float
+#[Pure] function add(float $num1, float $num2): float
 {
-    return $a + $b;
+    return $num1 + $num2;
 }
 
-#[Pure] function dec(float|int|null $a): float
+#[Pure] function dec(float|int $num): float
 {
-    return add($a, -1);
+    return add($num, -1);
 }
 
-#[Pure] function inc(float|int|null $a): float
+#[Pure] function inc(float|int $num): float
 {
-    return add($a, 1);
+    return add($num, 1);
 }
 
-#[Pure] function divide(float|int|null $a, float|int|null $b): float
+#[Pure] function divide(float|int $num1, float|int $num2): float
 {
-    return $a/$b;
+    return $num1/$num2;
 }
 
-#[Pure] function multiply(float|int|null $a, float|int|null $b): float
+#[Pure] function multiply(float|int $num1, float|int $num2): float
 {
-    return $a*$b;
+    return $num1*$num2;
 }
 
 function sum(array $arr): float
 {
-    return array_reduce($arr, 'add', 0.0);
+    return array_reduce($arr, 'Wojciech\Phlambda\add', 0.0);
 }

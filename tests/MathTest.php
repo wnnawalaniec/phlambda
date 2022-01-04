@@ -4,14 +4,15 @@ declare(strict_types=1);
 namespace Tests\Wojciech\Phlambda;
 
 use PHPUnit\Framework\TestCase;
+use Wojciech\Phlambda as f;
 
 class MathTest extends TestCase
 {
     public function testSum(): void
     {
-        $array = [1, 6.6, '1.3', true, null];
+        $array = [1, 6.6, '1.3', true];
 
-        $sum = sum($array);
+        $sum = f\sum($array);
 
         $expectedValue = 9.9;
         $this->assertSame($expectedValue, $sum);
@@ -21,7 +22,7 @@ class MathTest extends TestCase
     {
         $value = 7.2;
 
-        $decreased = dec($value);
+        $decreased = f\dec($value);
 
         $expected = 6.2;
         $this->assertSame($expected, $decreased);
@@ -31,7 +32,7 @@ class MathTest extends TestCase
     {
         $value = 7.2;
 
-        $decreased = inc($value);
+        $decreased = f\inc($value);
 
         $expected = 8.2;
         $this->assertSame($expected, $decreased);
@@ -42,7 +43,7 @@ class MathTest extends TestCase
         $a = 6.45;
         $b = 2.37;
 
-        $value = divide($a, $b);
+        $value = f\divide($a, $b);
 
         $expectedValue = 2.721518987341772;
         $this->assertSame($expectedValue, $value);
@@ -53,7 +54,7 @@ class MathTest extends TestCase
         $a = 6.45;
         $b = 2.37;
 
-        $value = multiply($a, $b);
+        $value = f\multiply($a, $b);
 
         $expectedValue = 15.286500000000002;
         $this->assertSame($expectedValue, $value);
