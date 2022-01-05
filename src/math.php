@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Wojciech\Phlambda;
+
 use JetBrains\PhpStorm\Pure;
 
 #[Pure] function add(float|null $a, float|null $b): float
@@ -30,5 +32,5 @@ use JetBrains\PhpStorm\Pure;
 
 function sum(array $arr): float
 {
-    return array_reduce($arr, 'add', 0.0);
+    return array_reduce($arr, 'Wojciech\Phlambda\add', 0.0);
 }
