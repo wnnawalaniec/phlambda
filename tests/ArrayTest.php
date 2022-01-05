@@ -13,14 +13,22 @@ use function Wojciech\Phlambda\{
 
 class ArrayTest extends TestCase
 {
-    public function testAll(): void
+    public function testAll_NotAllMatchesPredicate_ReturnsFalse(): void
     {
         $array = [9.99, 10, 10.01];
 
         $value = all(below(10), $array);
 
-        $expectedValue = [9.99];
-        $this->assertSame($expectedValue, $value);
+        $this->assertFalse($value);
+    }
+
+    public function testAll_AllMatchesPredicate_ReturnsTrue(): void
+    {
+        $array = [9.99, 10, 10.01];
+
+        $value = all(below(10.02), $array);
+
+        $this->assertTrue($value);
     }
 
     public function testReduce_MultipleElementsArrayGiven_ReturnReducedValue(): void

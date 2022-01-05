@@ -4,10 +4,11 @@ declare(strict_types=1);
 namespace Wojciech\Phlambda;
 
 use JetBrains\PhpStorm\Pure;
+use Wojciech\Phlambda\Internals as internals;
 
-#[Pure] function add(float|null $a, float|null $b): float
+#[Pure] function add(...$v): callable|float
 {
-    return $a + $b;
+    return internals\curring2(fn (int|float $a, int|float $b) => $a + $b)(...$v);
 }
 
 #[Pure] function dec(float|int|null $a): float

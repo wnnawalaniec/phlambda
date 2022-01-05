@@ -16,11 +16,11 @@ class MathTest extends TestCase
 {
     public function testSum(): void
     {
-        $array = [1, 6.6, '1.3', true, null];
+        $array = [1, 6.6, 1.3];
 
         $sum = sum($array);
 
-        $expectedValue = 9.9;
+        $expectedValue = 8.9;
         $this->assertSame($expectedValue, $sum);
     }
 
