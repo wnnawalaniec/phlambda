@@ -4,13 +4,7 @@ declare(strict_types=1);
 namespace Tests\Wojciech\Phlambda;
 
 use PHPUnit\Framework\TestCase;
-use function Wojciech\Phlambda\ {
-    dec,
-    sum,
-    inc,
-    divide,
-    multiply
-};
+use function Wojciech\Phlambda\{dec, subtract, sum, inc, divide, multiply};
 
 class MathTest extends TestCase
 {
@@ -63,6 +57,17 @@ class MathTest extends TestCase
         $value = multiply($a, $b);
 
         $expectedValue = 15.286500000000002;
+        $this->assertSame($expectedValue, $value);
+    }
+
+    public function testSubtract(): void
+    {
+        $a = 3.14;
+        $b = 1.14;
+
+        $value = subtract($a, $b);
+
+        $expectedValue = 2.0;
         $this->assertSame($expectedValue, $value);
     }
 }

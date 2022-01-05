@@ -6,32 +6,37 @@ namespace Wojciech\Phlambda;
 use JetBrains\PhpStorm\Pure;
 use Wojciech\Phlambda\Internals as internals;
 
-#[Pure] function add(...$v): callable|float
+#[Pure] function add(mixed ...$v): callable|float
 {
     return internals\curring2(fn (int|float $a, int|float $b) => $a + $b)(...$v);
 }
 
-#[Pure] function dec(float|int|null $a): float
+#[Pure] function subtract(mixed ...$v): callable|float
 {
-    return add($a, -1);
+    return internals\curring2(fn (int|float $a, int|float $b) => $a - $b)(...$v);
 }
 
-#[Pure] function inc(float|int|null $a): float
+#[Pure] function dec(mixed ...$v): callable|float
 {
-    return add($a, 1);
+    return add(-1)(...$v);
 }
 
-#[Pure] function divide(float|int|null $a, float|int|null $b): float
+#[Pure] function inc(mixed ...$v): callable|float
 {
-    return $a/$b;
+    return add(1)(...$v);
 }
 
-#[Pure] function multiply(float|int|null $a, float|int|null $b): float
+#[Pure] function divide(mixed ...$v): callable|float
 {
-    return $a*$b;
+    return internals\curring2(fn (int|float $a, int|float $b) => $a/$b)(...$v);
 }
 
-function sum(array $arr): float
+#[Pure] function multiply(mixed ...$v): callable|float
 {
-    return array_reduce($arr, 'Wojciech\Phlambda\add', 0.0);
+    return internals\curring2(fn (int|float $a, int|float $b) => $a*$b)(...$v);
+}
+
+function sum(mixed ...$v): callable|float
+{
+    return reduce(add(), 0.0)(...$v);
 }

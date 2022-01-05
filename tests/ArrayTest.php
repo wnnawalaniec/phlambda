@@ -97,18 +97,11 @@ class ArrayTest extends TestCase
         $this->assertSame($expectedValue, $value);
     }
 
-    public function testConcat_FirstArgumentIsNull_ReturnString(): void
+    public function testConcat_ArgumentsAreOfDifferentTypes_ThrowsException(): void
     {
         $this->expectException(\InvalidArgumentException::class);
 
-        concat(null, 'b');
-    }
-
-    public function testConcat_SecondArgumentIsNull_ReturnString(): void
-    {
-        $this->expectException(\InvalidArgumentException::class);
-
-        concat('a', null);
+        concat(['a'], 'b');
     }
 
     public function testConcat_ArraysGiven_ReturnArray(): void

@@ -87,7 +87,7 @@ function reduce(...$v): mixed
  * @return string|array Returned type will be same as passed parameters.
  * @throws \InvalidArgumentException When both parameters are not of same type
  */
-function concat(...$v): callable|string|array
+function concat(string|array...$v): callable|string|array
 {
     return internals\curring2(function ($a, $b) {
         if (is_array($a) && is_array($b)) {
