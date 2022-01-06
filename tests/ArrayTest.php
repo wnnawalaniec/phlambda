@@ -4,97 +4,79 @@ declare(strict_types=1);
 namespace Tests\Wojciech\Phlambda;
 
 use PHPUnit\Framework\TestCase;
-use function Wojciech\Phlambda\{
+use function Wojciech\Phlambda\{above,
+    adjust,
     all,
+    any,
+    append,
     below,
-    reduce,
-    concat
-};
+    concat,
+    drop,
+    dropLast,
+    dropRepeats,
+    inc,
+    reduce};
 
 class ArrayTest extends TestCase
 {
-    public function testAll_NotAllMatchesPredicate_ReturnsFalse(): void
+    public function testAdjust(): void
+    {
+        $this->assertSame([1, 2, 4], adjust(inc(), -1, [1, 2, 3]));
+        $this->assertSame([1, 2, 4], adjust(inc(), 2, [1, 2, 3]));
+        $this->assertSame([1, 2, 3], adjust(inc(), 3, [1, 2, 3]));
+    }
+
+    public function testAll(): void
     {
         $array = [9.99, 10, 10.01];
 
-        $value = all(below(10), $array);
-
-        $this->assertFalse($value);
+        $this->assertFalse(all(above(10.01), $array));
+        $this->assertTrue(all(below(10.02), $array));
     }
 
-    public function testAll_AllMatchesPredicate_ReturnsTrue(): void
+    public function testAny(): void
     {
         $array = [9.99, 10, 10.01];
 
-        $value = all(below(10.02), $array);
-
-        $this->assertTrue($value);
+        $this->assertFalse(any(above(10.01), $array));
+        $this->assertTrue(any(below(10.00), $array));
     }
 
-    public function testReduce_MultipleElementsArrayGiven_ReturnReducedValue(): void
+
+    /** @dataProvider allTypesOfValuesProvider */
+    public function testAppend(mixed $value): void
     {
-        $array = ['a', 'b', 'c'];
-        $expectedValue = 'abc';
+        $array = [1, 2, 3];
+        $expectedArray = [1, 2, 3, $value];
 
-        $value = reduce(concat(), null, $array);
-
-        $this->assertEquals($expectedValue, $value);
+        $appendedArray = append($value, $array);
+        $this->assertSame($expectedArray, $appendedArray);
     }
 
-    public function testReduce_SingleElementArrayGiven_ReturnReducedValue(): void
+    public function allTypesOfValuesProvider(): array
     {
-        $array = ['a'];
-        $expectedValue = 'a';
-
-        $value = reduce('Wojciech\Phlambda\concat', null, $array);
-
-        $this->assertEquals($expectedValue, $value);
+        return [
+            [1],
+            [1.1],
+            [true],
+            [false],
+            [null],
+            [['t']],
+            ['t'],
+            [new \stdClass()],
+            [fn () => 'a'],
+            [[]]
+        ];
     }
 
-    public function testReduce_ArrayAndInitialValueGiven_ReturnReducedValue(): void
+    public function testConcat(): void
     {
-        $array = ['b'];
-        $initialValue = 'a';
-        $expectedValue = 'ab';
-
-        $value = reduce(concat(), $initialValue, $array);
-
-        $this->assertEquals($expectedValue, $value);
-    }
-
-    public function testReduce_EmptyArrayAndNoInitialValueGiven_ThrowsException(): void
-    {
-        $this->expectException(\InvalidArgumentException::class);
-
-        reduce(concat(), null, []);
-    }
-
-    public function testReduce_EmptyArrayWithAnInitialValueGiven_ReturnReducedValue(): void
-    {
-        $initialValue = $expectedValue = 'a';
-
-        $value = reduce(concat(), $initialValue, []);
-
-        $this->assertSame($expectedValue, $value);
-    }
-
-    public function testReduce_NoValueGiven_ReturnReducedValue(): void
-    {
-        $this->expectException(\InvalidArgumentException::class);
-        $array = [];
-
-        reduce(concat(), null, $array);
-    }
-
-    public function testConcat_StringsGiven_ReturnString(): void
-    {
-        $a = 'a';
-        $b = 'b';
-        $expectedValue = 'ab';
-
-        $value = concat($a, $b);
-
-        $this->assertSame($expectedValue, $value);
+        $this->assertSame('ab', concat('a', 'b'));
+        $this->assertSame(['a', 'b'], concat(['a'], ['b']));
+        $this->assertSame([], concat([], []));
+        $this->assertEquals('ab', concat()('a')('b'));
+        $this->assertEquals('ab', concat('a')('b'));
+        $this->assertEquals('ab', concat('a', 'b'));
     }
 
     public function testConcat_ArgumentsAreOfDifferentTypes_ThrowsException(): void
@@ -104,21 +86,49 @@ class ArrayTest extends TestCase
         concat(['a'], 'b');
     }
 
-    public function testConcat_ArraysGiven_ReturnArray(): void
+    public function testDrop(): void
     {
-        $a = ['a'];
-        $b = ['b'];
-        $expectedValue = ['a', 'b'];
-
-        $value = concat($a, $b);
-
-        $this->assertSame($expectedValue, $value);
+        $this->assertSame('łć', drop(2, 'żółć'));
+        $this->assertSame('', drop(4, 'żółć'));
+        $this->assertSame('żółć', drop(-1, 'żółć'));
+        $this->assertSame([3], drop(2, [1, 2, 3]));
+        $this->assertSame([], drop(4, [1, 2, 3]));
+        $this->assertSame([1, 2, 3], drop(-1, [1, 2, 3]));
     }
 
-    public function testConcat_Curring(): void
+    public function testDropLast(): void
     {
-        $this->assertEquals('ab', concat()('a')('b'));
-        $this->assertEquals('ab', concat('a')('b'));
-        $this->assertEquals('ab', concat('a', 'b'));
+        $this->assertSame('żó', dropLast(2, 'żółć'));
+        $this->assertSame('', dropLast(4, 'żółć'));
+        $this->assertSame('żółć', dropLast(-1, 'żółć'));
+        $this->assertSame([1], dropLast(2, [1, 2, 3]));
+        $this->assertSame([], dropLast(4, [1, 2, 3]));
+        $this->assertSame([1, 2, 3], dropLast(-1, [1, 2, 3]));
+    }
+
+    public function testDropRepeats(): void
+    {
+        $this->assertSame([1, 2, 3], dropRepeats([1, 1, 2, 2, 3, 3]));
+        $this->assertSame([1, 2, 3], dropRepeats([1, 1, 2, 2, 3, 3]));
+        $this->assertSame([], dropRepeats([]));
+        $this->assertSame([1, '1', true], dropRepeats([1, '1', true]));
+        $this->assertSame([[1]], dropRepeats([[1], [1]]));
+        $object = new \stdClass();
+        $this->assertSame([$object], dropRepeats([$object, $object]));
+    }
+
+    public function testReduce(): void
+    {
+        $this->assertEquals('abc', reduce(concat(), null, ['a', 'b', 'c']));
+        $this->assertEquals('a', reduce(concat(), null, ['a']));
+        $this->assertEquals('ab', reduce(concat(), 'a', ['b']));
+        $this->assertEquals('a', reduce(concat(), 'a', []));
+    }
+
+    public function testReduce_EmptyArrayAndNoInitialValueGiven_ThrowsException(): void
+    {
+        $this->expectException(\InvalidArgumentException::class);
+
+        reduce(concat(), null, []);
     }
 }

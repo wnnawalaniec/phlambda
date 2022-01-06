@@ -7,3 +7,8 @@ function below(float|int $a): callable
 {
     return fn ($arg) => $arg < $a;
 }
+
+function above(float|int $a): callable
+{
+    return fn ($arg) => $arg > $a;
+}

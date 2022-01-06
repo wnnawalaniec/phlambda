@@ -1,6 +1,6 @@
 {
     "name": "wojciech/phlambda",
-    "description": "Little lib with some useful lambdas known from other languages like JS.",
+    "description": "Small library providing some functional programming tools for PHP, based on Rambda (https://github.com/ramda/ramda).",
     "type": "library",
     "autoload": {
         "psr-4": {
@@ -19,7 +19,8 @@
         }
     ],
     "require": {
-        "php": "^8.0"
+        "php": "^8.0",
+        "ext-mbstring": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5"
