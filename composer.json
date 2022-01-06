@@ -2,6 +2,9 @@
     "name": "wojciech.nawalaniec/phlambda",
     "description": "Small library providing some functional programming tools for PHP, based on Rambda (https://github.com/ramda/ramda).",
     "type": "library",
+    "license": "GPL-3.0-only",
+    "keywords": ["functional", "php8", "currying", "functional programming"],
+    "homepage": "https://github.com/wnnawalaniec/phlambda",
     "autoload": {
         "psr-4": {
             "Wojciech\\Phlambda\\": "src/"
