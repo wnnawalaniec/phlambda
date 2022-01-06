@@ -1,3 +1,5 @@
+.phpdoc
 .phpunit.cache
 .idea
 vendor
+docs

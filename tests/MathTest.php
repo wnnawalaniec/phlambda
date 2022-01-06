@@ -4,17 +4,17 @@ declare(strict_types=1);
 namespace Tests\Wojciech\Phlambda;
 
 use PHPUnit\Framework\TestCase;
-use Wojciech\Phlambda as f;
+use function Wojciech\Phlambda\{dec, subtract, sum, inc, divide, multiply};
 
 class MathTest extends TestCase
 {
     public function testSum(): void
     {
-        $array = [1, 6.6, '1.3', true];
+        $array = [1, 6.6, 1.3];
 
-        $sum = f\sum($array);
+        $sum = sum($array);
 
-        $expectedValue = 9.9;
+        $expectedValue = 8.9;
         $this->assertSame($expectedValue, $sum);
     }
 
@@ -22,7 +22,7 @@ class MathTest extends TestCase
     {
         $value = 7.2;
 
-        $decreased = f\dec($value);
+        $decreased = dec($value);
 
         $expected = 6.2;
         $this->assertSame($expected, $decreased);
@@ -32,7 +32,7 @@ class MathTest extends TestCase
     {
         $value = 7.2;
 
-        $decreased = f\inc($value);
+        $decreased = inc($value);
 
         $expected = 8.2;
         $this->assertSame($expected, $decreased);
@@ -43,7 +43,7 @@ class MathTest extends TestCase
         $a = 6.45;
         $b = 2.37;
 
-        $value = f\divide($a, $b);
+        $value = divide($a, $b);
 
         $expectedValue = 2.721518987341772;
         $this->assertSame($expectedValue, $value);
@@ -54,9 +54,20 @@ class MathTest extends TestCase
         $a = 6.45;
         $b = 2.37;
 
-        $value = f\multiply($a, $b);
+        $value = multiply($a, $b);
 
         $expectedValue = 15.286500000000002;
+        $this->assertSame($expectedValue, $value);
+    }
+
+    public function testSubtract(): void
+    {
+        $a = 3.14;
+        $b = 1.14;
+
+        $value = subtract($a, $b);
+
+        $expectedValue = 2.0;
         $this->assertSame($expectedValue, $value);
     }
 }

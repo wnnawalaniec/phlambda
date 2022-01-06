@@ -3,34 +3,37 @@ declare(strict_types=1);
 
 namespace Wojciech\Phlambda;
 
-use JetBrains\PhpStorm\Pure;
-
-#[Pure] function add(float $num1, float $num2): float
+function add(mixed ...$v): callable|float
 {
-    return $num1 + $num2;
+    return curring2(fn (int|float $a, int|float $b) => $a + $b)(...$v);
 }
 
-#[Pure] function dec(float|int $num): float
+function subtract(mixed ...$v): callable|float
 {
-    return add($num, -1);
+    return curring2(fn (int|float $a, int|float $b) => $a - $b)(...$v);
 }
 
-#[Pure] function inc(float|int $num): float
+function dec(mixed ...$v): callable|float
 {
-    return add($num, 1);
+    return add(-1)(...$v);
 }
 
-#[Pure] function divide(float|int $num1, float|int $num2): float
+function inc(mixed ...$v): callable|float
 {
-    return $num1/$num2;
+    return add(1)(...$v);
 }
 
-#[Pure] function multiply(float|int $num1, float|int $num2): float
+function divide(mixed ...$v): callable|float
 {
-    return $num1*$num2;
+    return curring2(fn (int|float $a, int|float $b) => $a/$b)(...$v);
 }
 
-function sum(array $arr): float
+function multiply(mixed ...$v): callable|float
 {
-    return array_reduce($arr, 'Wojciech\Phlambda\add', 0.0);
+    return curring2(fn (int|float $a, int|float $b) => $a*$b)(...$v);
+}
+
+function sum(mixed ...$v): callable|float
+{
+    return reduce(add(), 0.0)(...$v);
 }
