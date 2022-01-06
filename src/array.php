@@ -140,7 +140,7 @@ function concat(string|array...$v): callable|string|array
 }
 
 /**
- * Return copy of an array/string but without `n` first elements of the given `input`.
+ * Return copy of an array/string but without first `n` elements of the given `input`.
  *
  * Number of the elements can exceed size of the given array/string, in that case empty array/string will be returned.
  * If negative number will be given, unchanged array/string is returned.
@@ -214,7 +214,7 @@ function dropLast(int|string|array...$v): callable|string|array
  * Basic usage may look like this:
  * <blockquote><pre>dropRepeats([1, 1, '1', 2, 3]); // it will return [1, '1', 2, 3]</pre></blockquote>
  *
- * @param array $input Array we
+ * @param array $input Array we want to have with unique values only
  * @return callable|array If all arguments are given result is returned. Passing just some or none will result in currying function return.
  */
 function dropRepeats(array...$v): callable|array
@@ -228,6 +228,24 @@ function dropRepeats(array...$v): callable|array
         }
         return $result;
     })(...$v);
+}
+
+/**
+ * Applies given function to each element of the array and return new one with the results.
+ *
+ * It works like `array_map`. Exactly like this.
+ *
+ * Basic usage may look like this:
+ * <blockquote><pre>map(toString(), [1, 2, 3]); // it will return ['1', '2', '3']</pre></blockquote>
+ *
+ * @param callable(mixed): mixed $fn Function must accept one param and return some value.
+ * @param array $input Array we want to map.
+ * @return callable|array If all arguments are given result is returned. Passing just some or none will result in currying function return.
+ * Type of array will be same as type of returned values from given callback.
+ */
+function map(...$v): array|callable
+{
+    return curring2(fn (callable $fn, array $input) => array_map($fn, $input))(...$v);
 }
 
 /**
@@ -261,5 +279,26 @@ function reduce(...$v): mixed
 
         $initialValue = array_shift($input);
         return array_reduce($input, $fn, $initialValue);
-    })(...$v);
+    })(
+        ...$v);
+}
+
+/**
+ * Wraps array with Wrapper object.
+ *
+ * Example:
+ * <blockquote><pre>
+ * _([1,2,3,4,5])
+ *   ->all(above(2))
+ *   ->drop(1)
+ *   ->reduce(add(), 0);
+ * </blockquote></pre>
+ *
+ * @see Wrapper
+ * @param array $array
+ * @return Wrapper
+ */
+function _(array $array): Wrapper
+{
+    return Wrapper::wrap($array);
 }

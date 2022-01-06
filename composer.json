@@ -1,5 +1,5 @@
 {
-    "name": "wojciech/phlambda",
+    "name": "wojciech.nawalaniec/phlambda",
     "description": "Small library providing some functional programming tools for PHP, based on Rambda (https://github.com/ramda/ramda).",
     "type": "library",
     "autoload": {

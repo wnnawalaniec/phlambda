@@ -4,7 +4,10 @@ declare(strict_types=1);
 namespace Tests\Wojciech\Phlambda;
 
 use PHPUnit\Framework\TestCase;
-use function Wojciech\Phlambda\{above,
+use Wojciech\Phlambda\Wrapper;
+use function Wojciech\Phlambda\{_,
+    above,
+    add,
     adjust,
     all,
     any,
@@ -15,6 +18,7 @@ use function Wojciech\Phlambda\{above,
     dropLast,
     dropRepeats,
     inc,
+    map,
     reduce};
 
 class ArrayTest extends TestCase
@@ -24,6 +28,7 @@ class ArrayTest extends TestCase
         $this->assertSame([1, 2, 4], adjust(inc(), -1, [1, 2, 3]));
         $this->assertSame([1, 2, 4], adjust(inc(), 2, [1, 2, 3]));
         $this->assertSame([1, 2, 3], adjust(inc(), 3, [1, 2, 3]));
+        $this->assertSame([1, 2, 3], adjust()(inc())(3)([1, 2, 3]));
     }
 
     public function testAll(): void
@@ -117,12 +122,18 @@ class ArrayTest extends TestCase
         $this->assertSame([$object], dropRepeats([$object, $object]));
     }
 
+    public function testMap(): void
+    {
+        $this->assertSame(['1', '2', '3'], map(toString(), [1, 2, 3]));
+    }
+
     public function testReduce(): void
     {
         $this->assertEquals('abc', reduce(concat(), null, ['a', 'b', 'c']));
         $this->assertEquals('a', reduce(concat(), null, ['a']));
         $this->assertEquals('ab', reduce(concat(), 'a', ['b']));
         $this->assertEquals('a', reduce(concat(), 'a', []));
+        $this->assertEquals(6, reduce(add(), 0, [1, 2, 3]));
     }
 
     public function testReduce_EmptyArrayAndNoInitialValueGiven_ThrowsException(): void
@@ -130,5 +141,10 @@ class ArrayTest extends TestCase
         $this->expectException(\InvalidArgumentException::class);
 
         reduce(concat(), null, []);
+    }
+
+    public function testWrap(): void
+    {
+        $this->assertEquals(Wrapper::wrap([1, 2, 3]), _([1, 2, 3]));
     }
 }
