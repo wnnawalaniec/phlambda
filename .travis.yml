@@ -1,0 +1,22 @@
+language: php
+php:
+  - 8.0
+
+env:
+  global:
+    - XDEBUG_MODE=coverage
+
+install:
+  - composer self-update
+  - composer install
+  - composer require -w satooshi/php-coveralls:~2.0@stable
+
+before_script:
+  - mkdir -p build/logs
+  - cp phpunit.xml.dist phpunit.xml
+  - cp infection.json.dist infection.json
+
+script:
+  - composer run fullTest
+after_success:
+  - sh -c 'if( [ "$TRAVIS_PHP_VERSION" != "hhvm" ] ); then php vendor/bin/php-coveralls -v; fi;'

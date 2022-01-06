@@ -1,0 +1,5 @@
+# Set folder to clover (must be the same on travis)
+coverage_clover: build/logs/clover.xml
+# Same folder here
+json_path: build/logs/coveralls-upload.json
+service_name: travis-pro
