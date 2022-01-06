@@ -9,7 +9,7 @@ env:
 install:
   - composer self-update
   - composer install
-  - composer require -w satooshi/php-coveralls:~2.0@stable
+  - composer require -w php-coveralls/php-coveralls:^2
 
 before_script:
   - mkdir -p build/logs
