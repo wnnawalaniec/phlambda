@@ -8,7 +8,14 @@
     "autoload": {
         "psr-4": {
             "Wojciech\\Phlambda\\": "src/"
-        }
+        },
+        "files": [
+            "src/array.php",
+            "src/currying.php",
+            "src/math.php",
+            "src/predicates.php",
+            "src/string.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
