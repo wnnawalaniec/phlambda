@@ -139,6 +139,16 @@ class Wrapper implements \ArrayAccess
     }
 
     /**
+     * Applies given function to each element of the array and return new one with the results.
+     *
+     * @see map()
+     */
+    public function map(callable $fn): self
+    {
+        return self::wrap(map($fn, $this->array));
+    }
+
+    /**
      * Reduces array to single value using provided callback.
      *
      * @see reduce()

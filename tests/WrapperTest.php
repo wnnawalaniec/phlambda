@@ -70,6 +70,11 @@ class WrapperTest extends TestCase
         $this->assertSame([1, '1', true, 2, 3], _([1, 1, '1', true, 2, 3, 1])->dropRepeats()->toArray());
     }
 
+    public function testMap(): void
+    {
+        $this->assertSame(['1', '2', '3'], _([1, 2, 3])->map(toString())->toArray());
+    }
+
     public function testReduce(): void
     {
         $this->assertSame(6, _([1, 2, 3])->reduce(add(), 0));
