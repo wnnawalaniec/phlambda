@@ -5,6 +5,11 @@
     "license": "GPL-3.0-only",
     "keywords": ["functional", "php8", "currying", "functional programming"],
     "homepage": "https://github.com/wnnawalaniec/phlambda",
+    "config": {
+        "platform": {
+            "php": "^8"
+        }
+    },
     "autoload": {
         "psr-4": {
             "Wojciech\\Phlambda\\": "src/"
