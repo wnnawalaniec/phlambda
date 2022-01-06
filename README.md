@@ -7,6 +7,7 @@
 [![Latest Unstable Version](http://poser.pugx.org/wojciech.nawalaniec/phlambda/v/unstable)](https://packagist.org/packages/wojciech.nawalaniec/phlambda)
 [![Total Downloads](http://poser.pugx.org/wojciech.nawalaniec/phlambda/downloads)](https://packagist.org/packages/wojciech.nawalaniec/phlambda)
 [![License](http://poser.pugx.org/wojciech.nawalaniec/phlambda/license)](https://packagist.org/packages/wojciech.nawalaniec/phlambda)
+[![PHP Version Require](http://poser.pugx.org/wojciech.nawalaniec/phlambda/require/php)](https://packagist.org/packages/wojciech.nawalaniec/phlambda)
 
 Small and functional library for PHP.
 
