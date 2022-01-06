@@ -65,9 +65,9 @@ Here is some example of code you can write with help of this library:
 use Wojciech\Phlambda as f;
 
 f\_($someArray)
-    ->all(below(30))
-    ->map(toString())
-    ->reduce(concat(), '');
+    ->all(f\below(30))
+    ->map(f\toString())
+    ->reduce(f\concat(), '');
 ```
 
 First thing you can see and might be confusing is `_()` it's a function which wraps array with Wrapper object.
