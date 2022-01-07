@@ -20,12 +20,7 @@ namespace Wojciech\Phlambda;
  */
 class Wrapper implements \ArrayAccess
 {
-    private array $array;
-
-    public function __construct(array $array = [])
-    {
-        $this->array = $array;
-    }
+    public function __construct(private array $array = []) {}
 
     public static function wrap(array $array): self
     {
