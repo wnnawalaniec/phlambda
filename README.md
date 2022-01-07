@@ -75,6 +75,8 @@ If you wish to have more readable code you can use a static method from that cla
 
 If you don't want to use objects you can use just functions. Wrapper's methods are just delegates to those functions, 
 and exists only for chaining purposes.
+
+You can check all functions provided by this library in this [documentation](https://wnnawalaniec.github.io/phlambda/)
  
 ## Currying
 In this library all function automatically are curring. If you don't know what currying functions let me try to change it.
