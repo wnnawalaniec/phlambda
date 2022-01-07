@@ -18,7 +18,7 @@ Language itself is providing us with some functions like `array_map()` etc. wher
 and some callable to perform some operations on the input.
 But its... so cumbersome.
 
-On day at the company my friend joked about PHP and said that it's sad we can't do something like this in PHP:
+One day at the company my friend joked about PHP and said that it's sad we can't do something like this in PHP:
 ```js
 someArray.every(below(30));
 ```
@@ -41,7 +41,7 @@ every($arr, below(3));
 
 Both examples are similar, but we can see that with PHP solution we have no way of chaining methods together, also we
 must write most of that method our selves. After while another idea came up to my mind. We could leverage OOP and create
-class which implements `\ArrayAccess` so can be considered array like, and have all that nice methods we can chain together.
+class which implements `\ArrayAccess` so it can be considered array like, and have all that nice methods we can chain together.
 I thought about something like this:
 ```php
 $arrayObject
@@ -93,3 +93,7 @@ $result = reduce(concat(), '', $array); // $result = 'abc'
 $concat = reduce(concat(), ''); // now it will return callback accepting last param from reduce - an array
 $result = $concat($array); // $result = 'abc'
 ```
+
+## TODO
+- implement more methods
+- add placeholders for currying functions - it seems as interesting thing to do
