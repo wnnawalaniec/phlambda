@@ -9,6 +9,7 @@ use function Wojciech\Phlambda\add;
 use function Wojciech\Phlambda\below;
 use function Wojciech\Phlambda\inc;
 use function Wojciech\Phlambda\_;
+use function Wojciech\Phlambda\toString;
 
 class WrapperTest extends TestCase
 {

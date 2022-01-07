@@ -1,7 +1,7 @@
 <?php /** @noinspection PhpDocSignatureInspection */
 declare(strict_types=1);
 
-use function Wojciech\Phlambda\curring;
+namespace Wojciech\Phlambda;
 
 /**
  * Converts value to string.

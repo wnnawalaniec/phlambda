@@ -19,7 +19,8 @@ use function Wojciech\Phlambda\{_,
     dropRepeats,
     inc,
     map,
-    reduce};
+    reduce,
+    toString};
 
 class ArrayTest extends TestCase
 {

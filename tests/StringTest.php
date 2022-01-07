@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Tests\Wojciech\Phlambda;
 
 use PHPUnit\Framework\TestCase;
+use function Wojciech\Phlambda\toString;
 
 class StringTest extends TestCase
 {
