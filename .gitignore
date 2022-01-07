@@ -2,7 +2,7 @@
 .phpunit.cache
 .idea
 vendor
-docs
 phpunit.xml
 infection.json
 log
+tmp
