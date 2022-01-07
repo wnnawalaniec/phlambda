@@ -13,7 +13,7 @@ Functional library for PHP.
 
 Features:
  - set of useful functions helpful in functional programming
- - all functions can be currying functions
+ - all functions can be curry functions
  - every array can be wrapped with special class which allows for method chaining
 
 ## Basics
@@ -39,9 +39,9 @@ If you don't want to use objects you can use just functions. Wrapper's methods a
 and exists only for chaining purposes.
 
 ## Currying
-In this library all function automatically are curring. If you don't know what currying functions let me try to change it.
+In this library all function automatically are curring. If you don't know what curry functions let me try to change it.
 According to [Wikipedia](https://en.wikipedia.org/wiki/Currying):
-> In mathematics and computer science, currying is the technique of converting a function that takes multiple arguments into a sequence of functions that each takes a single argument.
+> In mathematics and computer science, curry is the technique of converting a function that takes multiple arguments into a sequence of functions that each takes a single argument.
 
 Let's see an example:
  ```php
@@ -103,4 +103,4 @@ adds some complexity to that project.
 
 ## TODO
 - implement more methods
-- add placeholders for currying functions - it seems as interesting thing to do
+- add placeholders for curry functions - it seems as interesting thing to do

@@ -18,11 +18,11 @@ namespace Wojciech\Phlambda;
  * @param callable(mixed): mixed $fn First param must be callable accepting one argument and returning some value.
  * @param int $idx Second param must index of the element in the array, which should be replaced with given function.
  * @param array $input Last param must be array which we wish to adjust.
- * @return callable|array If all arguments are given result is returned. Passing just some or none will result in currying function return.
+ * @return callable|array If all arguments are given result is returned. Passing just some or none will result in curry function return.
  */
 function adjust(int|callable|array...$v): array|callable
 {
-    return curring3(function (callable $fn, int $idx, array $input): array {
+    return curry3(function (callable $fn, int $idx, array $input): array {
         if ($idx < 0) {
             $idx = count($input) + $idx;
         }
@@ -57,11 +57,11 @@ function adjust(int|callable|array...$v): array|callable
  * @see any()
  * @param callable(mixed): bool $fn First param must be callable accepting one element and returning true or false.
  * @param array $array Second param must be array which we want to check.
- * @return callable|bool If all arguments are given result is returned. Passing just some or none will result in currying function return.
+ * @return callable|bool If all arguments are given result is returned. Passing just some or none will result in curry function return.
  */
 function all(...$v): callable|bool
 {
-    return curring2(fn (callable $fn, array $input) => count(array_filter($input, $fn)) === count($input))(...$v);
+    return curry2(fn (callable $fn, array $input) => count(array_filter($input, $fn)) === count($input))(...$v);
 }
 
 /**
@@ -76,11 +76,11 @@ function all(...$v): callable|bool
  * @see all()
  * @param callable(mixed): bool $fn First param must be callable accepting one argument and returning true or false.
  * @param array $input Second param must be array which we wish to adjust.
- * @return callable|array If all arguments are given result is returned. Passing just some or none will result in currying function return.
+ * @return callable|array If all arguments are given result is returned. Passing just some or none will result in curry function return.
  */
 function any(...$v): callable|bool
 {
-    return curring2(fn (callable $fn, array $input) => !empty(array_filter($input, $fn)))(...$v);
+    return curry2(fn (callable $fn, array $input) => !empty(array_filter($input, $fn)))(...$v);
 }
 
 /**
@@ -95,11 +95,11 @@ function any(...$v): callable|bool
  * @see concat()
  * @param mixed $item First param is a value to append.
  * @param array $input Second param is an array to be appended.
- * @return callable|array If all arguments are given result is returned. Passing just some or none will result in currying function return.
+ * @return callable|array If all arguments are given result is returned. Passing just some or none will result in curry function return.
  */
 function append(...$v): callable|array
 {
-    return curring2(function (mixed $item, array $input) { $input[] = $item; return $input; })(...$v);
+    return curry2(function (mixed $item, array $input) { $input[] = $item; return $input; })(...$v);
 }
 
 /**
@@ -121,12 +121,12 @@ function append(...$v): callable|array
  * @see append()
  * @param string|array $a First element to concat
  * @param string|array $b Second element to concat
- * @return string|array|callable If all arguments are given result is returned. Returned type will be same as passed parameters. Passing just some or none will result in currying function return.
+ * @return string|array|callable If all arguments are given result is returned. Returned type will be same as passed parameters. Passing just some or none will result in curry function return.
  * @throws \InvalidArgumentException When both parameters are not of same type
  */
 function concat(string|array...$v): callable|string|array
 {
-    return curring2(function ($a, $b) {
+    return curry2(function ($a, $b) {
         if (is_array($a) && is_array($b)) {
             return array_merge($a, $b);
         }
@@ -154,11 +154,11 @@ function concat(string|array...$v): callable|string|array
  * @see dropLast()
  * @param int $n First param must number of the elements to be dropped.
  * @param array|string $input Next param must be array|string we wish to consider.
- * @return callable|array|string If all arguments are given result is returned. Passing just some or none will result in currying function return.
+ * @return callable|array|string If all arguments are given result is returned. Passing just some or none will result in curry function return.
  */
 function drop(int|string|array...$v): callable|string|array
 {
-    return curring2(function (int $n, string|array $input){
+    return curry2(function (int $n, string|array $input){
         if ($n < 0) {
             return $input;
         }
@@ -186,11 +186,11 @@ function drop(int|string|array...$v): callable|string|array
  * @see drop()
  * @param int $n First param must number of the elements to be dropped.
  * @param array|string $input Next param must be array or string we wish to consider.
- * @return callable|array|string If all arguments are given result is returned. Passing just some or none will result in currying function return.
+ * @return callable|array|string If all arguments are given result is returned. Passing just some or none will result in curry function return.
  */
 function dropLast(int|string|array...$v): callable|string|array
 {
-    return curring2(function (int $n, string|array $input){
+    return curry2(function (int $n, string|array $input){
         if ($n < 0) {
             return $input;
         }
@@ -215,11 +215,11 @@ function dropLast(int|string|array...$v): callable|string|array
  * <blockquote><pre>dropRepeats([1, 1, '1', 2, 3]); // it will return [1, '1', 2, 3]</pre></blockquote>
  *
  * @param array $input Array we want to have with unique values only
- * @return callable|array If all arguments are given result is returned. Passing just some or none will result in currying function return.
+ * @return callable|array If all arguments are given result is returned. Passing just some or none will result in curry function return.
  */
 function dropRepeats(array...$v): callable|array
 {
-    return curring(function (array $input) {
+    return curry(function (array $input) {
         $result = [];
         foreach ($input as $value) {
             if (!in_array($value, $result, true)) {
@@ -240,12 +240,12 @@ function dropRepeats(array...$v): callable|array
  *
  * @param callable(mixed): mixed $fn Function must accept one param and return some value.
  * @param array $input Array we want to map.
- * @return callable|array If all arguments are given result is returned. Passing just some or none will result in currying function return.
+ * @return callable|array If all arguments are given result is returned. Passing just some or none will result in curry function return.
  * Type of array will be same as type of returned values from given callback.
  */
 function map(...$v): array|callable
 {
-    return curring2(fn (callable $fn, array $input) => array_map($fn, $input))(...$v);
+    return curry2(fn (callable $fn, array $input) => array_map($fn, $input))(...$v);
 }
 
 /**
@@ -263,12 +263,12 @@ function map(...$v): array|callable
  *
  * @param callable(mixed): bool $fn Function must accept one param and return bool.
  * @param array $input The input array
- * @return mixed If all arguments are given result is returned. Returned type will be same as <var>$fn</var> callback. Passing just some or none will result in currying function return.
+ * @return mixed If all arguments are given result is returned. Returned type will be same as <var>$fn</var> callback. Passing just some or none will result in curry function return.
  * @throws \InvalidArgumentException When array is empty and null initial value was passed.
  */
 function reduce(...$v): mixed
 {
-    return curring3(function (callable $fn, mixed $initialValue, array $input): mixed {
+    return curry3(function (callable $fn, mixed $initialValue, array $input): mixed {
         if (empty($input) && is_null($initialValue)) {
             throw new \InvalidArgumentException('Empty array and no initial value given');
         }

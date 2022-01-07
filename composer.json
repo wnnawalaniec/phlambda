@@ -3,7 +3,7 @@
     "description": "Small library providing some functional programming tools for PHP, based on Rambda (https://github.com/ramda/ramda).",
     "type": "library",
     "license": "GPL-3.0-only",
-    "keywords": ["functional", "php8", "currying", "functional programming"],
+    "keywords": ["functional", "php8", "curry", "functional programming"],
     "homepage": "https://github.com/wnnawalaniec/phlambda",
     "autoload": {
         "psr-4": {
@@ -11,7 +11,7 @@
         },
         "files": [
             "src/array.php",
-            "src/currying.php",
+          "src/curry.php",
             "src/math.php",
             "src/predicates.php",
             "src/string.php"

@@ -5,12 +5,12 @@ namespace Wojciech\Phlambda;
 
 function add(mixed ...$v): callable|float
 {
-    return curring2(fn (int|float $a, int|float $b) => $a + $b)(...$v);
+    return curry2(fn (int|float $a, int|float $b) => $a + $b)(...$v);
 }
 
 function subtract(mixed ...$v): callable|float
 {
-    return curring2(fn (int|float $a, int|float $b) => $a - $b)(...$v);
+    return curry2(fn (int|float $a, int|float $b) => $a - $b)(...$v);
 }
 
 function dec(mixed ...$v): callable|float
@@ -25,12 +25,12 @@ function inc(mixed ...$v): callable|float
 
 function divide(mixed ...$v): callable|float
 {
-    return curring2(fn (int|float $a, int|float $b) => $a/$b)(...$v);
+    return curry2(fn (int|float $a, int|float $b) => $a/$b)(...$v);
 }
 
 function multiply(mixed ...$v): callable|float
 {
-    return curring2(fn (int|float $a, int|float $b) => $a*$b)(...$v);
+    return curry2(fn (int|float $a, int|float $b) => $a*$b)(...$v);
 }
 
 function sum(mixed ...$v): callable|float
