@@ -35,12 +35,5 @@
     "require-dev": {
         "phpunit/phpunit": "^9.5",
         "infection/infection": "^0.25.5"
-    },
-    "scripts": {
-        "test": "phpunit",
-        "fullTest": [
-            "phpunit",
-            "infection"
-        ]
     }
 }

@@ -4,5 +4,5 @@
 vendor
 phpunit.xml
 infection.json
-log
+logs
 tmp
