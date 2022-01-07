@@ -13,8 +13,9 @@ Functional library for PHP.
 
 Features:
  - set of useful functions helpful in functional programming
- - all functions can be curry functions
+ - all functions are automatically curried
  - every array can be wrapped with special class which allows for method chaining
+ - first param is always function and the data to be operated will be last param
 
 ## Basics
 To install run:
@@ -39,9 +40,9 @@ If you don't want to use objects you can use just functions. Wrapper's methods a
 and exists only for chaining purposes.
 
 ## Currying
-In this library all function automatically are curring. If you don't know what curry functions let me try to change it.
+In this library all function are automatically curried. If you don't know what curry functions let me try to change it.
 According to [Wikipedia](https://en.wikipedia.org/wiki/Currying):
-> In mathematics and computer science, curry is the technique of converting a function that takes multiple arguments into a sequence of functions that each takes a single argument.
+> In mathematics and computer science, currying is the technique of converting a function that takes multiple arguments into a sequence of functions that each takes a single argument.
 
 Let's see an example:
  ```php
