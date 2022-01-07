@@ -9,9 +9,56 @@
 [![License](http://poser.pugx.org/wojciech.nawalaniec/phlambda/license)](https://packagist.org/packages/wojciech.nawalaniec/phlambda)
 [![PHP Version Require](http://poser.pugx.org/wojciech.nawalaniec/phlambda/require/php)](https://packagist.org/packages/wojciech.nawalaniec/phlambda)
 
-Small and functional library for PHP.
+Functional library for PHP.
 
-## About
+Features:
+ - set of useful functions helpful in functional programming
+ - all functions can be currying functions
+ - every array can be wrapped with special class which allows for method chaining
+
+## Basics
+To install run:
+```
+composer require wojciech.nawalaniec/phlambda
+```
+
+Here is some example of code you can write with help of this library:
+```php
+use Wojciech\Phlambda as f;
+
+f\_($someArray)
+    ->all(f\below(30))
+    ->map(f\toString())
+    ->reduce(f\concat(), '');
+```
+
+First thing you can see and might be confusing is `_()` it's a function which wraps array with Wrapper object.
+If you wish to have more readable code you can use a static method from that class instead: `Wrapper::wrap($array)`.
+
+If you don't want to use objects you can use just functions. Wrapper's methods are just delegates to those functions,
+and exists only for chaining purposes.
+
+## Currying
+In this library all function automatically are curring. If you don't know what currying functions let me try to change it.
+According to [Wikipedia](https://en.wikipedia.org/wiki/Currying):
+> In mathematics and computer science, currying is the technique of converting a function that takes multiple arguments into a sequence of functions that each takes a single argument.
+
+Let's see an example:
+ ```php
+// we can use reduce function normally like this:
+$array = ['a', 'b', 'c'];
+$result = reduce(concat(), '', $array); // $result = 'abc'
+
+// and we can use it like cirrying function:
+$concat = reduce(concat(), ''); // now it will return callback accepting last param from reduce - an array
+$result = $concat($array); // $result = 'abc'
+```
+
+## Docs
+
+[Here you can find documentation]((https://wnnawalaniec.github.io/phlambda/packages/Application.html))
+
+## Backstory
 PHP was not designed as functional programming language, that's one thing I'm sure. 
 We can create and use anonymous functions, and in `7.4` we even got arrow functions `fn () =>`.
 Language itself is providing us with some functions like `array_map()` etc. where we can pass an array
@@ -53,46 +100,6 @@ It seemed as a great weekend project so here it is.
 There are some great functional libraries for JS, but one (pointed by earlier mentioned friend) seemed interesting.
 It's [Ramda](https://github.com/ramda/ramda). It's interesting because it has all function automatically curried, and it
 adds some complexity to that project.
-
-## Basics
-To install run:
-```
-composer require wojciech.nawalaniec/phlambda
-```
-
-Here is some example of code you can write with help of this library:
-```php
-use Wojciech\Phlambda as f;
-
-f\_($someArray)
-    ->all(f\below(30))
-    ->map(f\toString())
-    ->reduce(f\concat(), '');
-```
-
-First thing you can see and might be confusing is `_()` it's a function which wraps array with Wrapper object.
-If you wish to have more readable code you can use a static method from that class instead: `Wrapper::wrap($array)`.
-
-If you don't want to use objects you can use just functions. Wrapper's methods are just delegates to those functions, 
-and exists only for chaining purposes.
-
-You can check all functions provided by this library in this [documentation](https://wnnawalaniec.github.io/phlambda/packages/Application.html)
- 
-## Currying
-In this library all function automatically are curring. If you don't know what currying functions let me try to change it.
-According to [Wikipedia](https://en.wikipedia.org/wiki/Currying):
-> In mathematics and computer science, currying is the technique of converting a function that takes multiple arguments into a sequence of functions that each takes a single argument.
-
-Let's see an example:
- ```php
-// we can use reduce function normally like this:
-$array = ['a', 'b', 'c'];
-$result = reduce(concat(), '', $array); // $result = 'abc'
-
-// and we can use it like cirrying function:
-$concat = reduce(concat(), ''); // now it will return callback accepting last param from reduce - an array
-$result = $concat($array); // $result = 'abc'
-```
 
 ## TODO
 - implement more methods
