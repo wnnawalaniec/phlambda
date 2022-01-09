@@ -56,7 +56,7 @@ $result = $concat($array); // $result = 'abc'
 
 ## Docs
 
-[Here you can find documentation]((https://wnnawalaniec.github.io/phlambda/packages/Application.html))
+[Here you can find documentation](https://wnnawalaniec.github.io/phlambda/packages/Application.html)
 
 ## Backstory
 PHP was not designed as functional programming language, that's one thing I'm sure. 
