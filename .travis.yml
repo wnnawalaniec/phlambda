@@ -1,5 +1,5 @@
 language: php
-dist: bionicg
+dist: bionic
 php:
   - 8.0
   - 8.1
