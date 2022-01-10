@@ -13,9 +13,6 @@ jobs:
     
     - name: Build
       run: make build-docs
-    
-    - name: debug
-      run: ls -la
       
     - name: Pack docs
       uses: montudor/action-zip@v1
