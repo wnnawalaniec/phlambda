@@ -32,14 +32,14 @@ jobs:
       with:
         name: github-pages
     
-    - run: tar -xzvf docs.tar.gz
+    - run: tar -xzvf docs.tar.gz -C ./public
+    
+    - run: ls -la
 
     - name: Deploy to GitHub Pages
-      uses: crazy-max/ghaction-github-pages@v2
+      uses: peaceiris/actions-gh-pages@v3.7.3
       with:
-        target_branch: gh-pages
-        build_dir: docs
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
     
     
