@@ -11,11 +11,10 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     
-    - name: Build
-      run: make build-docs
-    
-    - name: debug
-      run: ls -la
+    - name: Generate API docs
+      uses: phpDocumentor/phpDocumentor@master
+      with:
+        args: -d src -t docs
       
     - name: Pack docs
       uses: montudor/action-zip@v1
