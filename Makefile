@@ -10,4 +10,4 @@ test-mutation:
 test-full: test test-mutation
 
 build-docs:
-	docker run --rm -v $(pwd):/data phpdoc/phpdoc:3 -d /data/src -t ./docs
+	docker run --rm -v $(shell pwd):/data phpdoc/phpdoc:3 -d /data/src -t ./docs
