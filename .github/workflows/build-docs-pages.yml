@@ -32,7 +32,7 @@ jobs:
       with:
         name: github-pages
     
-    - run: tar -xzvf docs.tar.gz -C ./public
+    - run: mkdir -p ./public && tar -xzvf docs.tar.gz -C ./public
     
     - run: ls -la
 
