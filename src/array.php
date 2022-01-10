@@ -231,6 +231,69 @@ function dropRepeats(array...$v): callable|array
 }
 
 /**
+ * Works like map but result is concatenated.
+ *
+ * It's like map but if callback returns array it is merged into result.
+ *
+ * Basic usage may look like this:
+ * <blockquote><pre>
+ * $duplicate = fn ($x) => [$x, $x];
+ * flatMap($duplicate, [1, 2, 3]); // it will return [1, 1, 2, 2, 3, 3]
+ * </pre></blockquote>
+ *
+ * @see map()
+ * @see flat()
+ * @param callable(mixed): mixed $fn Function must accept one param and return some value.
+ * @param array $input Array we want to map.
+ * @return callable|array If all arguments are given result is returned. Passing just some or none will result in curry function return.
+ */
+function flatMap(array|callable...$v): callable|array
+{
+    return curry2(function (callable $fn, array $input): array {
+        return flat(false)(map($fn, $input));
+    })(...$v);
+}
+
+/**
+ * Makes single dimension array from mulit-dimension one.
+ *
+ * It makes multi-dimension array flatter. If first argument will be true, it will do this recursively.
+ *
+ * Basic usage may look like this:
+ * <blockquote><pre>
+ * flat(false, [[1], [2], [3]]); // it will return [1, 2, 3]
+ * flat(true, [[1], [2], [3]]); // it will return [1, 2, 3]
+ * flat(false, [[[1]], [[2]], [[3]]]); // it will return [[1], [2], [3]]
+ * flat(true, [[[1]], [[2]], [[3]]]); // it will return [1, 2, 3]
+ * </pre></blockquote>
+ *
+ * @see flatMap()
+ * @param callable(mixed): mixed $fn Function must accept one param and return some value.
+ * @param array $input Array we want to map.
+ * @return callable|array If all arguments are given result is returned. Passing just some or none will result in curry function return.
+ */
+function flat(mixed...$v): callable|array
+{
+    return curry2(function (bool $recursive, mixed $input): array {
+        if (!is_array($input)) {
+            return [$input];
+        }
+
+        $result = [];
+        foreach ($input as $item) {
+            $value = $recursive ? flat(true, $item) : $item;
+            if (is_array($value)) {
+                $result = concat($result, $value);
+            } else {
+                $result[] = $value;
+            }
+        }
+
+        return $result;
+    })(...$v);
+}
+
+/**
  * Applies given function to each element of the array and return new one with the results.
  *
  * It works like `array_map`. Exactly like this.
@@ -238,6 +301,7 @@ function dropRepeats(array...$v): callable|array
  * Basic usage may look like this:
  * <blockquote><pre>map(toString(), [1, 2, 3]); // it will return ['1', '2', '3']</pre></blockquote>
  *
+ * @see flatMap()
  * @param callable(mixed): mixed $fn Function must accept one param and return some value.
  * @param array $input Array we want to map.
  * @return callable|array If all arguments are given result is returned. Passing just some or none will result in curry function return.

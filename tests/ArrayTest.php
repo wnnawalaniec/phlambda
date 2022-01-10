@@ -17,8 +17,11 @@ use function Wojciech\Phlambda\{_,
     drop,
     dropLast,
     dropRepeats,
+    flat,
+    flatMap,
     inc,
     map,
+    multiply,
     reduce,
     toString};
 
@@ -121,6 +124,23 @@ class ArrayTest extends TestCase
         $this->assertSame([[1]], dropRepeats([[1], [1]]));
         $object = new \stdClass();
         $this->assertSame([$object], dropRepeats([$object, $object]));
+    }
+
+    public function testFlatMap(): void
+    {
+        $duplicate = fn ($x) => [$x, $x];
+        $this->assertSame([2, 4, 6], flatMap(multiply(2), [1, 2, 3]));
+        $this->assertSame([1, 1, 2, 2, 3, 3], flatMap($duplicate, [1, 2, 3]));
+    }
+
+    public function testFlat(): void
+    {
+        $this->assertSame([1, 2, 3], flat(false, [1, 2, 3]));
+        $this->assertSame([1, 2, 3], flat(true, [1, 2, 3]));
+        $this->assertSame([1, 2, 3], flat(false, [[1], [2], [3]]));
+        $this->assertSame([1, 2, 3], flat(true, [[1], [2], [3]]));
+        $this->assertSame([[1], [2], [3]], flat(false, [[[1]], [[2]], [[3]]]));
+        $this->assertSame([1, 2, 3], flat(true, [[[1]], [[2]], [[3]]]));
     }
 
     public function testMap(): void
