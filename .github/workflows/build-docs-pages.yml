@@ -15,7 +15,7 @@ jobs:
       run: make build-docs
       
     - name: Pack docs
-      run: sudo tar -czvf docs.tar.gz docs
+      run: sudo tar -czvf docs.tar.gz -C docs .
         
     - name: Make artifact
       uses: actions/upload-artifact@v2
