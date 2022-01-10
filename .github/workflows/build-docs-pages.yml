@@ -13,20 +13,15 @@ jobs:
     
     - name: Build
       run: make build-docs
-    
-    - name: Debug
-      run: ls -la
       
     - name: Pack docs
-      uses: montudor/action-zip@v1
-      with:
-        args: zip -qq -r docs.zip . -i docs
+      run: sudo tar -czvf docs.tar.gz docs
         
     - name: Make artifact
       uses: actions/upload-artifact@v2
       with:
         name: github-pages
-        path: docs.zip
+        path: docs.tar.gz
   
   deploy:
     needs: build
@@ -37,9 +32,7 @@ jobs:
       with:
         name: github-pages
     
-    - uses: montudor/action-zip@v1
-      with:
-        args: unzip -qq docs.zip -d docs
+    - run: tar -xzvf docs.tar.gz
 
     - name: Deploy to GitHub Pages
       uses: crazy-max/ghaction-github-pages@v2
