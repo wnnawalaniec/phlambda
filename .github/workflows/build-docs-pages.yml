@@ -13,12 +13,31 @@ jobs:
     
     - name: Build
       run: make build-docs
+      
+    - name: Pack docs
+      uses: montudor/action-zip@v1
+      with:
+        args: zip -qq -r docs.zip docs
+        
+    - name: Make artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: github-pages
+        path: docs.zip
   
   deploy:
     needs: build
     runs-on: ubuntu-latest
     
     steps:
+    - uses: actions/download-artifact@v2
+      with:
+        name: github-pages
+    
+    - uses: montudor/action-zip@v1
+      with:
+        args: unzip -qq docs.zip -d docs
+
     - name: Deploy to GitHub Pages
       uses: crazy-max/ghaction-github-pages@v2
       with:
