@@ -13,3 +13,5 @@ function toString(mixed...$v): string|callable
 {
     return curry(fn (mixed $item) => (string) $item)(...$v);
 }
+
+const toString = '\Wojciech\Phlambda\toString';

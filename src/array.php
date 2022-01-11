@@ -36,6 +36,8 @@ function adjust(int|callable|array...$v): array|callable
     })(...$v);
 }
 
+const adjust = '\Wojciech\Phlambda\adjust';
+
 /**
  * Returns true if all elements from the array match the predicate, false if
  * there is any which doesn't.
@@ -64,6 +66,8 @@ function all(...$v): callable|bool
     return curry2(fn (callable $fn, array $input) => count(array_filter($input, $fn)) === count($input))(...$v);
 }
 
+const all = '\Wojciech\Phlambda\all';
+
 /**
  * Return true if any element matches given predicate.
  *
@@ -83,6 +87,8 @@ function any(...$v): callable|bool
     return curry2(fn (callable $fn, array $input) => !empty(array_filter($input, $fn)))(...$v);
 }
 
+const any = '\Wojciech\Phlambda\any';
+
 /**
  * Return copy of an array with given element appended at the end.
  *
@@ -101,6 +107,8 @@ function append(...$v): callable|array
 {
     return curry2(function (mixed $item, array $input) { $input[] = $item; return $input; })(...$v);
 }
+
+const append = '\Wojciech\Phlambda\append';
 
 /**
  * Concat two elements arrays or strings.
@@ -139,6 +147,8 @@ function concat(string|array...$v): callable|string|array
     })(...$v);
 }
 
+const concat = '\Wojciech\Phlambda\concat';
+
 /**
  * Return copy of an array/string but without first `n` elements of the given `input`.
  *
@@ -170,6 +180,8 @@ function drop(int|string|array...$v): callable|string|array
         return array_slice($input, $n);
     })(...$v);
 }
+
+const drop = '\Wojciech\Phlambda\drop';
 
 /**
  * Return copy of an array or string but without `n` last elements of the given `input`.
@@ -203,6 +215,8 @@ function dropLast(int|string|array...$v): callable|string|array
     })(...$v);
 }
 
+const dropLast = '\Wojciech\Phlambda\dropLast';
+
 /**
  * Return copy of an array but without repeating elements.
  *
@@ -230,6 +244,8 @@ function dropRepeats(array...$v): callable|array
     })(...$v);
 }
 
+const dropRepeats = '\Wojciech\Phlambda\dropRepeats';
+
 /**
  * Works like map but result is concatenated.
  *
@@ -253,6 +269,8 @@ function flatMap(array|callable...$v): callable|array
         return flat(false)(map($fn, $input));
     })(...$v);
 }
+
+const flatMap = '\Wojciech\Phlambda\flatMap';
 
 /**
  * Makes single dimension array from mulit-dimension one.
@@ -293,6 +311,8 @@ function flat(mixed...$v): callable|array
     })(...$v);
 }
 
+const flat = '\Wojciech\Phlambda\flat';
+
 /**
  * Applies given function to each element of the array and return new one with the results.
  *
@@ -311,6 +331,8 @@ function map(...$v): array|callable
 {
     return curry2(fn (callable $fn, array $input) => array_map($fn, $input))(...$v);
 }
+
+const map = '\Wojciech\Phlambda\map';
 
 /**
  * Reduces array to single value using provided callback.
@@ -346,6 +368,8 @@ function reduce(...$v): mixed
     })(
         ...$v);
 }
+
+const reduce = '\Wojciech\Phlambda\reduce';
 
 /**
  * Wraps array with Wrapper object.

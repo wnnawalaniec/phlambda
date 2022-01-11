@@ -7,7 +7,6 @@ use PHPUnit\Framework\TestCase;
 use Wojciech\Phlambda\Wrapper;
 use function Wojciech\Phlambda\{_,
     above,
-    add,
     adjust,
     all,
     any,
@@ -19,20 +18,22 @@ use function Wojciech\Phlambda\{_,
     dropRepeats,
     flat,
     flatMap,
-    inc,
     map,
     multiply,
-    reduce,
-    toString};
+    reduce};
+use const Wojciech\Phlambda\add;
+use const Wojciech\Phlambda\concat;
+use const Wojciech\Phlambda\inc;
+use const Wojciech\Phlambda\toString;
 
 class ArrayTest extends TestCase
 {
     public function testAdjust(): void
     {
-        $this->assertSame([1, 2, 4], adjust(inc(), -1, [1, 2, 3]));
-        $this->assertSame([1, 2, 4], adjust(inc(), 2, [1, 2, 3]));
-        $this->assertSame([1, 2, 3], adjust(inc(), 3, [1, 2, 3]));
-        $this->assertSame([1, 2, 3], adjust()(inc())(3)([1, 2, 3]));
+        $this->assertSame([1, 2, 4], adjust(inc, -1, [1, 2, 3]));
+        $this->assertSame([1, 2, 4], adjust(inc, 2, [1, 2, 3]));
+        $this->assertSame([1, 2, 3], adjust(inc, 3, [1, 2, 3]));
+        $this->assertSame([1, 2, 3], adjust()(inc)(3)([1, 2, 3]));
     }
 
     public function testAll(): void
@@ -145,23 +146,23 @@ class ArrayTest extends TestCase
 
     public function testMap(): void
     {
-        $this->assertSame(['1', '2', '3'], map(toString(), [1, 2, 3]));
+        $this->assertSame(['1', '2', '3'], map(toString, [1, 2, 3]));
     }
 
     public function testReduce(): void
     {
-        $this->assertEquals('abc', reduce(concat(), null, ['a', 'b', 'c']));
-        $this->assertEquals('a', reduce(concat(), null, ['a']));
-        $this->assertEquals('ab', reduce(concat(), 'a', ['b']));
-        $this->assertEquals('a', reduce(concat(), 'a', []));
-        $this->assertEquals(6, reduce(add(), 0, [1, 2, 3]));
+        $this->assertEquals('abc', reduce(concat, null, ['a', 'b', 'c']));
+        $this->assertEquals('a', reduce(concat, null, ['a']));
+        $this->assertEquals('ab', reduce(concat, 'a', ['b']));
+        $this->assertEquals('a', reduce(concat, 'a', []));
+        $this->assertEquals(6, reduce(add, 0, [1, 2, 3]));
     }
 
     public function testReduce_EmptyArrayAndNoInitialValueGiven_ThrowsException(): void
     {
         $this->expectException(\InvalidArgumentException::class);
 
-        reduce(concat(), null, []);
+        reduce(concat, null, []);
     }
 
     public function testWrap(): void

@@ -15,6 +15,8 @@ function curry3(callable $fn): callable
     };
 }
 
+const curry3 = '\Wojciech\Phlambda\curry3';
+
 function curry2(callable $fn): callable
 {
     return $fn2 = function (...$v) use ($fn, &$fn2) {
@@ -26,6 +28,8 @@ function curry2(callable $fn): callable
     };
 }
 
+const curry2 = '\Wojciech\Phlambda\curry2';
+
 function curry(callable $fn): callable
 {
     return $fn2 = function (...$v) use ($fn, &$fn2) {
@@ -35,3 +39,5 @@ function curry(callable $fn): callable
         };
     };
 }
+
+const curry = '\Wojciech\Phlambda\curry';

@@ -5,11 +5,11 @@ namespace Tests\Wojciech\Phlambda;
 
 use PHPUnit\Framework\TestCase;
 use Wojciech\Phlambda\Wrapper;
-use function Wojciech\Phlambda\add;
-use function Wojciech\Phlambda\below;
-use function Wojciech\Phlambda\inc;
 use function Wojciech\Phlambda\_;
-use function Wojciech\Phlambda\toString;
+use function Wojciech\Phlambda\below;
+use const Wojciech\Phlambda\add;
+use const Wojciech\Phlambda\inc;
+use const Wojciech\Phlambda\toString;
 
 class WrapperTest extends TestCase
 {
@@ -36,7 +36,7 @@ class WrapperTest extends TestCase
 
     public function testAdjust(): void
     {
-        $this->assertSame([1, 2, 4], _([1, 2, 3])->adjust(inc(), -1)->toArray());
+        $this->assertSame([1, 2, 4], _([1, 2, 3])->adjust(inc, -1)->toArray());
     }
 
     public function testAll(): void
@@ -73,11 +73,11 @@ class WrapperTest extends TestCase
 
     public function testMap(): void
     {
-        $this->assertSame(['1', '2', '3'], _([1, 2, 3])->map(toString())->toArray());
+        $this->assertSame(['1', '2', '3'], _([1, 2, 3])->map(toString)->toArray());
     }
 
     public function testReduce(): void
     {
-        $this->assertSame(6, _([1, 2, 3])->reduce(add(), 0));
+        $this->assertSame(6, _([1, 2, 3])->reduce(add, 0));
     }
 }
