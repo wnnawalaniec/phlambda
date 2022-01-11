@@ -6,6 +6,25 @@ namespace Wojciech\Phlambda;
 use Wojciech\Phlambda\Internal\ShouldNotBeImplementedInWrapper;
 
 /**
+ * Function returns `true` if both arguments are `true`;
+
+ * Example:
+ * <blockquote><pre>and(true, true); // it will return true</pre></blockquote>
+ *
+ * @see both()
+ * @param callable(mixed): bool $fn1
+ * @param callable(mixed): bool $fn2
+ * @return callable
+ */
+#[ShouldNotBeImplementedInWrapper]
+function _and(bool...$v): bool|callable
+{
+    return curry2(fn (bool $input1, bool $input2) => $input1 && $input2)(...$v);
+}
+
+const _and = '\Wojciech\Phlambda\_and';
+
+/**
  * Function calling two provided functions and returning the `&&` of the results.
  *
  * This functions accepts two predicates and then return function accepting one parameter and calling both predicates
@@ -16,6 +35,7 @@ use Wojciech\Phlambda\Internal\ShouldNotBeImplementedInWrapper;
  * <blockquote><pre>both('is_number', below(3))(1) // it will return true</pre></blockquote>
  * <blockquote><pre>filter(both(above(18), below(30), [11, 19, 26, 40]); // it will return [19, 26]</pre></blockquote>
  *
+ * @see _and()
  * @param callable(mixed): bool $fn1
  * @param callable(mixed): bool $fn2
  * @return callable
