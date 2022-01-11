@@ -1,4 +1,3 @@
-# phlambda
 [![Build Status](https://travis-ci.com/wnnawalaniec/phlambda.svg?branch=master)](https://travis-ci.com/wnnawalaniec/phlambda)
 [![Version](http://poser.pugx.org/wojciech.nawalaniec/phlambda/version)](https://packagist.org/packages/wojciech.nawalaniec/phlambda)
 [![Coverage Status](https://coveralls.io/repos/github/wnnawalaniec/phlambda/badge.svg?branch=master)](https://coveralls.io/github/wnnawalaniec/phlambda?branch=master)
@@ -17,22 +16,23 @@ Features:
  - every array can be wrapped with special class which allows for method chaining
  - first param is always function and the data to be operated will be last param
  
-## Table of contents:
-- [Installation](#basics)
-- [Usage](#basics)
+# Table of contents
+
+- [Installation](#installation)
+- [Usage](#usage)
 - [Docs](#docs)
 - [Currying](#currying)
 - [TODO](#todo)
-- [Development Guides](#Development Guides)
+- [Development Guides](#development-guides)
 - [Backstory](#backstory)
- 
-## Installation
+
+# Installation
 To install run:
 ```
 composer require wojciech.nawalaniec/phlambda
 ```
 
-## Usage
+# Usage
 All functions and constants are in one namespace, so it won't create any conflict with existing ones in your project
 or other libraries.
 You can simply import namespaces with alias (for simplification), like this:
@@ -76,11 +76,10 @@ If you wish to have more readable code you can use a static method from that cla
 If you don't want to use objects you can use just functions. Wrapper's methods are just delegates to those functions,
 and exists only for chaining purposes.
 
-## Docs
-
+# Docs
 [Here you can find documentation.](https://wnnawalaniec.github.io/phlambda/packages/Application.html)
 
-## Currying
+# Currying
 In this library all function are automatically curried. If you don't know what curry functions let me try to change it.
 According to [Wikipedia](https://en.wikipedia.org/wiki/Currying):
 > In mathematics and computer science, currying is the technique of converting a function that takes multiple arguments into a sequence of functions that each takes a single argument.
@@ -96,12 +95,11 @@ $concat = reduce(\Wojciech\Phlambda\concat, ''); // now it will return callback 
 $result = $concat($array); // $result = 'abc'
 ```
 
-## TODO
+# TODO
 - implement more methods
 - add placeholders for curry functions - it seems as interesting thing to do
 
-## Development Guides
-
+# Development Guides
  - all functions must be tested
  - all functions must be automatically curring
  - all functions must be implemented in `Wrapper` (it's testd)
@@ -115,7 +113,7 @@ $result = $concat($array); // $result = 'abc'
  - there must be constant with a function name (with whole namespace) like e.g. `const map = 'Wojciech\Phlambda\map'`
  - if function name is PHP reserved key-word it must be prefixed with `_`
 
-## Backstory
+# Backstory
 PHP was not designed as functional programming language, that's one thing I'm sure. 
 We can create and use anonymous functions, and in `7.4` we even got arrow functions `fn () =>`.
 Language itself is providing us with some functions like `array_map()` etc. where we can pass an array
