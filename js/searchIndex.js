@@ -201,6 +201,16 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/wojciech-phlambda.html#constant_either"
         },                {
+            "fqsen": "\\Wojciech\\Phlambda\\not",
+            "name": "not",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_not"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\neither",
+            "name": "neither",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_neither"
+        },                {
             "fqsen": "\\Wojciech\\Phlambda\\_or",
             "name": "_or",
             "summary": "",
@@ -220,6 +230,16 @@ Search.appendIndex(
             "name": "either",
             "summary": "Function\u0020calling\u0020two\u0020provided\u0020functions\u0020and\u0020returning\u0020the\u0020\u0060\u007C\u007C\u0060\u0020of\u0020the\u0020results.",
             "url": "namespaces/wojciech-phlambda.html#function_either"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\not\u0028\u0029",
+            "name": "not",
+            "summary": "Function\u0020returns\u0020inverted\u0020result\u0020of\u0020the\u0020input.",
+            "url": "namespaces/wojciech-phlambda.html#function_not"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\neither\u0028\u0029",
+            "name": "neither",
+            "summary": "Function\u0020calling\u0020two\u0020provided\u0020functions\u0020and\u0020returning\u0020true\u0020when\u0020both\u0020are\u0020returning\u0020false.",
+            "url": "namespaces/wojciech-phlambda.html#function_neither"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\_or\u0028\u0029",
             "name": "_or",
