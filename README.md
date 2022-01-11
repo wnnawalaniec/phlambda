@@ -16,28 +16,68 @@ Features:
  - all functions are automatically curried
  - every array can be wrapped with special class which allows for method chaining
  - first param is always function and the data to be operated will be last param
-
-## Basics
+ 
+## Table of contents:
+- [Installation](#basics)
+- [Usage](#basics)
+- [Docs](#docs)
+- [Currying](#currying)
+- [Backstory](#backstory)
+- [TODO](#todo)
+ 
+## Installation
 To install run:
 ```
 composer require wojciech.nawalaniec/phlambda
 ```
 
-Here is some example of code you can write with help of this library:
+## Usage
+All functions and constants are in one namespace, so it won't create any conflict with existing ones in your project
+or other libraries.
+You can simply import namespaces with alias (for simplification), like this:
 ```php
 use Wojciech\Phlambda as f;
 
-f\_($someArray)
-    ->all(f\below(30))
-    ->map(f\toString())
-    ->reduce(f\concat(), '');
+f\all(f\above(2), [1, 2, 3, 4]);
 ```
 
-First thing you can see and might be confusing is `_()` it's a function which wraps array with Wrapper object.
+You can import one or few functions using import like this:
+```php
+use function Wojciech\Phlambda\{all, above};
+
+all(above(2), [1, 2, 3, 4]);
+```
+
+There are also constants which can be used in places accepting callbacks, because PHP
+will resolve them as functions:
+```php
+use function Wojciech\Phlambda\map;
+use const Wojciech\Phlambda\toString;
+
+map(toString, [1, 2, 3]);
+```
+
+If you have some array and wish to perform multiple, chained operations on it. You can wrapp it
+with special object with `_()` function:
+
+```php
+use function Wojciech\Phlambda\{_, below, concat};
+use const Wojciech\Phlambda\toString;
+
+_($someArray)
+    ->all(below(30))
+    ->map(toString) // you can use constant which will be resolved as callable by PHP
+    ->reduce(concat(), ''); // or you can call function without params because all functions all curried
+```
+
 If you wish to have more readable code you can use a static method from that class instead: `Wrapper::wrap($array)`.
 
 If you don't want to use objects you can use just functions. Wrapper's methods are just delegates to those functions,
 and exists only for chaining purposes.
+
+## Docs
+
+[Here you can find documentation.](https://wnnawalaniec.github.io/phlambda/packages/Application.html)
 
 ## Currying
 In this library all function are automatically curried. If you don't know what curry functions let me try to change it.
@@ -48,16 +88,12 @@ Let's see an example:
  ```php
 // we can use reduce function normally like this:
 $array = ['a', 'b', 'c'];
-$result = reduce(concat(), '', $array); // $result = 'abc'
+$result = reduce(\Wojciech\Phlambda\concat, '', $array); // $result = 'abc'
 
 // and we can use it like cirrying function:
-$concat = reduce(concat(), ''); // now it will return callback accepting last param from reduce - an array
+$concat = reduce(\Wojciech\Phlambda\concat, ''); // now it will return callback accepting last param from reduce - an array
 $result = $concat($array); // $result = 'abc'
 ```
-
-## Docs
-
-[Here you can find documentation](https://wnnawalaniec.github.io/phlambda/packages/Application.html)
 
 ## Backstory
 PHP was not designed as functional programming language, that's one thing I'm sure. 
