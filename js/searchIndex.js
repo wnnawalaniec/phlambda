@@ -201,6 +201,11 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/wojciech-phlambda.html#constant_either"
         },                {
+            "fqsen": "\\Wojciech\\Phlambda\\_or",
+            "name": "_or",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant__or"
+        },                {
             "fqsen": "\\Wojciech\\Phlambda\\_and\u0028\u0029",
             "name": "_and",
             "summary": "Function\u0020returns\u0020\u0060true\u0060\u0020if\u0020both\u0020arguments\u0020are\u0020\u0060true\u0060\u003B",
@@ -215,6 +220,11 @@ Search.appendIndex(
             "name": "either",
             "summary": "Function\u0020calling\u0020two\u0020provided\u0020functions\u0020and\u0020returning\u0020the\u0020\u0060\u007C\u007C\u0060\u0020of\u0020the\u0020results.",
             "url": "namespaces/wojciech-phlambda.html#function_either"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\_or\u0028\u0029",
+            "name": "_or",
+            "summary": "Function\u0020returns\u0020\u0060true\u0060\u0020if\u0020at\u0020least\u0020one\u0020arguments\u0020is\u0020\u0060true\u0060\u003B",
+            "url": "namespaces/wojciech-phlambda.html#function__or"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\add",
             "name": "add",
