@@ -59,7 +59,7 @@ const both = '\Wojciech\Phlambda\both';
  * <blockquote><pre>either(above(5), below(3))(1) // it will return true</pre></blockquote>
  * <blockquote><pre>filter(either(above(18), below(30), [11, 19, 26, 40]); // it will return [11, 19, 26, 40]</pre></blockquote>
  *
- * @see _or()
+ * @see _or(), neither()
  * @param callable(mixed): bool $fn1
  * @param callable(mixed): bool $fn2
  * @return callable
@@ -90,6 +90,30 @@ function not(bool...$v): bool|callable
 }
 
 const not = '\Wojciech\Phlambda\not';
+
+/**
+ * Function calling two provided functions and returning true when both are returning false.
+ *
+ * This functions accepts two predicates and then return function accepting one parameter and calling both predicates
+ * with that parameter. Then negation of `&&` operation on both results is returned.
+ * Keep in mind that if first function will return `false` second one won't be call.
+ *
+ * Example:
+ * <blockquote><pre>neither(above(5), below(3))(4) // it will return true</pre></blockquote>
+ * <blockquote><pre>neither(above(1), below(3))(4) // it will return false</pre></blockquote>
+ *
+ * @see either(), not()
+ * @param callable(mixed): bool $fn1
+ * @param callable(mixed): bool $fn2
+ * @return callable
+ */
+#[ShouldNotBeImplementedInWrapper]
+function neither(callable...$v): callable
+{
+    return curry2(fn (callable $fn1, callable $fn2): callable => fn (mixed $x) => not(either($fn1, $fn2)($x)))(...$v);
+}
+
+const neither = '\Wojciech\Phlambda\neither';
 
 /**
  * Function returns `true` if at least one arguments is `true`;

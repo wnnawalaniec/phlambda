@@ -5,8 +5,11 @@ namespace Tests\Wojciech\Phlambda;
 
 use function Wojciech\Phlambda\_and;
 use function Wojciech\Phlambda\_or;
+use function Wojciech\Phlambda\above;
+use function Wojciech\Phlambda\below;
 use function Wojciech\Phlambda\both;
 use function Wojciech\Phlambda\either;
+use function Wojciech\Phlambda\neither;
 use function Wojciech\Phlambda\not;
 
 class LogicTest extends BaseTest
@@ -38,6 +41,14 @@ class LogicTest extends BaseTest
     {
         $this->assertSame(true, not(false));
         $this->assertSame(false, not(true));
+    }
+
+    public function testNeither(): void
+    {
+        $this->assertSame(false, neither('is_integer', 'is_string')(2));
+        $this->assertSame(false, neither('is_integer', 'is_string')('2'));
+        $this->assertSame(true, neither('is_integer', 'is_string')(1.0));
+        $this->assertSame(true, neither(above(5), below(3))(4));
     }
 
     public function testOr(): void
