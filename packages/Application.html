@@ -103,6 +103,8 @@
 
 <dl class="phpdocumentor-table-of-contents">
     
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Wojciech-Phlambda-Internal-ShouldNotBeImplementedInWrapper.html"><abbr title="\Wojciech\Phlambda\Internal\ShouldNotBeImplementedInWrapper">ShouldNotBeImplementedInWrapper</abbr></a></dt>
+        <dd></dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Wojciech-Phlambda-Wrapper.html"><abbr title="\Wojciech\Phlambda\Wrapper">Wrapper</abbr></a></dt>
         <dd>This class is a wrapper for arrays, so you can chain functions from that library in nice fashion.</dd>
     
@@ -116,6 +118,13 @@
 </h3>
 
 <dl class="phpdocumentor-table-of-contents">
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="namespaces/wojciech-phlambda.html#constant__">_</a>
+    <span>
+        &nbsp;= &#039;\\Wojciech\\Phlambda\\_&#039;                            </span>
+</dt>
+<dd></dd>
+
             <dt class="phpdocumentor-table-of-contents__entry -constant -public">
     <a href="namespaces/wojciech-phlambda.html#constant_above">above</a>
     <span>
@@ -201,6 +210,13 @@
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="namespaces/wojciech-phlambda.html#constant_diff">diff</a>
+    <span>
+        &nbsp;= &#039;\\Wojciech\\Phlambda\\diff&#039;                            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
     <a href="namespaces/wojciech-phlambda.html#constant_divide">divide</a>
     <span>
         &nbsp;= &#039;\\Wojciech\\Phlambda\\divide&#039;                            </span>
@@ -225,6 +241,13 @@
     <a href="namespaces/wojciech-phlambda.html#constant_dropRepeats">dropRepeats</a>
     <span>
         &nbsp;= &#039;\\Wojciech\\Phlambda\\dropRepeats&#039;                            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="namespaces/wojciech-phlambda.html#constant_filter">filter</a>
+    <span>
+        &nbsp;= &#039;\\Wojciech\\Phlambda\\filter&#039;                            </span>
 </dt>
 <dd></dd>
 
@@ -257,6 +280,13 @@
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="namespaces/wojciech-phlambda.html#constant_matches">matches</a>
+    <span>
+        &nbsp;= &#039;\\Wojciech\\Phlambda\\matches&#039;                            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
     <a href="namespaces/wojciech-phlambda.html#constant_multiply">multiply</a>
     <span>
         &nbsp;= &#039;\\Wojciech\\Phlambda\\multiply&#039;                            </span>
@@ -267,6 +297,13 @@
     <a href="namespaces/wojciech-phlambda.html#constant_reduce">reduce</a>
     <span>
         &nbsp;= &#039;\\Wojciech\\Phlambda\\reduce&#039;                            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="namespaces/wojciech-phlambda.html#constant_startsWith">startsWith</a>
+    <span>
+        &nbsp;= &#039;\\Wojciech\\Phlambda\\startsWith&#039;                            </span>
 </dt>
 <dd></dd>
 
@@ -328,6 +365,13 @@ there is any which doesn&#039;t.</dd>
 <dd>Concat two elements arrays or strings.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -function -">
+    <a href="namespaces/wojciech-phlambda.html#function_diff">diff()</a>
+    <span>
+                                &nbsp;: callable|array&lt;string|int, mixed&gt;    </span>
+</dt>
+<dd>Applies given function to each element of the array and return new one with the results.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -function -">
     <a href="namespaces/wojciech-phlambda.html#function_drop">drop()</a>
     <span>
                                 &nbsp;: callable|array&lt;string|int, mixed&gt;|string    </span>
@@ -349,11 +393,18 @@ there is any which doesn&#039;t.</dd>
 <dd>Return copy of an array but without repeating elements.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -function -">
+    <a href="namespaces/wojciech-phlambda.html#function_filter">filter()</a>
+    <span>
+                                &nbsp;: callable|array&lt;string|int, mixed&gt;    </span>
+</dt>
+<dd>Iterates over each element of given array and returns only those who matches given predicate.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -function -">
     <a href="namespaces/wojciech-phlambda.html#function_flatMap">flatMap()</a>
     <span>
                                 &nbsp;: callable|array&lt;string|int, mixed&gt;    </span>
 </dt>
-<dd>Works like map but result is concatenated.</dd>
+<dd>Works like map but result is single dimension array.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -function -">
     <a href="namespaces/wojciech-phlambda.html#function_flat">flat()</a>
@@ -474,6 +525,20 @@ there is any which doesn&#039;t.</dd>
 </dt>
 <dd>Converts value to string.</dd>
 
+            <dt class="phpdocumentor-table-of-contents__entry -function -">
+    <a href="namespaces/wojciech-phlambda.html#function_startsWith">startsWith()</a>
+    <span>
+                                &nbsp;: bool|callable    </span>
+</dt>
+<dd>Returns true if given `$item` starts with `$expected` value.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -function -">
+    <a href="namespaces/wojciech-phlambda.html#function_matches">matches()</a>
+    <span>
+                                &nbsp;: bool|callable    </span>
+</dt>
+<dd>Test regular expression against a sting. Returns all matching elements or empty array if there aren&#039;t any.</dd>
+
     </dl>
 
         
@@ -483,6 +548,35 @@ there is any which doesn&#039;t.</dd>
             <a href="packages/Application.html#constants" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant__">
+        _
+        <a href="namespaces/wojciech-phlambda.html#constant__" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">436</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">_</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;\\Wojciech\\Phlambda\\_&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
     <h4 class="phpdocumentor-element__name" id="constant_above">
         above
         <a href="namespaces/wojciech-phlambda.html#constant_above" class="headerlink"><i class="fas fa-link"></i></a>
@@ -491,7 +585,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="predicates.php"><a href="files/predicates.html"><abbr title="predicates.php">predicates.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">22</span>
 
     </aside>
 
@@ -520,7 +614,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="math.php"><a href="files/math.html"><abbr title="math.php">math.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">11</span>
+    <span class="phpdocumentor-element-found-in__line">14</span>
 
     </aside>
 
@@ -549,7 +643,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">39</span>
+    <span class="phpdocumentor-element-found-in__line">41</span>
 
     </aside>
 
@@ -578,7 +672,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">69</span>
+    <span class="phpdocumentor-element-found-in__line">71</span>
 
     </aside>
 
@@ -607,7 +701,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">90</span>
+    <span class="phpdocumentor-element-found-in__line">92</span>
 
     </aside>
 
@@ -636,7 +730,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">111</span>
+    <span class="phpdocumentor-element-found-in__line">113</span>
 
     </aside>
 
@@ -665,7 +759,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="predicates.php"><a href="files/predicates.html"><abbr title="predicates.php">predicates.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">11</span>
+    <span class="phpdocumentor-element-found-in__line">14</span>
 
     </aside>
 
@@ -694,7 +788,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">150</span>
+    <span class="phpdocumentor-element-found-in__line">152</span>
 
     </aside>
 
@@ -723,7 +817,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="curry.php"><a href="files/curry.html"><abbr title="curry.php">curry.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">43</span>
+    <span class="phpdocumentor-element-found-in__line">48</span>
 
     </aside>
 
@@ -752,7 +846,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="curry.php"><a href="files/curry.html"><abbr title="curry.php">curry.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">31</span>
+    <span class="phpdocumentor-element-found-in__line">35</span>
 
     </aside>
 
@@ -781,7 +875,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="curry.php"><a href="files/curry.html"><abbr title="curry.php">curry.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">21</span>
 
     </aside>
 
@@ -810,7 +904,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="math.php"><a href="files/math.html"><abbr title="math.php">math.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">25</span>
+    <span class="phpdocumentor-element-found-in__line">30</span>
 
     </aside>
 
@@ -831,6 +925,35 @@ there is any which doesn&#039;t.</dd>
 
 </article>
                     <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_diff">
+        diff
+        <a href="namespaces/wojciech-phlambda.html#constant_diff" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">173</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">diff</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;\\Wojciech\\Phlambda\\diff&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
     <h4 class="phpdocumentor-element__name" id="constant_divide">
         divide
         <a href="namespaces/wojciech-phlambda.html#constant_divide" class="headerlink"><i class="fas fa-link"></i></a>
@@ -839,7 +962,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="math.php"><a href="files/math.html"><abbr title="math.php">math.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">39</span>
+    <span class="phpdocumentor-element-found-in__line">46</span>
 
     </aside>
 
@@ -868,7 +991,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">184</span>
+    <span class="phpdocumentor-element-found-in__line">207</span>
 
     </aside>
 
@@ -897,7 +1020,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">218</span>
+    <span class="phpdocumentor-element-found-in__line">241</span>
 
     </aside>
 
@@ -926,7 +1049,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">247</span>
+    <span class="phpdocumentor-element-found-in__line">270</span>
 
     </aside>
 
@@ -947,6 +1070,35 @@ there is any which doesn&#039;t.</dd>
 
 </article>
                     <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_filter">
+        filter
+        <a href="namespaces/wojciech-phlambda.html#constant_filter" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">287</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">filter</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;\\Wojciech\\Phlambda\\filter&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
     <h4 class="phpdocumentor-element__name" id="constant_flat">
         flat
         <a href="namespaces/wojciech-phlambda.html#constant_flat" class="headerlink"><i class="fas fa-link"></i></a>
@@ -955,7 +1107,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">314</span>
+    <span class="phpdocumentor-element-found-in__line">355</span>
 
     </aside>
 
@@ -984,7 +1136,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">273</span>
+    <span class="phpdocumentor-element-found-in__line">313</span>
 
     </aside>
 
@@ -1013,7 +1165,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="math.php"><a href="files/math.html"><abbr title="math.php">math.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">32</span>
+    <span class="phpdocumentor-element-found-in__line">38</span>
 
     </aside>
 
@@ -1042,7 +1194,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">335</span>
+    <span class="phpdocumentor-element-found-in__line">376</span>
 
     </aside>
 
@@ -1063,6 +1215,35 @@ there is any which doesn&#039;t.</dd>
 
 </article>
                     <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_matches">
+        matches
+        <a href="namespaces/wojciech-phlambda.html#constant_matches" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="string.php"><a href="files/string.html"><abbr title="string.php">string.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">64</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">matches</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;\\Wojciech\\Phlambda\\matches&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
     <h4 class="phpdocumentor-element__name" id="constant_multiply">
         multiply
         <a href="namespaces/wojciech-phlambda.html#constant_multiply" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1071,7 +1252,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="math.php"><a href="files/math.html"><abbr title="math.php">math.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">46</span>
+    <span class="phpdocumentor-element-found-in__line">54</span>
 
     </aside>
 
@@ -1100,7 +1281,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">372</span>
+    <span class="phpdocumentor-element-found-in__line">413</span>
 
     </aside>
 
@@ -1121,6 +1302,35 @@ there is any which doesn&#039;t.</dd>
 
 </article>
                     <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_startsWith">
+        startsWith
+        <a href="namespaces/wojciech-phlambda.html#constant_startsWith" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="string.php"><a href="files/string.html"><abbr title="string.php">string.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">43</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">startsWith</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;\\Wojciech\\Phlambda\\startsWith&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
     <h4 class="phpdocumentor-element__name" id="constant_subtract">
         subtract
         <a href="namespaces/wojciech-phlambda.html#constant_subtract" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1129,7 +1339,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="math.php"><a href="files/math.html"><abbr title="math.php">math.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">22</span>
 
     </aside>
 
@@ -1158,7 +1368,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="math.php"><a href="files/math.html"><abbr title="math.php">math.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">53</span>
+    <span class="phpdocumentor-element-found-in__line">62</span>
 
     </aside>
 
@@ -1187,7 +1397,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="string.php"><a href="files/string.html"><abbr title="string.php">string.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">17</span>
+    <span class="phpdocumentor-element-found-in__line">24</span>
 
     </aside>
 
@@ -1222,7 +1432,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">23</span>
+    <span class="phpdocumentor-element-found-in__line">25</span>
 
     </aside>
 
@@ -1271,7 +1481,7 @@ If index is greater than the size of array unchanged copy is returned.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">64</span>
+    <span class="phpdocumentor-element-found-in__line">66</span>
 
     </aside>
 
@@ -1339,7 +1549,7 @@ if ($below18($someUsers)) { // you can use that in code like normal function
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">85</span>
+    <span class="phpdocumentor-element-found-in__line">87</span>
 
     </aside>
 
@@ -1399,7 +1609,7 @@ if ($below18($someUsers)) { // you can use that in code like normal function
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">106</span>
+    <span class="phpdocumentor-element-found-in__line">108</span>
 
     </aside>
 
@@ -1459,7 +1669,7 @@ if ($below18($someUsers)) { // you can use that in code like normal function
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">135</span>
+    <span class="phpdocumentor-element-found-in__line">137</span>
 
     </aside>
 
@@ -1535,6 +1745,66 @@ keys will behave see it's documentation.</p>
     
 </article>
                     <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_diff">
+        diff()
+        <a href="namespaces/wojciech-phlambda.html#function_diff" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">168</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Applies given function to each element of the array and return new one with the results.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">diff</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"><p>It works like <code class="prettyprint">array_map</code>. Exactly like this.</p>
+<p>Basic usage may look like this:</p>
+<blockquote><pre class="prettyprint">map(toString(), [1, 2, 3]); // it will return ['1', '2', '3']</pre></blockquote>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$v</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">see</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><a href="namespaces/wojciech-phlambda.html#function_flatMap"><abbr title="\Wojciech\Phlambda\flatMap()">flatMap()</abbr></a></span>
+                                        
+                                             
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.
+Type of array will be same as type of returned values from given callback.</p>
+</section>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
     <h4 class="phpdocumentor-element__name" id="function_drop">
         drop()
         <a href="namespaces/wojciech-phlambda.html#function_drop" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1542,7 +1812,7 @@ keys will behave see it's documentation.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">169</span>
+    <span class="phpdocumentor-element-found-in__line">192</span>
 
     </aside>
 
@@ -1605,7 +1875,7 @@ For strings, <code class="prettyprint">mbstring</code> functions are used.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">203</span>
+    <span class="phpdocumentor-element-found-in__line">226</span>
 
     </aside>
 
@@ -1668,7 +1938,7 @@ For strings, <code class="prettyprint">mbstring</code> functions are used.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">234</span>
+    <span class="phpdocumentor-element-found-in__line">257</span>
 
     </aside>
 
@@ -1709,6 +1979,50 @@ solution.</p>
     
 </article>
                     <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_filter">
+        filter()
+        <a href="namespaces/wojciech-phlambda.html#function_filter" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">282</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Iterates over each element of given array and returns only those who matches given predicate.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">filter</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;|callable&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"><p>Basic usage may look like this:</p>
+<blockquote><pre class="prettyprint">filter(below(3), [1, 2, 3]); // it will return [1, 2]</pre></blockquote>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$v</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;|callable</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.</p>
+</section>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
     <h4 class="phpdocumentor-element__name" id="function_flatMap">
         flatMap()
         <a href="namespaces/wojciech-phlambda.html#function_flatMap" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1716,11 +2030,11 @@ solution.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">266</span>
+    <span class="phpdocumentor-element-found-in__line">306</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Works like map but result is concatenated.</p>
+        <p class="phpdocumentor-summary">Works like map but result is single dimension array.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
@@ -1786,7 +2100,7 @@ flatMap($duplicate, [1, 2, 3]); // it will return [1, 1, 2, 2, 3, 3]
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">293</span>
+    <span class="phpdocumentor-element-found-in__line">333</span>
 
     </aside>
 
@@ -1850,7 +2164,7 @@ flat(true, [[[1]], [[2]], [[3]]]); // it will return [1, 2, 3]
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">330</span>
+    <span class="phpdocumentor-element-found-in__line">371</span>
 
     </aside>
 
@@ -1910,7 +2224,7 @@ Type of array will be same as type of returned values from given callback.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">355</span>
+    <span class="phpdocumentor-element-found-in__line">396</span>
 
     </aside>
 
@@ -1976,7 +2290,7 @@ be thrown.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">389</span>
+    <span class="phpdocumentor-element-found-in__line">430</span>
 
     </aside>
 
@@ -2036,7 +2350,7 @@ _([1,2,3,4,5])
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="curry.php"><a href="files/curry.html"><abbr title="curry.php">curry.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">6</span>
+    <span class="phpdocumentor-element-found-in__line">8</span>
 
     </aside>
 
@@ -2075,7 +2389,7 @@ _([1,2,3,4,5])
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="curry.php"><a href="files/curry.html"><abbr title="curry.php">curry.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">20</span>
+    <span class="phpdocumentor-element-found-in__line">23</span>
 
     </aside>
 
@@ -2114,7 +2428,7 @@ _([1,2,3,4,5])
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="curry.php"><a href="files/curry.html"><abbr title="curry.php">curry.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">33</span>
+    <span class="phpdocumentor-element-found-in__line">37</span>
 
     </aside>
 
@@ -2153,7 +2467,7 @@ _([1,2,3,4,5])
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="math.php"><a href="files/math.html"><abbr title="math.php">math.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">6</span>
+    <span class="phpdocumentor-element-found-in__line">8</span>
 
     </aside>
 
@@ -2192,7 +2506,7 @@ _([1,2,3,4,5])
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="math.php"><a href="files/math.html"><abbr title="math.php">math.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">13</span>
+    <span class="phpdocumentor-element-found-in__line">16</span>
 
     </aside>
 
@@ -2231,7 +2545,7 @@ _([1,2,3,4,5])
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="math.php"><a href="files/math.html"><abbr title="math.php">math.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">20</span>
+    <span class="phpdocumentor-element-found-in__line">24</span>
 
     </aside>
 
@@ -2270,7 +2584,7 @@ _([1,2,3,4,5])
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="math.php"><a href="files/math.html"><abbr title="math.php">math.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">27</span>
+    <span class="phpdocumentor-element-found-in__line">32</span>
 
     </aside>
 
@@ -2309,7 +2623,7 @@ _([1,2,3,4,5])
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="math.php"><a href="files/math.html"><abbr title="math.php">math.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">34</span>
+    <span class="phpdocumentor-element-found-in__line">40</span>
 
     </aside>
 
@@ -2348,7 +2662,7 @@ _([1,2,3,4,5])
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="math.php"><a href="files/math.html"><abbr title="math.php">math.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">41</span>
+    <span class="phpdocumentor-element-found-in__line">48</span>
 
     </aside>
 
@@ -2387,7 +2701,7 @@ _([1,2,3,4,5])
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="math.php"><a href="files/math.html"><abbr title="math.php">math.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">48</span>
+    <span class="phpdocumentor-element-found-in__line">56</span>
 
     </aside>
 
@@ -2426,7 +2740,7 @@ _([1,2,3,4,5])
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="predicates.php"><a href="files/predicates.html"><abbr title="predicates.php">predicates.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">6</span>
+    <span class="phpdocumentor-element-found-in__line">8</span>
 
     </aside>
 
@@ -2465,7 +2779,7 @@ _([1,2,3,4,5])
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="predicates.php"><a href="files/predicates.html"><abbr title="predicates.php">predicates.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">13</span>
+    <span class="phpdocumentor-element-found-in__line">16</span>
 
     </aside>
 
@@ -2504,7 +2818,7 @@ _([1,2,3,4,5])
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="string.php"><a href="files/string.html"><abbr title="string.php">string.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">12</span>
+    <span class="phpdocumentor-element-found-in__line">18</span>
 
     </aside>
 
@@ -2514,7 +2828,11 @@ _([1,2,3,4,5])
     <span class="phpdocumentor-signature__visibility"></span>
                 <span class="phpdocumentor-signature__name">toString</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|callable</span></code>
 
-    
+        <section class="phpdocumentor-description"><blockquote><pre class="prettyprint">toString(1) // it will return '1'</pre></blockquote>
+<blockquote><pre class="prettyprint">toString(true) // it will return '1'</pre></blockquote>
+<blockquote><pre class="prettyprint">toString(null) // it will return ''</pre></blockquote>
+</section>
+
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -2531,6 +2849,95 @@ _([1,2,3,4,5])
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">string|callable</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.</p>
+</section>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_startsWith">
+        startsWith()
+        <a href="namespaces/wojciech-phlambda.html#function_startsWith" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="string.php"><a href="files/string.html"><abbr title="string.php">string.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">37</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns true if given `$item` starts with `$expected` value.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">startsWith</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|callable</span></code>
+
+        <section class="phpdocumentor-description"><blockquote><pre class="prettyprint">startsWith('Lorem ipsum', 'Lorem ipsum 123') // it will return true</pre></blockquote>
+<blockquote><pre class="prettyprint">startsWith(' Lorem ipsum', 'Lorem ipsum 123') // it will return false</pre></blockquote>
+<blockquote><pre class="prettyprint">startsWith('lorem ipsum', 'Lorem ipsum 123') // it will return false</pre></blockquote>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$v</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool|callable</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.</p>
+</section>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_matches">
+        matches()
+        <a href="namespaces/wojciech-phlambda.html#function_matches" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="string.php"><a href="files/string.html"><abbr title="string.php">string.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">55</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Test regular expression against a sting. Returns all matching elements or empty array if there aren&#039;t any.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">matches</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|callable</span></code>
+
+        <section class="phpdocumentor-description"><blockquote><pre class="prettyprint">matches('/([a-z]a)/', 'bananas') // it will return ['ba', 'na', 'na']</pre></blockquote>
+<blockquote><pre class="prettyprint">matches('/a/', 'b') // it will return []</pre></blockquote>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$v</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool|callable</span>
             &mdash;
             <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.</p>
 </section>

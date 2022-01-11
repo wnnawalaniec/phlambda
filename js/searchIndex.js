@@ -26,6 +26,11 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/wojciech-phlambda.html#constant_concat"
         },                {
+            "fqsen": "\\Wojciech\\Phlambda\\diff",
+            "name": "diff",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_diff"
+        },                {
             "fqsen": "\\Wojciech\\Phlambda\\drop",
             "name": "drop",
             "summary": "",
@@ -40,6 +45,11 @@ Search.appendIndex(
             "name": "dropRepeats",
             "summary": "",
             "url": "namespaces/wojciech-phlambda.html#constant_dropRepeats"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\filter",
+            "name": "filter",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_filter"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\flatMap",
             "name": "flatMap",
@@ -60,6 +70,11 @@ Search.appendIndex(
             "name": "reduce",
             "summary": "",
             "url": "namespaces/wojciech-phlambda.html#constant_reduce"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\_",
+            "name": "_",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant__"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\adjust\u0028\u0029",
             "name": "adjust",
@@ -86,6 +101,11 @@ Search.appendIndex(
             "summary": "Concat\u0020two\u0020elements\u0020arrays\u0020or\u0020strings.",
             "url": "namespaces/wojciech-phlambda.html#function_concat"
         },                {
+            "fqsen": "\\Wojciech\\Phlambda\\diff\u0028\u0029",
+            "name": "diff",
+            "summary": "Applies\u0020given\u0020function\u0020to\u0020each\u0020element\u0020of\u0020the\u0020array\u0020and\u0020return\u0020new\u0020one\u0020with\u0020the\u0020results.",
+            "url": "namespaces/wojciech-phlambda.html#function_diff"
+        },                {
             "fqsen": "\\Wojciech\\Phlambda\\drop\u0028\u0029",
             "name": "drop",
             "summary": "Return\u0020copy\u0020of\u0020an\u0020array\/string\u0020but\u0020without\u0020first\u0020\u0060n\u0060\u0020elements\u0020of\u0020the\u0020given\u0020\u0060input\u0060.",
@@ -101,9 +121,14 @@ Search.appendIndex(
             "summary": "Return\u0020copy\u0020of\u0020an\u0020array\u0020but\u0020without\u0020repeating\u0020elements.",
             "url": "namespaces/wojciech-phlambda.html#function_dropRepeats"
         },                {
+            "fqsen": "\\Wojciech\\Phlambda\\filter\u0028\u0029",
+            "name": "filter",
+            "summary": "Iterates\u0020over\u0020each\u0020element\u0020of\u0020given\u0020array\u0020and\u0020returns\u0020only\u0020those\u0020who\u0020matches\u0020given\u0020predicate.",
+            "url": "namespaces/wojciech-phlambda.html#function_filter"
+        },                {
             "fqsen": "\\Wojciech\\Phlambda\\flatMap\u0028\u0029",
             "name": "flatMap",
-            "summary": "Works\u0020like\u0020map\u0020but\u0020result\u0020is\u0020concatenated.",
+            "summary": "Works\u0020like\u0020map\u0020but\u0020result\u0020is\u0020single\u0020dimension\u0020array.",
             "url": "namespaces/wojciech-phlambda.html#function_flatMap"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\flat\u0028\u0029",
@@ -155,6 +180,11 @@ Search.appendIndex(
             "name": "curry",
             "summary": "",
             "url": "namespaces/wojciech-phlambda.html#function_curry"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\Internal\\ShouldNotBeImplementedInWrapper",
+            "name": "ShouldNotBeImplementedInWrapper",
+            "summary": "",
+            "url": "classes/Wojciech-Phlambda-Internal-ShouldNotBeImplementedInWrapper.html"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\add",
             "name": "add",
@@ -251,10 +281,30 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/wojciech-phlambda.html#constant_toString"
         },                {
+            "fqsen": "\\Wojciech\\Phlambda\\startsWith",
+            "name": "startsWith",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_startsWith"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\matches",
+            "name": "matches",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_matches"
+        },                {
             "fqsen": "\\Wojciech\\Phlambda\\toString\u0028\u0029",
             "name": "toString",
             "summary": "Converts\u0020value\u0020to\u0020string.",
             "url": "namespaces/wojciech-phlambda.html#function_toString"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\startsWith\u0028\u0029",
+            "name": "startsWith",
+            "summary": "Returns\u0020true\u0020if\u0020given\u0020\u0060\u0024item\u0060\u0020starts\u0020with\u0020\u0060\u0024expected\u0060\u0020value.",
+            "url": "namespaces/wojciech-phlambda.html#function_startsWith"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\matches\u0028\u0029",
+            "name": "matches",
+            "summary": "Test\u0020regular\u0020expression\u0020against\u0020a\u0020sting.\u0020Returns\u0020all\u0020matching\u0020elements\u0020or\u0020empty\u0020array\u0020if\u0020there\u0020aren\u0027t\u0020any.",
+            "url": "namespaces/wojciech-phlambda.html#function_matches"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\Wrapper",
             "name": "Wrapper",
@@ -321,6 +371,11 @@ Search.appendIndex(
             "summary": "Concat\u0020this\u0020array\u0020with\u0020given\u0020one\u0020\u0028Wrapper\u0020may\u0020be\u0020passed\u0020too\u0029.",
             "url": "classes/Wojciech-Phlambda-Wrapper.html#method_concat"
         },                {
+            "fqsen": "\\Wojciech\\Phlambda\\Wrapper\u003A\u003Adiff\u0028\u0029",
+            "name": "diff",
+            "summary": "",
+            "url": "classes/Wojciech-Phlambda-Wrapper.html#method_diff"
+        },                {
             "fqsen": "\\Wojciech\\Phlambda\\Wrapper\u003A\u003Adrop\u0028\u0029",
             "name": "drop",
             "summary": "Return\u0020copy\u0020but\u0020without\u0020first\u0020\u0060n\u0060\u0020elements\u0020of\u0020the\u0020given\u0020\u0060input\u0060.",
@@ -331,10 +386,20 @@ Search.appendIndex(
             "summary": "Return\u0020copy\u0020but\u0020without\u0020\u0060n\u0060\u0020last\u0020elements\u0020of\u0020the\u0020given\u0020\u0060input\u0060.",
             "url": "classes/Wojciech-Phlambda-Wrapper.html#method_dropLast"
         },                {
+            "fqsen": "\\Wojciech\\Phlambda\\Wrapper\u003A\u003Afilter\u0028\u0029",
+            "name": "filter",
+            "summary": "Returns\u0020list\u0020with\u0020only\u0020values\u0020matching\u0020given\u0020predicate.",
+            "url": "classes/Wojciech-Phlambda-Wrapper.html#method_filter"
+        },                {
             "fqsen": "\\Wojciech\\Phlambda\\Wrapper\u003A\u003AdropRepeats\u0028\u0029",
             "name": "dropRepeats",
             "summary": "Return\u0020copy\u0020but\u0020without\u0020repeating\u0020elements.",
             "url": "classes/Wojciech-Phlambda-Wrapper.html#method_dropRepeats"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\Wrapper\u003A\u003AflatMap\u0028\u0029",
+            "name": "flatMap",
+            "summary": "Applies\u0020given\u0020function\u0020to\u0020each\u0020element\u0020of\u0020the\u0020array\u0020and\u0020return\u0020new\u0020one\u0020with\u0020the\u0020results\u0020flatten\u0020to\u0020single\u0020dimension.",
+            "url": "classes/Wojciech-Phlambda-Wrapper.html#method_flatMap"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\Wrapper\u003A\u003Amap\u0028\u0029",
             "name": "map",
@@ -365,5 +430,10 @@ Search.appendIndex(
             "name": "Wojciech",
             "summary": "",
             "url": "namespaces/wojciech.html"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\Internal",
+            "name": "Internal",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda-internal.html"
         }            ]
 );
