@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Tests\Wojciech\Phlambda;
 
-use PHPUnit\Framework\TestCase;
 use Wojciech\Phlambda\Wrapper;
 use function Wojciech\Phlambda\_;
 use function Wojciech\Phlambda\below;
@@ -11,7 +10,7 @@ use const Wojciech\Phlambda\add;
 use const Wojciech\Phlambda\inc;
 use const Wojciech\Phlambda\toString;
 
-class WrapperTest extends TestCase
+class WrapperTest extends BaseTest
 {
     public function testArrayAccess(): void
     {

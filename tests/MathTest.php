@@ -3,10 +3,9 @@ declare(strict_types=1);
 
 namespace Tests\Wojciech\Phlambda;
 
-use PHPUnit\Framework\TestCase;
-use function Wojciech\Phlambda\{dec, subtract, sum, inc, divide, multiply};
+use function Wojciech\Phlambda\{dec, divide, inc, multiply, subtract, sum};
 
-class MathTest extends TestCase
+class MathTest extends BaseTest
 {
     public function testSum(): void
     {

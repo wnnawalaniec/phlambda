@@ -103,6 +103,11 @@ class Wrapper implements \ArrayAccess
         return self::wrap(concat($this->array, ($array instanceof Wrapper ? $array->toArray() : $array)));
     }
 
+    public function diff(array|Wrapper $array): self
+    {
+        return self::wrap(diff($this->array, ($array instanceof  Wrapper ? $array->toArray() : $array)));
+    }
+
     /**
      * Return copy but without first `n` elements of the given `input`.
      *
@@ -124,6 +129,16 @@ class Wrapper implements \ArrayAccess
     }
 
     /**
+     * Returns list with only values matching given predicate.
+     *
+     * @see filter
+     */
+    public function filter(callable $fn): self
+    {
+        return self::wrap(filter($fn, $this->array));
+    }
+
+    /**
      * Return copy but without repeating elements.
      *
      * @see dropRepeats()
@@ -131,6 +146,17 @@ class Wrapper implements \ArrayAccess
     public function dropRepeats(): self
     {
         return self::wrap(dropRepeats($this->array));
+    }
+
+    /**
+     * Applies given function to each element of the array and return new one with the results flatten to single dimension.
+     *
+     * @see flatMap()
+     */
+    public function flatMap(callable $fn): self
+    {
+        return self::wrap(flatMap($fn, $this->array));
+
     }
 
     /**

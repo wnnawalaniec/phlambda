@@ -22,8 +22,9 @@ Features:
 - [Usage](#basics)
 - [Docs](#docs)
 - [Currying](#currying)
-- [Backstory](#backstory)
 - [TODO](#todo)
+- [Development Guides](#Development Guides)
+- [Backstory](#backstory)
  
 ## Installation
 To install run:
@@ -65,7 +66,7 @@ use function Wojciech\Phlambda\{_, below, concat};
 use const Wojciech\Phlambda\toString;
 
 _($someArray)
-    ->all(below(30))
+    ->filter(below(30))
     ->map(toString) // you can use constant which will be resolved as callable by PHP
     ->reduce(concat(), ''); // or you can call function without params because all functions all curried
 ```
@@ -94,6 +95,25 @@ $result = reduce(\Wojciech\Phlambda\concat, '', $array); // $result = 'abc'
 $concat = reduce(\Wojciech\Phlambda\concat, ''); // now it will return callback accepting last param from reduce - an array
 $result = $concat($array); // $result = 'abc'
 ```
+
+## TODO
+- implement more methods
+- add placeholders for curry functions - it seems as interesting thing to do
+
+## Development Guides
+
+ - all functions must be tested
+ - all functions must be automatically curring
+ - all functions must be implemented in `Wrapper` (it's testd)
+   - if function shouldn't be e.g. it's predicate or some math operation attribute `ShouldNotBeImplementedInWrapper` must be added
+ - all function must be documented
+   - because `...$v` is used for curring, `@param` should be used to document order and type of params
+   - type declarations (both return and arguments) must be used
+   - similar functions should be linked with `@see`
+   - at least one example must be given
+     - examples should be inside `<blockquote><pre>` tags
+ - there must be constant with a function name (with whole namespace) like e.g. `const map = 'Wojciech\Phlambda\map'`
+ - if function name is PHP reserved key-word it must be prefixed with `_`
 
 ## Backstory
 PHP was not designed as functional programming language, that's one thing I'm sure. 
@@ -129,7 +149,7 @@ class which implements `\ArrayAccess` so it can be considered array like, and ha
 I thought about something like this:
 ```php
 $arrayObject
-    ->every(below(30))
+    ->filter(below(30))
     ->sum();
 ```
 It seemed as a great weekend project so here it is.
@@ -137,7 +157,3 @@ It seemed as a great weekend project so here it is.
 There are some great functional libraries for JS, but one (pointed by earlier mentioned friend) seemed interesting.
 It's [Ramda](https://github.com/ramda/ramda). It's interesting because it has all function automatically curried, and it
 adds some complexity to that project.
-
-## TODO
-- implement more methods
-- add placeholders for curry functions - it seems as interesting thing to do

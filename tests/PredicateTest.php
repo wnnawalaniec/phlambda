@@ -3,11 +3,10 @@ declare(strict_types=1);
 
 namespace Tests\Wojciech\Phlambda;
 
-use PHPUnit\Framework\TestCase;
 use function Wojciech\Phlambda\above;
 use function Wojciech\Phlambda\below;
 
-class PredicateTest extends TestCase
+class PredicateTest extends BaseTest
 {
     public function testBelow(): void
     {

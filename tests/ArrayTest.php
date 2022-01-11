@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Tests\Wojciech\Phlambda;
 
-use PHPUnit\Framework\TestCase;
+use Wojciech\Phlambda\Internal\ShouldNotBeImplementedInWrapper;
 use Wojciech\Phlambda\Wrapper;
 use function Wojciech\Phlambda\{_,
     above,
@@ -16,17 +16,19 @@ use function Wojciech\Phlambda\{_,
     drop,
     dropLast,
     dropRepeats,
+    filter,
     flat,
     flatMap,
     map,
     multiply,
     reduce};
+use const Wojciech\Phlambda\_;
 use const Wojciech\Phlambda\add;
 use const Wojciech\Phlambda\concat;
 use const Wojciech\Phlambda\inc;
 use const Wojciech\Phlambda\toString;
 
-class ArrayTest extends TestCase
+class ArrayTest extends BaseTest
 {
     public function testAdjust(): void
     {
@@ -127,11 +129,17 @@ class ArrayTest extends TestCase
         $this->assertSame([$object], dropRepeats([$object, $object]));
     }
 
+    public function testFilter(): void
+    {
+        $this->assertSame([1, 2], filter(below(3), [1, 2, 3]));
+    }
+
     public function testFlatMap(): void
     {
         $duplicate = fn ($x) => [$x, $x];
         $this->assertSame([2, 4, 6], flatMap(multiply(2), [1, 2, 3]));
         $this->assertSame([1, 1, 2, 2, 3, 3], flatMap($duplicate, [1, 2, 3]));
+        $this->assertSame([1, 1, 2, 2, 3, 3], flatMap($duplicate, [1, [[2]], [3]]));
     }
 
     public function testFlat(): void
@@ -168,5 +176,10 @@ class ArrayTest extends TestCase
     public function testWrap(): void
     {
         $this->assertEquals(Wrapper::wrap([1, 2, 3]), _([1, 2, 3]));
+    }
+
+    public function testWrapShouldNotBeImplementedInWrapper(): void
+    {
+        $this->assertFunctionHasAttribute(ShouldNotBeImplementedInWrapper::class, _);
     }
 }

@@ -3,6 +3,9 @@ declare(strict_types=1);
 
 namespace Wojciech\Phlambda;
 
+use Wojciech\Phlambda\Internal\ShouldNotBeImplementedInWrapper;
+
+#[ShouldNotBeImplementedInWrapper]
 function curry3(callable $fn): callable
 {
     return $fn2 = function (...$v) use ($fn, &$fn2) {
@@ -17,6 +20,7 @@ function curry3(callable $fn): callable
 
 const curry3 = '\Wojciech\Phlambda\curry3';
 
+#[ShouldNotBeImplementedInWrapper]
 function curry2(callable $fn): callable
 {
     return $fn2 = function (...$v) use ($fn, &$fn2) {
@@ -30,6 +34,7 @@ function curry2(callable $fn): callable
 
 const curry2 = '\Wojciech\Phlambda\curry2';
 
+#[ShouldNotBeImplementedInWrapper]
 function curry(callable $fn): callable
 {
     return $fn2 = function (...$v) use ($fn, &$fn2) {

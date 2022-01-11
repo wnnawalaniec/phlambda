@@ -3,12 +3,11 @@ declare(strict_types=1);
 
 namespace Tests\Wojciech\Phlambda;
 
-use PHPUnit\Framework\TestCase;
 use function Wojciech\Phlambda\curry;
 use function Wojciech\Phlambda\curry2;
 use function Wojciech\Phlambda\curry3;
 
-class CurryTest extends TestCase
+class CurryTest extends BaseTest
 {
     public function testCurry(): void
     {

@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace Wojciech\Phlambda;
 
+use Wojciech\Phlambda\Internal\ShouldNotBeImplementedInWrapper;
+
 /**
  * Return copy of an array with replaced element at given index.
  *
@@ -150,6 +152,27 @@ function concat(string|array...$v): callable|string|array
 const concat = '\Wojciech\Phlambda\concat';
 
 /**
+ * Applies given function to each element of the array and return new one with the results.
+ *
+ * It works like `array_map`. Exactly like this.
+ *
+ * Basic usage may look like this:
+ * <blockquote><pre>map(toString(), [1, 2, 3]); // it will return ['1', '2', '3']</pre></blockquote>
+ *
+ * @see flatMap()
+ * @param callable(mixed): mixed $fn Function must accept one param and return some value.
+ * @param array $input Array we want to map.
+ * @return callable|array If all arguments are given result is returned. Passing just some or none will result in curry function return.
+ * Type of array will be same as type of returned values from given callback.
+ */
+function diff(array...$v): callable|array
+{
+    return curry2(fn (array $input1, array $input2) => array_diff($input1, $input2))(...$v);
+}
+
+const diff = '\Wojciech\Phlambda\diff';
+
+/**
  * Return copy of an array/string but without first `n` elements of the given `input`.
  *
  * Number of the elements can exceed size of the given array/string, in that case empty array/string will be returned.
@@ -247,7 +270,24 @@ function dropRepeats(array...$v): callable|array
 const dropRepeats = '\Wojciech\Phlambda\dropRepeats';
 
 /**
- * Works like map but result is concatenated.
+ * Iterates over each element of given array and returns only those who matches given predicate.
+ *
+ * Basic usage may look like this:
+ * <blockquote><pre>filter(below(3), [1, 2, 3]); // it will return [1, 2]</pre></blockquote>
+ *
+ * @param callable(mixed): bool $fn First param must be callable accepting one element and returning true or false.
+ * @param array $input Array we want to filter.
+ * @return callable|array If all arguments are given result is returned. Passing just some or none will result in curry function return.
+ */
+function filter(array|callable...$v): callable|array
+{
+    return curry2(fn (callable $fn, array $input) => array_filter($input, $fn))(...$v);
+}
+
+const filter = '\Wojciech\Phlambda\filter';
+
+/**
+ * Works like map but result is single dimension array.
  *
  * It's like map but if callback returns array it is merged into result.
  *
@@ -266,7 +306,7 @@ const dropRepeats = '\Wojciech\Phlambda\dropRepeats';
 function flatMap(array|callable...$v): callable|array
 {
     return curry2(function (callable $fn, array $input): array {
-        return flat(false)(map($fn, $input));
+        return flat(true)(map($fn, $input));
     })(...$v);
 }
 
@@ -290,6 +330,7 @@ const flatMap = '\Wojciech\Phlambda\flatMap';
  * @param array $input Array we want to map.
  * @return callable|array If all arguments are given result is returned. Passing just some or none will result in curry function return.
  */
+#[ShouldNotBeImplementedInWrapper]
 function flat(mixed...$v): callable|array
 {
     return curry2(function (bool $recursive, mixed $input): array {
@@ -386,7 +427,10 @@ const reduce = '\Wojciech\Phlambda\reduce';
  * @param array $array
  * @return Wrapper
  */
+#[ShouldNotBeImplementedInWrapper]
 function _(array $array): Wrapper
 {
     return Wrapper::wrap($array);
 }
+
+const _ = '\Wojciech\Phlambda\_';
