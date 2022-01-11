@@ -183,7 +183,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\Internal\\ShouldNotBeImplementedInWrapper",
             "name": "ShouldNotBeImplementedInWrapper",
-            "summary": "",
+            "summary": "Attribute\u0020to\u0020mark\u0020methods\u0020that\u0020are\u0020not\u0020supposed\u0020to\u0020be\u0020implemented\u0020by\u0020Wrapper.",
             "url": "classes/Wojciech-Phlambda-Internal-ShouldNotBeImplementedInWrapper.html"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\add",
