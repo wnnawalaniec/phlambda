@@ -72,6 +72,25 @@ function either(callable...$v): callable
 
 const either = '\Wojciech\Phlambda\either';
 
+
+/**
+ * Function returns inverted result of the input.
+ *
+ * Example:
+ * <blockquote><pre>not(true); // it will return false</pre></blockquote>
+ * <blockquote><pre>not(false); // it will return true</pre></blockquote>
+ *
+ * @param bool $input
+ * @return callable
+ */
+#[ShouldNotBeImplementedInWrapper]
+function not(bool...$v): bool|callable
+{
+    return curry(fn (bool $input) => !$input)(...$v);
+}
+
+const not = '\Wojciech\Phlambda\not';
+
 /**
  * Function returns `true` if at least one arguments is `true`;
  *

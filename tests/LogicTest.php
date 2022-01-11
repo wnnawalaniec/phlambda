@@ -7,6 +7,7 @@ use function Wojciech\Phlambda\_and;
 use function Wojciech\Phlambda\_or;
 use function Wojciech\Phlambda\both;
 use function Wojciech\Phlambda\either;
+use function Wojciech\Phlambda\not;
 
 class LogicTest extends BaseTest
 {
@@ -31,6 +32,12 @@ class LogicTest extends BaseTest
         $this->assertSame(true, either('is_integer', 'is_string')(2));
         $this->assertSame(true, either('is_integer', 'is_string')('2'));
         $this->assertSame(false, either('is_integer', 'is_string')(1.0));
+    }
+
+    public function testNot(): void
+    {
+        $this->assertSame(true, not(false));
+        $this->assertSame(false, not(true));
     }
 
     public function testOr(): void
