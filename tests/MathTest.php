@@ -9,64 +9,46 @@ class MathTest extends BaseTest
 {
     public function testSum(): void
     {
-        $array = [1, 6.6, 1.3];
-
-        $sum = sum($array);
-
-        $expectedValue = 8.9;
-        $this->assertSame($expectedValue, $sum);
+        $this->assertSame(8.9, sum([1, 6.6, 1.3]));
+        $this->assertSame(6, sum([1, 2, 3]));
+        $this->assertSame(6.0, sum([1, 2.0, 3]));
     }
 
     public function testDecreasing(): void
     {
-        $value = 7.2;
-
-        $decreased = dec($value);
-
-        $expected = 6.2;
-        $this->assertSame($expected, $decreased);
+        $this->assertSame(6.2, dec(7.2));
+        $this->assertSame(6.0, dec(7.0));
+        $this->assertSame(6, dec(7));
     }
 
     public function testIncreasing(): void
     {
-        $value = 7.2;
-
-        $decreased = inc($value);
-
-        $expected = 8.2;
-        $this->assertSame($expected, $decreased);
+        $this->assertSame(8.2, inc(7.2));
+        $this->assertSame(8.0, inc(7.0));
+        $this->assertSame(8, inc(7));
     }
 
     public function testDivide(): void
     {
-        $a = 6.45;
-        $b = 2.37;
-
-        $value = divide($a, $b);
-
-        $expectedValue = 2.721518987341772;
-        $this->assertSame($expectedValue, $value);
+        $this->assertSame(2.721518987341772, divide(6.45, 2.37));
+        $this->assertSame(3, divide(6, 2));
+        $this->assertSame(3.0, divide(6, 2.0));
+        $this->assertSame(3.0, divide(6.0, 2));
     }
 
     public function testMultiply(): void
     {
-        $a = 6.45;
-        $b = 2.37;
-
-        $value = multiply($a, $b);
-
-        $expectedValue = 15.286500000000002;
-        $this->assertSame($expectedValue, $value);
+        $this->assertSame(15.286500000000002, multiply(6.45, 2.37));
+        $this->assertSame(12, multiply(6, 2));
+        $this->assertSame(12.0, multiply(6, 2.0));
+        $this->assertSame(12.0, multiply(6.0, 2));
     }
 
     public function testSubtract(): void
     {
-        $a = 3.14;
-        $b = 1.14;
-
-        $value = subtract($a, $b);
-
-        $expectedValue = 2.0;
-        $this->assertSame($expectedValue, $value);
+        $this->assertSame(2.0, subtract(3.14, 1.14));
+        $this->assertSame(2, subtract(3, 1));
+        $this->assertSame(2.0, subtract(3, 1.0));
+        $this->assertSame(2.0, subtract(3.0, 1));
     }
 }
