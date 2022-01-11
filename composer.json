@@ -11,7 +11,8 @@
         },
         "files": [
             "src/array.php",
-          "src/curry.php",
+            "src/curry.php",
+            "src/logic.php",
             "src/math.php",
             "src/predicates.php",
             "src/string.php"
