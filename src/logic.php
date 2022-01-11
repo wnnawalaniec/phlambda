@@ -7,13 +7,13 @@ use Wojciech\Phlambda\Internal\ShouldNotBeImplementedInWrapper;
 
 /**
  * Function returns `true` if both arguments are `true`;
-
+ *
  * Example:
- * <blockquote><pre>and(true, true); // it will return true</pre></blockquote>
+ * <blockquote><pre>_and(true, true); // it will return true</pre></blockquote>
  *
  * @see both()
- * @param callable(mixed): bool $fn1
- * @param callable(mixed): bool $fn2
+ * @param bool $input1
+ * @param bool $input2
  * @return callable
  */
 #[ShouldNotBeImplementedInWrapper]
@@ -59,7 +59,7 @@ const both = '\Wojciech\Phlambda\both';
  * <blockquote><pre>either(above(5), below(3))(1) // it will return true</pre></blockquote>
  * <blockquote><pre>filter(either(above(18), below(30), [11, 19, 26, 40]); // it will return [11, 19, 26, 40]</pre></blockquote>
  *
- * @see _and()
+ * @see _or()
  * @param callable(mixed): bool $fn1
  * @param callable(mixed): bool $fn2
  * @return callable
@@ -71,3 +71,23 @@ function either(callable...$v): callable
 }
 
 const either = '\Wojciech\Phlambda\either';
+
+/**
+ * Function returns `true` if at least one arguments is `true`;
+ *
+ * Example:
+ * <blockquote><pre>_or(false, true); // it will return true</pre></blockquote>
+ * <blockquote><pre>_or(false, false); // it will return false</pre></blockquote>
+ *
+ * @see either()
+ * @param bool $input1
+ * @param bool $input2
+ * @return callable
+ */
+#[ShouldNotBeImplementedInWrapper]
+function _or(bool...$v): bool|callable
+{
+    return curry2(fn (bool $input1, bool $input2) => $input1 || $input2)(...$v);
+}
+
+const _or = '\Wojciech\Phlambda\_or';

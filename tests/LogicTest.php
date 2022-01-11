@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Tests\Wojciech\Phlambda;
 
 use function Wojciech\Phlambda\_and;
+use function Wojciech\Phlambda\_or;
 use function Wojciech\Phlambda\both;
 use function Wojciech\Phlambda\either;
 
@@ -13,6 +14,8 @@ class LogicTest extends BaseTest
     {
         $this->assertSame(true, _and(true, true));
         $this->assertSame(false, _and(true, false));
+        $this->assertSame(false, _and(false, false));
+        $this->assertSame(false, _and(false, false));
     }
 
     public function testBoth(): void
@@ -28,5 +31,13 @@ class LogicTest extends BaseTest
         $this->assertSame(true, either('is_integer', 'is_string')(2));
         $this->assertSame(true, either('is_integer', 'is_string')('2'));
         $this->assertSame(false, either('is_integer', 'is_string')(1.0));
+    }
+
+    public function testOr(): void
+    {
+        $this->assertSame(true, _or(true, true));
+        $this->assertSame(true, _or(true, false));
+        $this->assertSame(false, _or(false, false));
+        $this->assertSame(true, _or(false, true));
     }
 }
