@@ -186,6 +186,36 @@ Search.appendIndex(
             "summary": "Attribute\u0020to\u0020mark\u0020methods\u0020that\u0020are\u0020not\u0020supposed\u0020to\u0020be\u0020implemented\u0020by\u0020Wrapper.",
             "url": "classes/Wojciech-Phlambda-Internal-ShouldNotBeImplementedInWrapper.html"
         },                {
+            "fqsen": "\\Wojciech\\Phlambda\\_and",
+            "name": "_and",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant__and"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\both",
+            "name": "both",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_both"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\either",
+            "name": "either",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_either"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\_and\u0028\u0029",
+            "name": "_and",
+            "summary": "Function\u0020returns\u0020\u0060true\u0060\u0020if\u0020both\u0020arguments\u0020are\u0020\u0060true\u0060\u003B",
+            "url": "namespaces/wojciech-phlambda.html#function__and"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\both\u0028\u0029",
+            "name": "both",
+            "summary": "Function\u0020calling\u0020two\u0020provided\u0020functions\u0020and\u0020returning\u0020the\u0020\u0060\u0026\u0026\u0060\u0020of\u0020the\u0020results.",
+            "url": "namespaces/wojciech-phlambda.html#function_both"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\either\u0028\u0029",
+            "name": "either",
+            "summary": "Function\u0020calling\u0020two\u0020provided\u0020functions\u0020and\u0020returning\u0020the\u0020\u0060\u007C\u007C\u0060\u0020of\u0020the\u0020results.",
+            "url": "namespaces/wojciech-phlambda.html#function_either"
+        },                {
             "fqsen": "\\Wojciech\\Phlambda\\add",
             "name": "add",
             "summary": "",
