@@ -168,17 +168,17 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\curry3\u0028\u0029",
             "name": "curry3",
-            "summary": "",
+            "summary": "Returns\u0020currying\u0020function\u0020awaiting\u00203\u0020arguments.",
             "url": "namespaces/wojciech-phlambda.html#function_curry3"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\curry2\u0028\u0029",
             "name": "curry2",
-            "summary": "",
+            "summary": "Returns\u0020currying\u0020function\u0020awaiting\u00202\u0020arguments.",
             "url": "namespaces/wojciech-phlambda.html#function_curry2"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\curry\u0028\u0029",
             "name": "curry",
-            "summary": "",
+            "summary": "Returns\u0020currying\u0020function\u0020awaiting\u00201\u0020argument.",
             "url": "namespaces/wojciech-phlambda.html#function_curry"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\Internal\\ShouldNotBeImplementedInWrapper",
@@ -223,37 +223,37 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\add\u0028\u0029",
             "name": "add",
-            "summary": "",
+            "summary": "Returns\u0020sum\u0020of\u0020two\u0020numbers.",
             "url": "namespaces/wojciech-phlambda.html#function_add"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\subtract\u0028\u0029",
             "name": "subtract",
-            "summary": "",
+            "summary": "Returns\u0020subtraction\u0020of\u0020two\u0020numbers.",
             "url": "namespaces/wojciech-phlambda.html#function_subtract"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\dec\u0028\u0029",
             "name": "dec",
-            "summary": "",
+            "summary": "Decreases\u0020number\u0020by\u00201.",
             "url": "namespaces/wojciech-phlambda.html#function_dec"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\inc\u0028\u0029",
             "name": "inc",
-            "summary": "",
+            "summary": "Increases\u0020number\u0020by\u00201.",
             "url": "namespaces/wojciech-phlambda.html#function_inc"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\divide\u0028\u0029",
             "name": "divide",
-            "summary": "",
+            "summary": "Divides\u0020two\u0020numbers.",
             "url": "namespaces/wojciech-phlambda.html#function_divide"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\multiply\u0028\u0029",
             "name": "multiply",
-            "summary": "",
+            "summary": "Multiplies\u0020two\u0020numbers.",
             "url": "namespaces/wojciech-phlambda.html#function_multiply"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\sum\u0028\u0029",
             "name": "sum",
-            "summary": "",
+            "summary": "Returns\u0020sum\u0020of\u0020all\u0020elements.",
             "url": "namespaces/wojciech-phlambda.html#function_sum"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\below",
