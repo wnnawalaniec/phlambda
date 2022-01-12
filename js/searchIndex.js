@@ -251,6 +251,11 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/wojciech-phlambda.html#constant_startsWith"
         },                {
+            "fqsen": "\\Wojciech\\Phlambda\\endsWith",
+            "name": "endsWith",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_endsWith"
+        },                {
             "fqsen": "\\Wojciech\\Phlambda\\matches",
             "name": "matches",
             "summary": "",
@@ -360,6 +365,11 @@ Search.appendIndex(
             "name": "startsWith",
             "summary": "Returns\u0020true\u0020if\u0020given\u0020\u0060\u0024item\u0060\u0020starts\u0020with\u0020\u0060\u0024expected\u0060\u0020value.",
             "url": "namespaces/wojciech-phlambda.html#function_startsWith"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\endsWith\u0028\u0029",
+            "name": "endsWith",
+            "summary": "Returns\u0020true\u0020if\u0020given\u0020\u0060\u0024item\u0060\u0020ends\u0020with\u0020\u0060\u0024expected\u0060\u0020value.",
+            "url": "namespaces/wojciech-phlambda.html#function_endsWith"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\matches\u0028\u0029",
             "name": "matches",

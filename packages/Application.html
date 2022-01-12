@@ -273,6 +273,13 @@
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="namespaces/wojciech-phlambda.html#constant_endsWith">endsWith</a>
+    <span>
+        &nbsp;= &#039;\\Wojciech\\Phlambda\\endsWith&#039;                            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
     <a href="namespaces/wojciech-phlambda.html#constant_filter">filter</a>
     <span>
         &nbsp;= &#039;\\Wojciech\\Phlambda\\filter&#039;                            </span>
@@ -615,6 +622,13 @@ there is any which doesn&#039;t.</dd>
                                 &nbsp;: bool|callable    </span>
 </dt>
 <dd>Returns true if given `$item` starts with `$expected` value.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -function -">
+    <a href="namespaces/wojciech-phlambda.html#function_endsWith">endsWith()</a>
+    <span>
+                                &nbsp;: bool|callable    </span>
+</dt>
+<dd>Returns true if given `$item` ends with `$expected` value.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -function -">
     <a href="namespaces/wojciech-phlambda.html#function_matches">matches()</a>
@@ -1270,6 +1284,35 @@ there is any which doesn&#039;t.</dd>
 
 </article>
                     <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_endsWith">
+        endsWith
+        <a href="namespaces/wojciech-phlambda.html#constant_endsWith" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="constants.php"><a href="files/constants.html"><abbr title="constants.php">constants.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">45</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">endsWith</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;\\Wojciech\\Phlambda\\endsWith&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
     <h4 class="phpdocumentor-element__name" id="constant_filter">
         filter
         <a href="namespaces/wojciech-phlambda.html#constant_filter" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1423,7 +1466,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="constants.php"><a href="files/constants.html"><abbr title="constants.php">constants.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">45</span>
+    <span class="phpdocumentor-element-found-in__line">46</span>
 
     </aside>
 
@@ -3528,6 +3571,51 @@ Keep in mind that if first function will return <code class="prettyprint">false<
     
 </article>
                     <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_endsWith">
+        endsWith()
+        <a href="namespaces/wojciech-phlambda.html#function_endsWith" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="string.php"><a href="files/string.html"><abbr title="string.php">string.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">52</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns true if given `$item` ends with `$expected` value.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">endsWith</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|callable</span></code>
+
+        <section class="phpdocumentor-description"><blockquote><pre class="prettyprint">endsWith('123', 'Lorem ipsum 123') // it will return true</pre></blockquote>
+<blockquote><pre class="prettyprint">endsWith('123 ', 'Lorem ipsum 123') // it will return false</pre></blockquote>
+<blockquote><pre class="prettyprint">endsWith('M 123', 'Lorem ipsum 123') // it will return false</pre></blockquote>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$v</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool|callable</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.</p>
+</section>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
     <h4 class="phpdocumentor-element__name" id="function_matches">
         matches()
         <a href="namespaces/wojciech-phlambda.html#function_matches" class="headerlink"><i class="fas fa-link"></i></a>
@@ -3535,7 +3623,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="string.php"><a href="files/string.html"><abbr title="string.php">string.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">51</span>
+    <span class="phpdocumentor-element-found-in__line">68</span>
 
     </aside>
 
