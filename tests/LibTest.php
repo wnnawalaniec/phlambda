@@ -34,7 +34,15 @@ class LibTest extends BaseTest
         $unimplemented = $allFunctionsInNamespace
             ->diff($implementedWrapperMethods);
 
-        $this->assertEmpty($unimplemented->toArray());
+        $this->assertEmpty(
+            $unimplemented->toArray(),
+            sprintf(
+                "Some functions are not implemented in %s class nor mark with attribute: %s.\nThose functions are: %s",
+                Wrapper::class,
+                ShouldNotBeImplementedInWrapper::class,
+                '[' . implode(', ', $unimplemented->toArray()) . ']'
+            )
+        );
     }
 
     public function testThereIsConstWithNamespaceOfEachFunction(): void
@@ -49,7 +57,15 @@ class LibTest extends BaseTest
             ->filter(startsWith('\wojciech\phlambda'))
             ->flatMap(matches('/wojciech\\\\phlambda\\\\\K\w+/'));
 
-        $this->assertEmpty($allFunctionsInNamespace->diff($definedConstantsInNamespace)->toArray());
+        $this->assertEmpty(
+            $allFunctionsInNamespace->diff($definedConstantsInNamespace)->toArray(),
+            sprintf(
+                "Library is missing constants with names of functions: %s.\nCheckout `make generate-constants` command.",
+                '[' . implode(', ', $allFunctionsInNamespace
+                    ->diff($definedConstantsInNamespace)
+                    ->toArray()). ']'
+            )
+        );
     }
 
     public function testAllConstWithFunctionsNamespacesHasSameNameAsFunction(): void
@@ -64,6 +80,14 @@ class LibTest extends BaseTest
             ->filter(startsWith('wojciech\phlambda'))
             ->flatMap(matches('/wojciech\\\\phlambda\\\\\K\w+/'));
 
-        $this->assertEmpty($allFunctionsInNamespace->diff($definedConstantsInNamespace)->toArray());
+        $this->assertEmpty(
+            $allFunctionsInNamespace->diff($definedConstantsInNamespace)->toArray(),
+            sprintf(
+                "Library is missing constants with following names: %s.\nCheckout `make generate-constants` command.",
+                '[' . implode(', ', $allFunctionsInNamespace
+                    ->diff($definedConstantsInNamespace)
+                    ->toArray()). ']'
+            )
+        );
     }
 }

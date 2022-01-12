@@ -12,7 +12,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 const target_namespace = 'Wojciech\Phlambda';
 
 $file = new \Nette\PhpGenerator\PhpFile();
-$file->addComment('This file is auto-generated.');
+$file->addComment('This file is auto-generated (`make generate-constants`)');
 $file->setStrictTypes();
 $file->addNamespace(target_namespace);
 

@@ -24,6 +24,7 @@ Features:
 - [Currying](#currying)
 - [TODO](#todo)
 - [Development Guides](#development-guides)
+  - [Tools](#tools)
 - [Backstory](#backstory)
 
 # Installation
@@ -101,6 +102,10 @@ $result = $concat($array); // $result = 'abc'
 
 # Development Guides
 Check out [CONTRIBUTING file](https://github.com/wnnawalaniec/phlambda/blob/master/CONTRIBUTING.md)
+
+## Tools
+ - `make build-docs` - generates HTML documentation. *Requires [Docker](https://www.docker.com/) installed*
+ - `make generate-constants` - generates `src/constants.php` file, for all functions
 
 # Backstory
 PHP was not designed as functional programming language, that's one thing I'm sure. 
