@@ -25,7 +25,7 @@ $declaredFunctions = _(get_defined_functions()['user'])
 $fileContent = (string) $file;
 
 foreach ($declaredFunctions as $function) {
-    $fileContent .= sprintf('const %s = "\%s\%s"; ' . PHP_EOL, $function, target_namespace, $function);
+    $fileContent .= sprintf('const %s = \'\%s\%s\'; ' . PHP_EOL, $function, target_namespace, $function);
 }
 
 file_put_contents(__DIR__ . '/../src/constants.php', $fileContent);
