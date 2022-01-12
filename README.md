@@ -100,18 +100,7 @@ $result = $concat($array); // $result = 'abc'
 - add placeholders for curry functions - it seems as interesting thing to do
 
 # Development Guides
- - all functions must be tested
- - all functions must be automatically curring
- - all functions must be implemented in `Wrapper` (it's testd)
-   - if function shouldn't be e.g. it's predicate or some math operation attribute `ShouldNotBeImplementedInWrapper` must be added
- - all function must be documented
-   - because `...$v` is used for curring, `@param` should be used to document order and type of params
-   - type declarations (both return and arguments) must be used
-   - similar functions should be linked with `@see`
-   - at least one example must be given
-     - examples should be inside `<blockquote><pre>` tags
- - there must be constant with a function name (with whole namespace) like e.g. `const map = 'Wojciech\Phlambda\map'`
- - if function name is PHP reserved key-word it must be prefixed with `_`
+Check out [CONTRIBUTING file](https://github.com/wnnawalaniec/phlambda/blob/master/CONTRIBUTING.md)
 
 # Backstory
 PHP was not designed as functional programming language, that's one thing I'm sure. 
