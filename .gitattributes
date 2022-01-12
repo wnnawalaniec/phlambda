@@ -6,3 +6,5 @@
 /.coveralls.yml export-ignore
 /infection.json.dist export-ignore
 /phpunit.xml.dist export-ignore
+/tools export-ignore
+/Makefile export-ignore
