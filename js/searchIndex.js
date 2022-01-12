@@ -1,81 +1,6 @@
 Search.appendIndex(
     [
                 {
-            "fqsen": "\\Wojciech\\Phlambda\\adjust",
-            "name": "adjust",
-            "summary": "",
-            "url": "namespaces/wojciech-phlambda.html#constant_adjust"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\all",
-            "name": "all",
-            "summary": "",
-            "url": "namespaces/wojciech-phlambda.html#constant_all"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\any",
-            "name": "any",
-            "summary": "",
-            "url": "namespaces/wojciech-phlambda.html#constant_any"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\append",
-            "name": "append",
-            "summary": "",
-            "url": "namespaces/wojciech-phlambda.html#constant_append"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\concat",
-            "name": "concat",
-            "summary": "",
-            "url": "namespaces/wojciech-phlambda.html#constant_concat"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\diff",
-            "name": "diff",
-            "summary": "",
-            "url": "namespaces/wojciech-phlambda.html#constant_diff"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\drop",
-            "name": "drop",
-            "summary": "",
-            "url": "namespaces/wojciech-phlambda.html#constant_drop"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\dropLast",
-            "name": "dropLast",
-            "summary": "",
-            "url": "namespaces/wojciech-phlambda.html#constant_dropLast"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\dropRepeats",
-            "name": "dropRepeats",
-            "summary": "",
-            "url": "namespaces/wojciech-phlambda.html#constant_dropRepeats"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\filter",
-            "name": "filter",
-            "summary": "",
-            "url": "namespaces/wojciech-phlambda.html#constant_filter"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\flatMap",
-            "name": "flatMap",
-            "summary": "",
-            "url": "namespaces/wojciech-phlambda.html#constant_flatMap"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\flat",
-            "name": "flat",
-            "summary": "",
-            "url": "namespaces/wojciech-phlambda.html#constant_flat"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\map",
-            "name": "map",
-            "summary": "",
-            "url": "namespaces/wojciech-phlambda.html#constant_map"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\reduce",
-            "name": "reduce",
-            "summary": "",
-            "url": "namespaces/wojciech-phlambda.html#constant_reduce"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\_",
-            "name": "_",
-            "summary": "",
-            "url": "namespaces/wojciech-phlambda.html#constant__"
-        },                {
             "fqsen": "\\Wojciech\\Phlambda\\adjust\u0028\u0029",
             "name": "adjust",
             "summary": "Return\u0020copy\u0020of\u0020an\u0020array\u0020with\u0020replaced\u0020element\u0020at\u0020given\u0020index.",
@@ -151,6 +76,81 @@ Search.appendIndex(
             "summary": "Wraps\u0020array\u0020with\u0020Wrapper\u0020object.",
             "url": "namespaces/wojciech-phlambda.html#function__"
         },                {
+            "fqsen": "\\Wojciech\\Phlambda\\adjust",
+            "name": "adjust",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_adjust"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\all",
+            "name": "all",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_all"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\any",
+            "name": "any",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_any"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\append",
+            "name": "append",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_append"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\concat",
+            "name": "concat",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_concat"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\diff",
+            "name": "diff",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_diff"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\drop",
+            "name": "drop",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_drop"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\dropLast",
+            "name": "dropLast",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_dropLast"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\dropRepeats",
+            "name": "dropRepeats",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_dropRepeats"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\filter",
+            "name": "filter",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_filter"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\flatMap",
+            "name": "flatMap",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_flatMap"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\flat",
+            "name": "flat",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_flat"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\map",
+            "name": "map",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_map"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\reduce",
+            "name": "reduce",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_reduce"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\_",
+            "name": "_",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant__"
+        },                {
             "fqsen": "\\Wojciech\\Phlambda\\curry3",
             "name": "curry3",
             "summary": "",
@@ -165,26 +165,6 @@ Search.appendIndex(
             "name": "curry",
             "summary": "",
             "url": "namespaces/wojciech-phlambda.html#constant_curry"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\curry3\u0028\u0029",
-            "name": "curry3",
-            "summary": "Returns\u0020currying\u0020function\u0020awaiting\u00203\u0020arguments.",
-            "url": "namespaces/wojciech-phlambda.html#function_curry3"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\curry2\u0028\u0029",
-            "name": "curry2",
-            "summary": "Returns\u0020currying\u0020function\u0020awaiting\u00202\u0020arguments.",
-            "url": "namespaces/wojciech-phlambda.html#function_curry2"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\curry\u0028\u0029",
-            "name": "curry",
-            "summary": "Returns\u0020currying\u0020function\u0020awaiting\u00201\u0020argument.",
-            "url": "namespaces/wojciech-phlambda.html#function_curry"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\Internal\\ShouldNotBeImplementedInWrapper",
-            "name": "ShouldNotBeImplementedInWrapper",
-            "summary": "Attribute\u0020to\u0020mark\u0020methods\u0020that\u0020are\u0020not\u0020supposed\u0020to\u0020be\u0020implemented\u0020by\u0020Wrapper.",
-            "url": "classes/Wojciech-Phlambda-Internal-ShouldNotBeImplementedInWrapper.html"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\_and",
             "name": "_and",
@@ -215,36 +195,6 @@ Search.appendIndex(
             "name": "_or",
             "summary": "",
             "url": "namespaces/wojciech-phlambda.html#constant__or"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\_and\u0028\u0029",
-            "name": "_and",
-            "summary": "Function\u0020returns\u0020\u0060true\u0060\u0020if\u0020both\u0020arguments\u0020are\u0020\u0060true\u0060\u003B",
-            "url": "namespaces/wojciech-phlambda.html#function__and"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\both\u0028\u0029",
-            "name": "both",
-            "summary": "Function\u0020calling\u0020two\u0020provided\u0020functions\u0020and\u0020returning\u0020the\u0020\u0060\u0026\u0026\u0060\u0020of\u0020the\u0020results.",
-            "url": "namespaces/wojciech-phlambda.html#function_both"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\either\u0028\u0029",
-            "name": "either",
-            "summary": "Function\u0020calling\u0020two\u0020provided\u0020functions\u0020and\u0020returning\u0020the\u0020\u0060\u007C\u007C\u0060\u0020of\u0020the\u0020results.",
-            "url": "namespaces/wojciech-phlambda.html#function_either"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\not\u0028\u0029",
-            "name": "not",
-            "summary": "Function\u0020returns\u0020inverted\u0020result\u0020of\u0020the\u0020input.",
-            "url": "namespaces/wojciech-phlambda.html#function_not"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\neither\u0028\u0029",
-            "name": "neither",
-            "summary": "Function\u0020calling\u0020two\u0020provided\u0020functions\u0020and\u0020returning\u0020true\u0020when\u0020both\u0020are\u0020returning\u0020false.",
-            "url": "namespaces/wojciech-phlambda.html#function_neither"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\_or\u0028\u0029",
-            "name": "_or",
-            "summary": "Function\u0020returns\u0020\u0060true\u0060\u0020if\u0020at\u0020least\u0020one\u0020arguments\u0020is\u0020\u0060true\u0060\u003B",
-            "url": "namespaces/wojciech-phlambda.html#function__or"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\add",
             "name": "add",
@@ -281,6 +231,81 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/wojciech-phlambda.html#constant_sum"
         },                {
+            "fqsen": "\\Wojciech\\Phlambda\\below",
+            "name": "below",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_below"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\above",
+            "name": "above",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_above"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\toString",
+            "name": "toString",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_toString"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\startsWith",
+            "name": "startsWith",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_startsWith"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\matches",
+            "name": "matches",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_matches"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\curry3\u0028\u0029",
+            "name": "curry3",
+            "summary": "Returns\u0020currying\u0020function\u0020awaiting\u00203\u0020arguments.",
+            "url": "namespaces/wojciech-phlambda.html#function_curry3"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\curry2\u0028\u0029",
+            "name": "curry2",
+            "summary": "Returns\u0020currying\u0020function\u0020awaiting\u00202\u0020arguments.",
+            "url": "namespaces/wojciech-phlambda.html#function_curry2"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\curry\u0028\u0029",
+            "name": "curry",
+            "summary": "Returns\u0020currying\u0020function\u0020awaiting\u00201\u0020argument.",
+            "url": "namespaces/wojciech-phlambda.html#function_curry"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\Internal\\ShouldNotBeImplementedInWrapper",
+            "name": "ShouldNotBeImplementedInWrapper",
+            "summary": "Attribute\u0020to\u0020mark\u0020methods\u0020that\u0020are\u0020not\u0020supposed\u0020to\u0020be\u0020implemented\u0020by\u0020Wrapper.",
+            "url": "classes/Wojciech-Phlambda-Internal-ShouldNotBeImplementedInWrapper.html"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\_and\u0028\u0029",
+            "name": "_and",
+            "summary": "Function\u0020returns\u0020\u0060true\u0060\u0020if\u0020both\u0020arguments\u0020are\u0020\u0060true\u0060\u003B",
+            "url": "namespaces/wojciech-phlambda.html#function__and"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\both\u0028\u0029",
+            "name": "both",
+            "summary": "Function\u0020calling\u0020two\u0020provided\u0020functions\u0020and\u0020returning\u0020the\u0020\u0060\u0026\u0026\u0060\u0020of\u0020the\u0020results.",
+            "url": "namespaces/wojciech-phlambda.html#function_both"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\either\u0028\u0029",
+            "name": "either",
+            "summary": "Function\u0020calling\u0020two\u0020provided\u0020functions\u0020and\u0020returning\u0020the\u0020\u0060\u007C\u007C\u0060\u0020of\u0020the\u0020results.",
+            "url": "namespaces/wojciech-phlambda.html#function_either"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\not\u0028\u0029",
+            "name": "not",
+            "summary": "Function\u0020returns\u0020inverted\u0020result\u0020of\u0020the\u0020input.",
+            "url": "namespaces/wojciech-phlambda.html#function_not"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\neither\u0028\u0029",
+            "name": "neither",
+            "summary": "Function\u0020calling\u0020two\u0020provided\u0020functions\u0020and\u0020returning\u0020true\u0020when\u0020both\u0020are\u0020returning\u0020false.",
+            "url": "namespaces/wojciech-phlambda.html#function_neither"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\_or\u0028\u0029",
+            "name": "_or",
+            "summary": "Function\u0020returns\u0020\u0060true\u0060\u0020if\u0020at\u0020least\u0020one\u0020arguments\u0020is\u0020\u0060true\u0060\u003B",
+            "url": "namespaces/wojciech-phlambda.html#function__or"
+        },                {
             "fqsen": "\\Wojciech\\Phlambda\\add\u0028\u0029",
             "name": "add",
             "summary": "Returns\u0020sum\u0020of\u0020two\u0020numbers.",
@@ -316,16 +341,6 @@ Search.appendIndex(
             "summary": "Returns\u0020sum\u0020of\u0020all\u0020elements.",
             "url": "namespaces/wojciech-phlambda.html#function_sum"
         },                {
-            "fqsen": "\\Wojciech\\Phlambda\\below",
-            "name": "below",
-            "summary": "",
-            "url": "namespaces/wojciech-phlambda.html#constant_below"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\above",
-            "name": "above",
-            "summary": "",
-            "url": "namespaces/wojciech-phlambda.html#constant_above"
-        },                {
             "fqsen": "\\Wojciech\\Phlambda\\below\u0028\u0029",
             "name": "below",
             "summary": "",
@@ -335,21 +350,6 @@ Search.appendIndex(
             "name": "above",
             "summary": "",
             "url": "namespaces/wojciech-phlambda.html#function_above"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\toString",
-            "name": "toString",
-            "summary": "",
-            "url": "namespaces/wojciech-phlambda.html#constant_toString"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\startsWith",
-            "name": "startsWith",
-            "summary": "",
-            "url": "namespaces/wojciech-phlambda.html#constant_startsWith"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\matches",
-            "name": "matches",
-            "summary": "",
-            "url": "namespaces/wojciech-phlambda.html#constant_matches"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\toString\u0028\u0029",
             "name": "toString",
