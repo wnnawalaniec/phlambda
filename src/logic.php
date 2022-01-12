@@ -22,8 +22,6 @@ function _and(bool...$v): bool|callable
     return curry2(fn (bool $input1, bool $input2) => $input1 && $input2)(...$v);
 }
 
-const _and = '\Wojciech\Phlambda\_and';
-
 /**
  * Function calling two provided functions and returning the `&&` of the results.
  *
@@ -45,8 +43,6 @@ function both(callable...$v): callable
 {
     return curry2(fn (callable $fn1, callable $fn2): callable => fn (mixed $x) => $fn1($x) && $fn2($x))(...$v);
 }
-
-const both = '\Wojciech\Phlambda\both';
 
 /**
  * Function calling two provided functions and returning the `||` of the results.
@@ -70,9 +66,6 @@ function either(callable...$v): callable
     return curry2(fn (callable $fn1, callable $fn2): callable => fn (mixed $x) => $fn1($x) || $fn2($x))(...$v);
 }
 
-const either = '\Wojciech\Phlambda\either';
-
-
 /**
  * Function returns inverted result of the input.
  *
@@ -88,8 +81,6 @@ function not(bool...$v): bool|callable
 {
     return curry(fn (bool $input) => !$input)(...$v);
 }
-
-const not = '\Wojciech\Phlambda\not';
 
 /**
  * Function calling two provided functions and returning true when both are returning false.
@@ -113,8 +104,6 @@ function neither(callable...$v): callable
     return curry2(fn (callable $fn1, callable $fn2): callable => fn (mixed $x) => not(either($fn1, $fn2)($x)))(...$v);
 }
 
-const neither = '\Wojciech\Phlambda\neither';
-
 /**
  * Function returns `true` if at least one arguments is `true`;
  *
@@ -132,5 +121,3 @@ function _or(bool...$v): bool|callable
 {
     return curry2(fn (bool $input1, bool $input2) => $input1 || $input2)(...$v);
 }
-
-const _or = '\Wojciech\Phlambda\_or';

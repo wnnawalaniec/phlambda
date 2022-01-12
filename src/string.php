@@ -21,8 +21,6 @@ function toString(mixed...$v): string|callable
     return curry(fn (mixed $item) => (string) $item)(...$v);
 }
 
-const toString = '\Wojciech\Phlambda\toString';
-
 /**
  * Returns true if given `$item` starts with `$expected` value.
  *
@@ -39,8 +37,6 @@ function startsWith(mixed...$v): bool|callable
 {
     return curry2(fn (string $expected, string $item) => str_starts_with($item, $expected))(...$v);
 }
-
-const startsWith = '\Wojciech\Phlambda\startsWith';
 
 /**
  * Test regular expression against a sting. Returns all matching elements or empty array if there aren't any.
@@ -60,5 +56,3 @@ function matches(string...$v): array|callable
         return $matches[0] ?? [];
     })(...$v);
 }
-
-const matches = '\Wojciech\Phlambda\matches';

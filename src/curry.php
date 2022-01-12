@@ -24,8 +24,6 @@ function curry3(callable $fn): callable
     };
 }
 
-const curry3 = '\Wojciech\Phlambda\curry3';
-
 /**
  * Returns currying function awaiting 2 arguments.
  *
@@ -44,8 +42,6 @@ function curry2(callable $fn): callable
     };
 }
 
-const curry2 = '\Wojciech\Phlambda\curry2';
-
 /**
  * Returns currying function awaiting 1 argument.
  *
@@ -62,5 +58,3 @@ function curry(callable $fn): callable
         };
     };
 }
-
-const curry = '\Wojciech\Phlambda\curry';

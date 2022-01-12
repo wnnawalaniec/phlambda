@@ -15,7 +15,8 @@
             "src/logic.php",
             "src/math.php",
             "src/predicates.php",
-            "src/string.php"
+            "src/string.php",
+            "src/constants.php"
         ]
     },
     "autoload-dev": {
