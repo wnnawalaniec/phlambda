@@ -42,4 +42,5 @@ const below = '\Wojciech\Phlambda\below';
 const above = '\Wojciech\Phlambda\above'; 
 const toString = '\Wojciech\Phlambda\toString'; 
 const startsWith = '\Wojciech\Phlambda\startsWith'; 
+const endsWith = '\Wojciech\Phlambda\endsWith'; 
 const matches = '\Wojciech\Phlambda\matches'; 

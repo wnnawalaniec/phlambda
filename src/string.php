@@ -39,6 +39,23 @@ function startsWith(mixed...$v): bool|callable
 }
 
 /**
+ * Returns true if given `$item` ends with `$expected` value.
+ *
+ * <blockquote><pre>endsWith('123', 'Lorem ipsum 123') // it will return true</pre></blockquote>
+ * <blockquote><pre>endsWith('123 ', 'Lorem ipsum 123') // it will return false</pre></blockquote>
+ * <blockquote><pre>endsWith('M 123', 'Lorem ipsum 123') // it will return false</pre></blockquote>
+ *
+ * @param string $expected Expected start of the string.
+ * @param string $item String we want to check.
+ * @return bool|callable If all arguments are given result is returned. Passing just some or none will result in curry function return.
+ */
+#[ShouldNotBeImplementedInWrapper]
+function endsWith(mixed...$v): bool|callable
+{
+    return curry2(fn (string $expected, string $item) => str_ends_with($item, $expected))(...$v);
+}
+
+/**
  * Test regular expression against a sting. Returns all matching elements or empty array if there aren't any.
  *
  * <blockquote><pre>matches('/([a-z]a)/', 'bananas') // it will return ['ba', 'na', 'na']</pre></blockquote>

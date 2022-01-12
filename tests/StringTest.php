@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Tests\Wojciech\Phlambda;
 
+use function Wojciech\Phlambda\endsWith;
 use function Wojciech\Phlambda\matches;
 use function Wojciech\Phlambda\startsWith;
 use function Wojciech\Phlambda\toString;
@@ -31,6 +32,16 @@ class StringTest extends BaseTest
         $this->assertSame(false, startsWith(' Lorem', 'Lorem ipsum 123'));
         $this->assertSame(true, startsWith('Żó', 'Żółć'));
         $this->assertSame(false, startsWith('Żó', 'Zolc'));
+    }
+
+    public function testEndsWith(): void
+    {
+        $this->assertSame(true, endsWith('oo', 'Foo'));
+        $this->assertSame(true, endsWith('oo ', 'Foo '));
+        $this->assertSame(false, endsWith('oo ', 'Foo'));
+        $this->assertSame(false, endsWith('O', 'Foo'));
+        $this->assertSame(true, endsWith('ółć', 'Żółć'));
+        $this->assertSame(false, endsWith('ć', 'Zolc'));
     }
 
     public function testMatches(): void
