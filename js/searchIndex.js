@@ -96,6 +96,11 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/wojciech-phlambda.html#constant_append"
         },                {
+            "fqsen": "\\Wojciech\\Phlambda\\clamp",
+            "name": "clamp",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_clamp"
+        },                {
             "fqsen": "\\Wojciech\\Phlambda\\concat",
             "name": "concat",
             "summary": "",
@@ -355,6 +360,11 @@ Search.appendIndex(
             "name": "above",
             "summary": "",
             "url": "namespaces/wojciech-phlambda.html#function_above"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\clamp\u0028\u0029",
+            "name": "clamp",
+            "summary": "Restricts\u0020value\u0020to\u0020given\u0020minimum\u0020and\u0020maximum.",
+            "url": "namespaces/wojciech-phlambda.html#function_clamp"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\toString\u0028\u0029",
             "name": "toString",
