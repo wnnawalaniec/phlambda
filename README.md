@@ -25,7 +25,6 @@ Features:
 - [Usage](#usage)
 - [Docs](#docs)
 - [Currying](#currying)
-- [TODO](#todo)
 - [Development Guides](#development-guides)
   - [Tools](#tools)
 - [Backstory](#backstory)
@@ -98,10 +97,6 @@ $result = reduce(\Wojciech\Phlambda\concat, '', $array); // $result = 'abc'
 $concat = reduce(\Wojciech\Phlambda\concat, ''); // now it will return callback accepting last param from reduce - an array
 $result = $concat($array); // $result = 'abc'
 ```
-
-# TODO
-- implement more methods
-- add placeholders for curry functions - it seems as interesting thing to do
 
 # Development Guides
 Check out [CONTRIBUTING file](https://github.com/wnnawalaniec/phlambda/blob/master/CONTRIBUTING.md)
