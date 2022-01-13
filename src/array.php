@@ -204,7 +204,7 @@ function drop(int|string|array...$v): callable|string|array
  * <blockquote><pre>dropLast(2, '123'); // it will return '12'</pre></blockquote>
  * <blockquote><pre>dropLast(3, '123'); // it will return ''</pre></blockquote>
  *
- * @see drop()
+ * @see drop(), dropLastWhile()
  * @param int $n First param must number of the elements to be dropped.
  * @param array|string $input Next param must be array or string we wish to consider.
  * @return callable|array|string If all arguments are given result is returned. Passing just some or none will result in curry function return.
@@ -221,6 +221,39 @@ function dropLast(int|string|array...$v): callable|string|array
         }
 
         return array_slice($input, 0, -$n);
+    })(...$v);
+}
+
+/**
+ * Return copy of an array or string but without tailing elements which match predicate.
+ *
+ * It passes each value from the right to the supplied predicate function, skipping elements until
+ * the predicate function returns `false`. The predicate function is applied to one argument: (value).
+ *
+ * Basic usage may look like this:
+ * <blockquote><pre>dropLastWhile(below(4), [1, 2, 3, 4, 3, 2, 1]); // it will return [1, 2, 3, 4]</pre></blockquote>
+ * <blockquote><pre> dropLastWhile(fn($x) => $x !== 'f', 'abcdefedcba' // it will return 'abcdef'</pre></blockquote>
+ *
+ * @see drop(), dropLast()
+ * @param callable(mixed): bool $fn First param predicate for matching elements.
+ * @param array|string $input Next param must be array or string we wish to consider.
+ * @return callable|array|string If all arguments are given result is returned. Passing just some or none will result in curry function return.
+ */
+#[ShouldNotBeImplementedInWrapper]
+function dropLastWhile(callable|string|array...$v): callable|string|array
+{
+    return curry2(function (callable $fn, array|string $item): array|string {
+        $result = is_string($item) ? str_split($item) : $item;
+        end($result);
+        while (key($result) !== null) {
+            if ($fn(current($result))) {
+                array_pop($result);
+                end($result);
+            } else {
+                break;
+            }
+        }
+        return is_string($item) ? implode('', $result) : $result;
     })(...$v);
 }
 

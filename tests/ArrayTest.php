@@ -16,6 +16,7 @@ use function Wojciech\Phlambda\{_,
     concat,
     drop,
     dropLast,
+    dropLastWhile,
     dropRepeats,
     filter,
     flat,
@@ -117,6 +118,15 @@ class ArrayTest extends BaseTest
         $this->assertSame([1], dropLast(2, [1, 2, 3]));
         $this->assertSame([], dropLast(4, [1, 2, 3]));
         $this->assertSame([1, 2, 3], dropLast(-1, [1, 2, 3]));
+    }
+
+    public function testDropLastWhile(): void
+    {
+        $this->assertSame([1, 2, 3, 4], dropLastWhile(below(4), [1, 2, 3, 4, 3, 2, 1]));
+        $this->assertSame([6 => 0, 1, 2, 3, 0 => 4], dropLastWhile(below(4), [6 => 0, 1, 2, 3, 0=> 4, 3, 2, 1]));
+        $this->assertSame([4, 5, 6], dropLastWhile(below(4), [4, 5, 6]));
+        $this->assertSame('abcdef', dropLastWhile(fn($x) => $x !== 'f', 'abcdefedcba'));
+        $this->assertSame('', dropLastWhile(fn($x) => $x !== 'z', 'abc'));
     }
 
     public function testDropRepeats(): void
