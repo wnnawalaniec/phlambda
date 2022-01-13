@@ -1,9 +1,12 @@
+<p align="center">
+ <img src="https://i.ibb.co/44kx283/repository-open-graph-template2.png"/>
+</a>
+
 [![Build Status](https://travis-ci.com/wnnawalaniec/phlambda.svg?branch=master)](https://travis-ci.com/wnnawalaniec/phlambda)
 [![Version](http://poser.pugx.org/wojciech.nawalaniec/phlambda/version)](https://packagist.org/packages/wojciech.nawalaniec/phlambda)
 [![Coverage Status](https://coveralls.io/repos/github/wnnawalaniec/phlambda/badge.svg?branch=master)](https://coveralls.io/github/wnnawalaniec/phlambda?branch=master)
 [![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fwnnawalaniec%2Fphlambda%2Fmaster)](https://dashboard.stryker-mutator.io/reports/github.com/wnnawalaniec/phlambda/master)
 [![Latest Stable Version](http://poser.pugx.org/wojciech.nawalaniec/phlambda/v)](https://packagist.org/packages/wojciech.nawalaniec/phlambda)
-[![Latest Unstable Version](http://poser.pugx.org/wojciech.nawalaniec/phlambda/v/unstable)](https://packagist.org/packages/wojciech.nawalaniec/phlambda)
 [![Total Downloads](http://poser.pugx.org/wojciech.nawalaniec/phlambda/downloads)](https://packagist.org/packages/wojciech.nawalaniec/phlambda)
 [![License](http://poser.pugx.org/wojciech.nawalaniec/phlambda/license)](https://packagist.org/packages/wojciech.nawalaniec/phlambda)
 [![PHP Version Require](http://poser.pugx.org/wojciech.nawalaniec/phlambda/require/php)](https://packagist.org/packages/wojciech.nawalaniec/phlambda)
