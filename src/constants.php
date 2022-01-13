@@ -1,16 +1,17 @@
 <?php
 
 /**
- * This file is auto-generated.
+ * This file is auto-generated (`make generate-constants`)
  */
 
 declare(strict_types=1);
 
 namespace Wojciech\Phlambda;
-const adjust = '\Wojciech\Phlambda\adjust';
-const all = '\Wojciech\Phlambda\all';
+const adjust = '\Wojciech\Phlambda\adjust'; 
+const all = '\Wojciech\Phlambda\all'; 
 const any = '\Wojciech\Phlambda\any'; 
 const append = '\Wojciech\Phlambda\append'; 
+const clamp = '\Wojciech\Phlambda\clamp'; 
 const concat = '\Wojciech\Phlambda\concat'; 
 const diff = '\Wojciech\Phlambda\diff'; 
 const drop = '\Wojciech\Phlambda\drop'; 
