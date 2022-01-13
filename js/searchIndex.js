@@ -41,6 +41,11 @@ Search.appendIndex(
             "summary": "Return\u0020copy\u0020of\u0020an\u0020array\u0020or\u0020string\u0020but\u0020without\u0020\u0060n\u0060\u0020last\u0020elements\u0020of\u0020the\u0020given\u0020\u0060input\u0060.",
             "url": "namespaces/wojciech-phlambda.html#function_dropLast"
         },                {
+            "fqsen": "\\Wojciech\\Phlambda\\dropLastWhile\u0028\u0029",
+            "name": "dropLastWhile",
+            "summary": "Return\u0020copy\u0020of\u0020an\u0020array\u0020or\u0020string\u0020but\u0020without\u0020tailing\u0020elements\u0020which\u0020match\u0020predicate.",
+            "url": "namespaces/wojciech-phlambda.html#function_dropLastWhile"
+        },                {
             "fqsen": "\\Wojciech\\Phlambda\\dropRepeats\u0028\u0029",
             "name": "dropRepeats",
             "summary": "Return\u0020copy\u0020of\u0020an\u0020array\u0020but\u0020without\u0020repeating\u0020elements.",
@@ -96,11 +101,6 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/wojciech-phlambda.html#constant_append"
         },                {
-            "fqsen": "\\Wojciech\\Phlambda\\clamp",
-            "name": "clamp",
-            "summary": "",
-            "url": "namespaces/wojciech-phlambda.html#constant_clamp"
-        },                {
             "fqsen": "\\Wojciech\\Phlambda\\concat",
             "name": "concat",
             "summary": "",
@@ -120,6 +120,11 @@ Search.appendIndex(
             "name": "dropLast",
             "summary": "",
             "url": "namespaces/wojciech-phlambda.html#constant_dropLast"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\dropLastWhile",
+            "name": "dropLastWhile",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_dropLastWhile"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\dropRepeats",
             "name": "dropRepeats",
@@ -265,6 +270,11 @@ Search.appendIndex(
             "name": "matches",
             "summary": "",
             "url": "namespaces/wojciech-phlambda.html#constant_matches"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\clamp",
+            "name": "clamp",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_clamp"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\curry3\u0028\u0029",
             "name": "curry3",
