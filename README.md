@@ -8,7 +8,7 @@
 [![License](http://poser.pugx.org/wojciech.nawalaniec/phlambda/license)](https://packagist.org/packages/wojciech.nawalaniec/phlambda)
 [![PHP Version Require](http://poser.pugx.org/wojciech.nawalaniec/phlambda/require/php)](https://packagist.org/packages/wojciech.nawalaniec/phlambda)
 
-Functional library for PHP.
+Small library for PHP with set of usefull functions for functional programming.
 
 Features:
  - set of useful functions helpful in functional programming
