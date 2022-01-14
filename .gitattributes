@@ -8,3 +8,4 @@
 /phpunit.xml.dist export-ignore
 /tools export-ignore
 /Makefile export-ignore
+/.github export-ignore
