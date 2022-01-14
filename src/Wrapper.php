@@ -18,13 +18,23 @@ namespace Wojciech\Phlambda;
  *
  * @see _()
  */
-class Wrapper implements \ArrayAccess
+class Wrapper implements \ArrayAccess, \IteratorAggregate, \Countable
 {
     public function __construct(private array $array = []) {}
 
     public static function wrap(array $array): self
     {
         return new self($array);
+    }
+
+    public function getIterator(): \ArrayIterator
+    {
+        return new \ArrayIterator($this->array);
+    }
+
+    public function count(): int
+    {
+        return \count($this->array);
     }
 
     public function offsetExists(mixed $offset): bool

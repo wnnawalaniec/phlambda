@@ -27,6 +27,23 @@ class WrapperTest extends BaseTest
         $this->assertSame('bar', $wrapper['foo']);
     }
 
+    public function testTraversable(): void
+    {
+        $expectedArray = [1, 2, 3];
+        $wrapper = new Wrapper($expectedArray);
+        $array = [];
+        foreach ($wrapper as $item) {
+            $array[] = $item;
+        }
+
+        $this->assertSame($expectedArray, $array);
+    }
+
+    public function testCountable(): void
+    {
+        $this->assertSame(3, \count(new Wrapper([1, 2, 3])));
+    }
+
     public function testAny(): void
     {
         $this->assertTrue(_([1,2,3])->any(below(2)));
