@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
  
+## v0.0.9 - 2022-01-14
+
+This version adds tool helping in development by generating constatns file. Also new function is added.
+ 
+### Added
+ - added functions `clamp()`, `dropLastWhile()`
+ - added changelog
+ 
+### Changed
+ - made `Wrapper` both `Traversable` and `Countable`
+ - `.github` won't be exported to packages
+
 ## v0.0.8 - 2022-01-12
 
 This version adds tool helping in development by generating constatns file. Also new function is added.
