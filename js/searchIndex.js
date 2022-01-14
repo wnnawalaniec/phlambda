@@ -411,6 +411,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Wojciech-Phlambda-Wrapper.html#method_wrap"
         },                {
+            "fqsen": "\\Wojciech\\Phlambda\\Wrapper\u003A\u003AgetIterator\u0028\u0029",
+            "name": "getIterator",
+            "summary": "",
+            "url": "classes/Wojciech-Phlambda-Wrapper.html#method_getIterator"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\Wrapper\u003A\u003Acount\u0028\u0029",
+            "name": "count",
+            "summary": "",
+            "url": "classes/Wojciech-Phlambda-Wrapper.html#method_count"
+        },                {
             "fqsen": "\\Wojciech\\Phlambda\\Wrapper\u003A\u003AoffsetExists\u0028\u0029",
             "name": "offsetExists",
             "summary": "",
