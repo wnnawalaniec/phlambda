@@ -418,6 +418,39 @@ function reduce(...$v): mixed
 }
 
 /**
+ * Returns new list, composed of n-tuples of consecutive elements.
+ *
+ * If n is greater than the length of the list, an empty list is returned. Keys are preserved.
+ *
+ * Example use:
+ * <blockquote><pre>tuples(2, [1, 2, 3, 4, 5])  // Returns [1, 2], [2, 3], [3, 4], [4, 5]]</pre></blockquote>
+ * <blockquote><pre>tuples(2, ['a' => 1, 2, 'c' => 3, 4, 5])  // Returns ['a' => 1, 2], [2, 'c' => 3], ['c' => 3, 4], [4, 5]]</pre></blockquote>
+ * <blockquote><pre>tuples(3, [1, 2, 3, 4, 5])  // Returns [[1, 2, 3], [2, 3, 4], [3, 4, 5]]</pre></blockquote>
+ * <blockquote><pre>tuples(7, [1, 2, 3, 4, 5])  // Returns []</pre></blockquote>
+ *
+ * @param int $size Size of the tuples
+ * @param array $input The input array
+ * @return mixed If all arguments are given result is returned. Returned type will be same as <var>$fn</var> callback. Passing just some or none will result in curry function return.
+ */
+#[ShouldNotBeImplementedInWrapper]
+function tuples(mixed...$v): callable|array
+{
+    return curry2(function (int $size, array $input): array {
+        $result = [];
+
+        foreach (array_values($input) as $idx => $item) {
+            if ($idx + $size > count($input)) {
+                break;
+            }
+
+            $result[] = array_slice($input, $idx, $size);
+        }
+
+        return $result;
+    })(...$v);
+}
+
+/**
  * Wraps array with Wrapper object.
  *
  * Example:

@@ -23,7 +23,8 @@ use function Wojciech\Phlambda\{_,
     flatMap,
     map,
     multiply,
-    reduce};
+    reduce,
+    tuples};
 use const Wojciech\Phlambda\_;
 use const Wojciech\Phlambda\add;
 use const Wojciech\Phlambda\concat;
@@ -182,6 +183,15 @@ class ArrayTest extends BaseTest
         $this->expectException(\InvalidArgumentException::class);
 
         reduce(concat, null, []);
+    }
+
+    public function testTuples(): void
+    {
+        $this->assertSame([[1, 2], [2, 3], [3, 4], [4, 5]], tuples(2, [1, 2, 3, 4, 5]));
+        $this->assertSame([[1, 2], [2, 3], [3, 4], [4, 5]], tuples(2, [1, 2, 3, 4, 5]));
+        $this->assertSame([['a' => 1, 2], [2, 'c' => 3], ['c' => 3, 4], [4, 5]], tuples(2, ['a' => 1, 2, 'c' => 3, 4, 5]));
+        $this->assertSame([[1, 2, 3], [2, 3, 4], [3, 4, 5]], tuples(3, [1, 2, 3, 4, 5]));
+        $this->assertSame([], tuples(7, [1, 2, 3, 4, 5]));
     }
 
     public function testWrap(): void

@@ -22,6 +22,7 @@ const flatMap = '\Wojciech\Phlambda\flatMap';
 const flat = '\Wojciech\Phlambda\flat'; 
 const map = '\Wojciech\Phlambda\map'; 
 const reduce = '\Wojciech\Phlambda\reduce'; 
+const tuples = '\Wojciech\Phlambda\tuples'; 
 const _ = '\Wojciech\Phlambda\_'; 
 const curry3 = '\Wojciech\Phlambda\curry3'; 
 const curry2 = '\Wojciech\Phlambda\curry2'; 
