@@ -26,6 +26,11 @@ Search.appendIndex(
             "summary": "Concat\u0020two\u0020elements\u0020arrays\u0020or\u0020strings.",
             "url": "namespaces/wojciech-phlambda.html#function_concat"
         },                {
+            "fqsen": "\\Wojciech\\Phlambda\\collectBy\u0028\u0029",
+            "name": "collectBy",
+            "summary": "Splits\u0020a\u0020list\u0020into\u0020sub\u002Dlist\u0020based\u0020on\u0020the\u0020result\u0020of\u0020calling\u0020a\u0020key\u002Dreturning\u0020function.",
+            "url": "namespaces/wojciech-phlambda.html#function_collectBy"
+        },                {
             "fqsen": "\\Wojciech\\Phlambda\\diff\u0028\u0029",
             "name": "diff",
             "summary": "Applies\u0020given\u0020function\u0020to\u0020each\u0020element\u0020of\u0020the\u0020array\u0020and\u0020return\u0020new\u0020one\u0020with\u0020the\u0020results.",
@@ -76,6 +81,11 @@ Search.appendIndex(
             "summary": "Reduces\u0020array\u0020to\u0020single\u0020value\u0020using\u0020provided\u0020callback.",
             "url": "namespaces/wojciech-phlambda.html#function_reduce"
         },                {
+            "fqsen": "\\Wojciech\\Phlambda\\tuples\u0028\u0029",
+            "name": "tuples",
+            "summary": "Returns\u0020new\u0020list,\u0020composed\u0020of\u0020n\u002Dtuples\u0020of\u0020consecutive\u0020elements.",
+            "url": "namespaces/wojciech-phlambda.html#function_tuples"
+        },                {
             "fqsen": "\\Wojciech\\Phlambda\\_\u0028\u0029",
             "name": "_",
             "summary": "Wraps\u0020array\u0020with\u0020Wrapper\u0020object.",
@@ -105,6 +115,11 @@ Search.appendIndex(
             "name": "concat",
             "summary": "",
             "url": "namespaces/wojciech-phlambda.html#constant_concat"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\collectBy",
+            "name": "collectBy",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_collectBy"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\diff",
             "name": "diff",
@@ -155,6 +170,11 @@ Search.appendIndex(
             "name": "reduce",
             "summary": "",
             "url": "namespaces/wojciech-phlambda.html#constant_reduce"
+        },                {
+            "fqsen": "\\Wojciech\\Phlambda\\tuples",
+            "name": "tuples",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_tuples"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\_",
             "name": "_",

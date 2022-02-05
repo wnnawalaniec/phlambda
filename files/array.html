@@ -147,6 +147,13 @@ there is any which doesn&#039;t.</dd>
 <dd>Concat two elements arrays or strings.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -function -">
+    <a href="namespaces/wojciech-phlambda.html#function_collectBy">collectBy()</a>
+    <span>
+                                &nbsp;: array&lt;string|int, mixed&gt;|callable    </span>
+</dt>
+<dd>Splits a list into sub-list based on the result of calling a key-returning function.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -function -">
     <a href="namespaces/wojciech-phlambda.html#function_diff">diff()</a>
     <span>
                                 &nbsp;: callable|array&lt;string|int, mixed&gt;    </span>
@@ -215,6 +222,13 @@ there is any which doesn&#039;t.</dd>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd>Reduces array to single value using provided callback.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -function -">
+    <a href="namespaces/wojciech-phlambda.html#function_tuples">tuples()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Returns new list, composed of n-tuples of consecutive elements.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -function -">
     <a href="namespaces/wojciech-phlambda.html#function__">_()</a>
@@ -555,6 +569,71 @@ keys will behave see it's documentation.</p>
     
 </article>
                     <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_collectBy">
+        collectBy()
+        <a href="namespaces/wojciech-phlambda.html#function_collectBy" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">176</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Splits a list into sub-list based on the result of calling a key-returning function.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">collectBy</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable|array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|callable</span></code>
+
+        <section class="phpdocumentor-description"><p>Example use:</p>
+<blockquote><pre class="prettyprint">
+collectBy(
+fn ($x) => $x['type'],
+[
+['type' => 'dinner', 'item' => 'burger'],
+['type' => 'breakfast', 'item' => 'coffee'],
+['type' => 'dinner', 'item' => 'soup'],
+['type' => 'breakfast', 'item' => 'cinnabon'],
+]
+);
+<p>Will return:
+[
+[
+['type' =&gt; 'dinner', 'item' =&gt; 'burger'],
+['type' =&gt; 'dinner', 'item' =&gt; 'soup'],
+],
+[
+['type' =&gt; 'breakfast', 'item' =&gt; 'coffee'],
+['type' =&gt; 'breakfast', 'item' =&gt; 'cinnabon'],
+]
+]
+</pre></blockquote></p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$v</span>
+                : <span class="phpdocumentor-signature__argument__return-type">callable|array&lt;string|int, mixed&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|callable</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Returned type will be same as passed parameters. Passing just some or none will result in curry function return.</p>
+</section>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
     <h4 class="phpdocumentor-element__name" id="function_diff">
         diff()
         <a href="namespaces/wojciech-phlambda.html#function_diff" class="headerlink"><i class="fas fa-link"></i></a>
@@ -562,7 +641,7 @@ keys will behave see it's documentation.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">158</span>
+    <span class="phpdocumentor-element-found-in__line">208</span>
 
     </aside>
 
@@ -622,7 +701,7 @@ Type of array will be same as type of returned values from given callback.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">180</span>
+    <span class="phpdocumentor-element-found-in__line">230</span>
 
     </aside>
 
@@ -685,7 +764,7 @@ For strings, <code class="prettyprint">mbstring</code> functions are used.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">212</span>
+    <span class="phpdocumentor-element-found-in__line">262</span>
 
     </aside>
 
@@ -749,7 +828,7 @@ For strings, <code class="prettyprint">mbstring</code> functions are used.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">242</span>
+    <span class="phpdocumentor-element-found-in__line">292</span>
 
     </aside>
 
@@ -811,7 +890,7 @@ the predicate function returns <code class="prettyprint">false</code>. The predi
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">274</span>
+    <span class="phpdocumentor-element-found-in__line">324</span>
 
     </aside>
 
@@ -859,7 +938,7 @@ solution.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">297</span>
+    <span class="phpdocumentor-element-found-in__line">347</span>
 
     </aside>
 
@@ -903,7 +982,7 @@ solution.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">319</span>
+    <span class="phpdocumentor-element-found-in__line">369</span>
 
     </aside>
 
@@ -973,7 +1052,7 @@ flatMap($duplicate, [1, 2, 3]); // it will return [1, 1, 2, 2, 3, 3]
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">344</span>
+    <span class="phpdocumentor-element-found-in__line">394</span>
 
     </aside>
 
@@ -1037,7 +1116,7 @@ flat(true, [[[1]], [[2]], [[3]]]); // it will return [1, 2, 3]
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">380</span>
+    <span class="phpdocumentor-element-found-in__line">430</span>
 
     </aside>
 
@@ -1097,7 +1176,7 @@ Type of array will be same as type of returned values from given callback.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">403</span>
+    <span class="phpdocumentor-element-found-in__line">453</span>
 
     </aside>
 
@@ -1156,6 +1235,54 @@ be thrown.</p>
     
 </article>
                     <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_tuples">
+        tuples()
+        <a href="namespaces/wojciech-phlambda.html#function_tuples" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">484</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns new list, composed of n-tuples of consecutive elements.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">tuples</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"><p>If n is greater than the length of the list, an empty list is returned. Keys are preserved.</p>
+<p>Example use:</p>
+<blockquote><pre class="prettyprint">tuples(2, [1, 2, 3, 4, 5])  // Returns [1, 2], [2, 3], [3, 4], [4, 5]]</pre></blockquote>
+<blockquote><pre class="prettyprint">tuples(2, ['a' => 1, 2, 'c' => 3, 4, 5])  // Returns ['a' => 1, 2], [2, 'c' => 3], ['c' => 3, 4], [4, 5]]</pre></blockquote>
+<blockquote><pre class="prettyprint">tuples(3, [1, 2, 3, 4, 5])  // Returns [[1, 2, 3], [2, 3, 4], [3, 4, 5]]</pre></blockquote>
+<blockquote><pre class="prettyprint">tuples(7, [1, 2, 3, 4, 5])  // Returns []</pre></blockquote>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$v</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Returned type will be same as <var>$fn</var> callback. Passing just some or none will result in curry function return.</p>
+</section>
+
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
     <h4 class="phpdocumentor-element__name" id="function__">
         _()
         <a href="namespaces/wojciech-phlambda.html#function__" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1163,7 +1290,7 @@ be thrown.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">435</span>
+    <span class="phpdocumentor-element-found-in__line">517</span>
 
     </aside>
 
