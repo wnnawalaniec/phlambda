@@ -142,6 +142,56 @@ function concat(string|array...$v): callable|string|array
 }
 
 /**
+ * Splits a list into sub-list based on the result of calling a key-returning function.
+ *
+ * Example use:
+ * <blockquote><pre>
+ * collectBy(
+        fn ($x) => $x['type'],
+        [
+            ['type' => 'dinner', 'item' => 'burger'],
+            ['type' => 'breakfast', 'item' => 'coffee'],
+            ['type' => 'dinner', 'item' => 'soup'],
+            ['type' => 'breakfast', 'item' => 'cinnabon'],
+        ]
+   );
+ *
+ * Will return:
+ * [
+        [
+            ['type' => 'dinner', 'item' => 'burger'],
+            ['type' => 'dinner', 'item' => 'soup'],
+        ],
+        [
+            ['type' => 'breakfast', 'item' => 'coffee'],
+            ['type' => 'breakfast', 'item' => 'cinnabon'],
+        ]
+   ]
+ * </pre></blockquote>
+ *
+ * @param callable(mixed): mixed $fn function accepting single value and returning value of type which can be used as array key
+ * @param array $input Array to split
+ * @return array|callable If all arguments are given result is returned. Returned type will be same as passed parameters. Passing just some or none will result in curry function return.
+ */
+#[ShouldNotBeImplementedInWrapper]
+function collectBy(callable|array...$v): callable|array
+{
+    return curry2(function (callable $fn, array $input): array {
+        $groupedByKey = reduce(function ($o, $x) use ($fn) {
+            $key = $fn($x);
+            $o[$key][] = $x;
+            return $o;
+        }, [], $input);
+        $groupedListWithoutKeys = [];
+        foreach ($groupedByKey as $list) {
+            $groupedListWithoutKeys[] = $list;
+        }
+
+        return $groupedListWithoutKeys;
+    })(...$v);
+}
+
+/**
  * Applies given function to each element of the array and return new one with the results.
  *
  * It works like `array_map`. Exactly like this.
@@ -395,7 +445,7 @@ function map(...$v): array|callable
  * <blockquote><pre>reduce(concat(), null, ['2', '3', '4'])  // Returns '234'</pre></blockquote>
  * <blockquote><pre>reduce(concat(), '')  // Returns curring function accepting array as param</pre></blockquote>
  *
- * @param callable(mixed): bool $fn Function must accept one param and return bool.
+ * @param callable(mixed, mixed): bool $fn Functions which accepts two arguments. First will be accumulator and second current value from array
  * @param array $input The input array
  * @return mixed If all arguments are given result is returned. Returned type will be same as <var>$fn</var> callback. Passing just some or none will result in curry function return.
  * @throws \InvalidArgumentException When array is empty and null initial value was passed.
@@ -407,14 +457,13 @@ function reduce(...$v): mixed
             throw new \InvalidArgumentException('Empty array and no initial value given');
         }
 
-        if ($initialValue) {
+        if (!is_null($initialValue)) {
             return array_reduce($input, $fn, $initialValue);
         }
 
         $initialValue = array_shift($input);
         return array_reduce($input, $fn, $initialValue);
-    })(
-        ...$v);
+    })(...$v);
 }
 
 /**

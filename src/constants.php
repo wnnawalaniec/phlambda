@@ -12,6 +12,7 @@ const all = '\Wojciech\Phlambda\all';
 const any = '\Wojciech\Phlambda\any'; 
 const append = '\Wojciech\Phlambda\append'; 
 const concat = '\Wojciech\Phlambda\concat'; 
+const collectBy = '\Wojciech\Phlambda\collectBy'; 
 const diff = '\Wojciech\Phlambda\diff'; 
 const drop = '\Wojciech\Phlambda\drop'; 
 const dropLast = '\Wojciech\Phlambda\dropLast'; 

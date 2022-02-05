@@ -106,5 +106,5 @@ function multiply(mixed ...$v): callable|float|int
 #[ShouldNotBeImplementedInWrapper]
 function sum(mixed ...$v): callable|float|int
 {
-    return reduce(add(), 0.0)(...$v);
+    return reduce(add(), 0)(...$v);
 }

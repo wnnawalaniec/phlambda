@@ -12,7 +12,7 @@ use function Wojciech\Phlambda\{_,
     any,
     append,
     below,
-    clamp,
+    collectBy,
     concat,
     drop,
     dropLast,
@@ -101,6 +101,30 @@ class ArrayTest extends BaseTest
         concat(['a'], 'b');
     }
 
+    public function testCollectBy(): void
+    {
+        $this->assertSame(
+            [
+                [
+                    ['type' => 'dinner', 'item' => 'burger'],
+                    ['type' => 'dinner', 'item' => 'soup'],
+                ],
+                [
+                    ['type' => 'breakfast', 'item' => 'coffee'],
+                    ['type' => 'breakfast', 'item' => 'cinnabon'],
+                ]
+            ],
+            collectBy(
+                fn ($x) => $x['type'],
+                [
+                    ['type' => 'dinner', 'item' => 'burger'],
+                    ['type' => 'breakfast', 'item' => 'coffee'],
+                    ['type' => 'dinner', 'item' => 'soup'],
+                    ['type' => 'breakfast', 'item' => 'cinnabon'],
+                ]
+            )
+        );
+    }
     public function testDrop(): void
     {
         $this->assertSame('łć', drop(2, 'żółć'));
