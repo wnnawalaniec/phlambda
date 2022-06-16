@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Tests\Wojciech\Phlambda;
 
-use Wojciech\Phlambda\Internal\ShouldNotBeImplementedInWrapper;
+use Wojciech\Phlambda\Internal\Attributes\ShouldNotBeImplementedInWrapper;
 use Wojciech\Phlambda\Wrapper;
 use function Wojciech\Phlambda\{_,
     above,

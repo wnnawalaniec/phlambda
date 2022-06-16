@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Wojciech\Phlambda;
 
-use Wojciech\Phlambda\Internal\ShouldNotBeImplementedInWrapper;
+use Wojciech\Phlambda\Internal\Attributes\ShouldNotBeImplementedInWrapper;
 
 #[ShouldNotBeImplementedInWrapper]
 function below(float|int $a): callable

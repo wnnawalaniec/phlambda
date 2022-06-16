@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Wojciech\Phlambda\Internal;
+namespace Wojciech\Phlambda\Internal\Attributes;
 
 use Wojciech\Phlambda\Wrapper;
 

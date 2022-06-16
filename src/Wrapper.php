@@ -44,7 +44,7 @@ class Wrapper implements \ArrayAccess, \IteratorAggregate, \Countable
 
     public function offsetGet(mixed $offset): mixed
     {
-        return $this->array[$offset] ?? null;
+        return $this->array[$offset];
     }
 
     public function offsetSet(mixed $offset, mixed $value): void
@@ -113,6 +113,11 @@ class Wrapper implements \ArrayAccess, \IteratorAggregate, \Countable
         return self::wrap(concat($this->array, ($array instanceof Wrapper ? $array->toArray() : $array)));
     }
 
+    /**
+     * Returns difference between this object and given array or wrapper.
+     *
+     * @see diff()
+     */
     public function diff(array|Wrapper $array): self
     {
         return self::wrap(diff($this->array, ($array instanceof  Wrapper ? $array->toArray() : $array)));

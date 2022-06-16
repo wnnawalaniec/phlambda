@@ -72,6 +72,12 @@ class WrapperTest extends BaseTest
         $this->assertSame([1, 2, 'a', 'b'], _([1, 2])->concat(_(['a', 'b']))->toArray());
     }
 
+    public function testDiff(): void
+    {
+        $this->assertSame([1, 2], _([1, 2, 3])->diff([3, 4, 5])->toArray());
+        $this->assertSame([1, 2], _([1, 2, 3])->diff(_([3, 4, 5]))->toArray());
+    }
+
     public function testDrop(): void
     {
         $this->assertSame([3, 4], _([1, 2, 3, 4])->drop(2)->toArray());

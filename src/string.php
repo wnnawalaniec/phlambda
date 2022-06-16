@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Wojciech\Phlambda;
 
-use Wojciech\Phlambda\Internal\ShouldNotBeImplementedInWrapper;
+use Wojciech\Phlambda\Internal\Attributes\ShouldNotBeImplementedInWrapper;
 
 /**
  * Converts value to string.
@@ -13,7 +13,7 @@ use Wojciech\Phlambda\Internal\ShouldNotBeImplementedInWrapper;
  * <blockquote><pre>toString(null) // it will return ''</pre></blockquote>
  *
  * @param mixed $item Element we wish to convert.
- * @return string|callable If all arguments are given result is returned. Passing just some or none will result in curry function return.
+ * @return string|callable If all arguments are given result is returned. Passing just some or none will result in curring function return.
  */
 #[ShouldNotBeImplementedInWrapper]
 function toString(mixed...$v): string|callable
@@ -30,7 +30,7 @@ function toString(mixed...$v): string|callable
  *
  * @param string $expected Expected start of the string.
  * @param string $item String we want to check.
- * @return bool|callable If all arguments are given result is returned. Passing just some or none will result in curry function return.
+ * @return bool|callable If all arguments are given result is returned. Passing just some or none will result in curring function return.
  */
 #[ShouldNotBeImplementedInWrapper]
 function startsWith(mixed...$v): bool|callable
@@ -47,7 +47,7 @@ function startsWith(mixed...$v): bool|callable
  *
  * @param string $expected Expected start of the string.
  * @param string $item String we want to check.
- * @return bool|callable If all arguments are given result is returned. Passing just some or none will result in curry function return.
+ * @return bool|callable If all arguments are given result is returned. Passing just some or none will result in curring function return.
  */
 #[ShouldNotBeImplementedInWrapper]
 function endsWith(mixed...$v): bool|callable
@@ -63,7 +63,7 @@ function endsWith(mixed...$v): bool|callable
  *
  * @param string $expression Regexp.
  * @param string $item String we want to check.
- * @return bool|callable If all arguments are given result is returned. Passing just some or none will result in curry function return.
+ * @return bool|callable If all arguments are given result is returned. Passing just some or none will result in curring function return.
  */
 #[ShouldNotBeImplementedInWrapper]
 function matches(string...$v): array|callable

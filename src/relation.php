@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Wojciech\Phlambda;
 
-use Wojciech\Phlambda\Internal\ShouldNotBeImplementedInWrapper;
+use Wojciech\Phlambda\Internal\Attributes\ShouldNotBeImplementedInWrapper;
 
 /**
  * Restricts value to given minimum and maximum.
@@ -18,7 +18,7 @@ use Wojciech\Phlambda\Internal\ShouldNotBeImplementedInWrapper;
  * @param mixed $min Minimum value
  * @param mixed $max Maximum value
  * @param mixed $item Value to be clamped
- * @return callable|mixed If all arguments are given result is returned. Passing just some or none will result in curry function return.
+ * @return callable|mixed If all arguments are given result is returned. Passing just some or none will result in curring function return.
  */
 #[ShouldNotBeImplementedInWrapper]
 function clamp(...$v): mixed

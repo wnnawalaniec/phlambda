@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Wojciech\Phlambda;
 
-use Wojciech\Phlambda\Internal\ShouldNotBeImplementedInWrapper;
+use Wojciech\Phlambda\Internal\Attributes\ShouldNotBeImplementedInWrapper;
 
 /**
  * Return copy of an array with replaced element at given index.
@@ -20,7 +20,7 @@ use Wojciech\Phlambda\Internal\ShouldNotBeImplementedInWrapper;
  * @param callable(mixed): mixed $fn First param must be callable accepting one argument and returning some value.
  * @param int $idx Second param must index of the element in the array, which should be replaced with given function.
  * @param array $input Last param must be array which we wish to adjust.
- * @return callable|array If all arguments are given result is returned. Passing just some or none will result in curry function return.
+ * @return callable|array If all arguments are given result is returned. Passing just some or none will result in curring function return.
  */
 function adjust(int|callable|array...$v): array|callable
 {
@@ -59,7 +59,7 @@ function adjust(int|callable|array...$v): array|callable
  * @see any()
  * @param callable(mixed): bool $fn First param must be callable accepting one element and returning true or false.
  * @param array $array Second param must be array which we want to check.
- * @return callable|bool If all arguments are given result is returned. Passing just some or none will result in curry function return.
+ * @return callable|bool If all arguments are given result is returned. Passing just some or none will result in curring function return.
  */
 function all(...$v): callable|bool
 {
@@ -78,7 +78,7 @@ function all(...$v): callable|bool
  * @see all()
  * @param callable(mixed): bool $fn First param must be callable accepting one argument and returning true or false.
  * @param array $input Second param must be array which we wish to adjust.
- * @return callable|array If all arguments are given result is returned. Passing just some or none will result in curry function return.
+ * @return callable|array If all arguments are given result is returned. Passing just some or none will result in curring function return.
  */
 function any(...$v): callable|bool
 {
@@ -97,7 +97,7 @@ function any(...$v): callable|bool
  * @see concat()
  * @param mixed $item First param is a value to append.
  * @param array $input Second param is an array to be appended.
- * @return callable|array If all arguments are given result is returned. Passing just some or none will result in curry function return.
+ * @return callable|array If all arguments are given result is returned. Passing just some or none will result in curring function return.
  */
 function append(...$v): callable|array
 {
@@ -123,7 +123,7 @@ function append(...$v): callable|array
  * @see append()
  * @param string|array $a First element to concat
  * @param string|array $b Second element to concat
- * @return string|array|callable If all arguments are given result is returned. Returned type will be same as passed parameters. Passing just some or none will result in curry function return.
+ * @return string|array|callable If all arguments are given result is returned. Returned type will be same as passed parameters. Passing just some or none will result in curring function return.
  * @throws \InvalidArgumentException When both parameters are not of same type
  */
 function concat(string|array...$v): callable|string|array
@@ -171,7 +171,7 @@ function concat(string|array...$v): callable|string|array
  *
  * @param callable(mixed): mixed $fn function accepting single value and returning value of type which can be used as array key
  * @param array $input Array to split
- * @return array|callable If all arguments are given result is returned. Returned type will be same as passed parameters. Passing just some or none will result in curry function return.
+ * @return array|callable If all arguments are given result is returned. Returned type will be same as passed parameters. Passing just some or none will result in curring function return.
  */
 #[ShouldNotBeImplementedInWrapper]
 function collectBy(callable|array...$v): callable|array
@@ -192,17 +192,17 @@ function collectBy(callable|array...$v): callable|array
 }
 
 /**
- * Applies given function to each element of the array and return new one with the results.
+ * Returns elements from first array, that are not present in second
  *
- * It works like `array_map`. Exactly like this.
+ * It works just like array_diff.
  *
  * Basic usage may look like this:
- * <blockquote><pre>map(toString(), [1, 2, 3]); // it will return ['1', '2', '3']</pre></blockquote>
+ * <blockquote><pre>diff([1, 2, 3], [3, 4, 5]); // it will return [1, 2]</pre></blockquote>
  *
- * @see flatMap()
- * @param callable(mixed): mixed $fn Function must accept one param and return some value.
- * @param array $input Array we want to map.
- * @return callable|array If all arguments are given result is returned. Passing just some or none will result in curry function return.
+ * @see array_diff()
+ * @param array $a First array.
+ * @param array $b Second array.
+ * @return callable|array If all arguments are given result is returned. Passing just some or none will result in curring function return.
  * Type of array will be same as type of returned values from given callback.
  */
 function diff(array...$v): callable|array
@@ -225,7 +225,7 @@ function diff(array...$v): callable|array
  * @see dropLast()
  * @param int $n First param must number of the elements to be dropped.
  * @param array|string $input Next param must be array|string we wish to consider.
- * @return callable|array|string If all arguments are given result is returned. Passing just some or none will result in curry function return.
+ * @return callable|array|string If all arguments are given result is returned. Passing just some or none will result in curring function return.
  */
 function drop(int|string|array...$v): callable|string|array
 {
@@ -257,7 +257,7 @@ function drop(int|string|array...$v): callable|string|array
  * @see drop(), dropLastWhile()
  * @param int $n First param must number of the elements to be dropped.
  * @param array|string $input Next param must be array or string we wish to consider.
- * @return callable|array|string If all arguments are given result is returned. Passing just some or none will result in curry function return.
+ * @return callable|array|string If all arguments are given result is returned. Passing just some or none will result in curring function return.
  */
 function dropLast(int|string|array...$v): callable|string|array
 {
@@ -287,7 +287,7 @@ function dropLast(int|string|array...$v): callable|string|array
  * @see drop(), dropLast()
  * @param callable(mixed): bool $fn First param predicate for matching elements.
  * @param array|string $input Next param must be array or string we wish to consider.
- * @return callable|array|string If all arguments are given result is returned. Passing just some or none will result in curry function return.
+ * @return callable|array|string If all arguments are given result is returned. Passing just some or none will result in curring function return.
  */
 #[ShouldNotBeImplementedInWrapper]
 function dropLastWhile(callable|string|array...$v): callable|string|array
@@ -319,7 +319,7 @@ function dropLastWhile(callable|string|array...$v): callable|string|array
  * <blockquote><pre>dropRepeats([1, 1, '1', 2, 3]); // it will return [1, '1', 2, 3]</pre></blockquote>
  *
  * @param array $input Array we want to have with unique values only
- * @return callable|array If all arguments are given result is returned. Passing just some or none will result in curry function return.
+ * @return callable|array If all arguments are given result is returned. Passing just some or none will result in curring function return.
  */
 function dropRepeats(array...$v): callable|array
 {
@@ -342,7 +342,7 @@ function dropRepeats(array...$v): callable|array
  *
  * @param callable(mixed): bool $fn First param must be callable accepting one element and returning true or false.
  * @param array $input Array we want to filter.
- * @return callable|array If all arguments are given result is returned. Passing just some or none will result in curry function return.
+ * @return callable|array If all arguments are given result is returned. Passing just some or none will result in curring function return.
  */
 function filter(array|callable...$v): callable|array
 {
@@ -364,7 +364,7 @@ function filter(array|callable...$v): callable|array
  * @see flat()
  * @param callable(mixed): mixed $fn Function must accept one param and return some value.
  * @param array $input Array we want to map.
- * @return callable|array If all arguments are given result is returned. Passing just some or none will result in curry function return.
+ * @return callable|array If all arguments are given result is returned. Passing just some or none will result in curring function return.
  */
 function flatMap(array|callable...$v): callable|array
 {
@@ -389,7 +389,7 @@ function flatMap(array|callable...$v): callable|array
  * @see flatMap()
  * @param callable(mixed): mixed $fn Function must accept one param and return some value.
  * @param array $input Array we want to map.
- * @return callable|array If all arguments are given result is returned. Passing just some or none will result in curry function return.
+ * @return callable|array If all arguments are given result is returned. Passing just some or none will result in curring function return.
  */
 #[ShouldNotBeImplementedInWrapper]
 function flat(mixed...$v): callable|array
@@ -424,7 +424,7 @@ function flat(mixed...$v): callable|array
  * @see flatMap()
  * @param callable(mixed): mixed $fn Function must accept one param and return some value.
  * @param array $input Array we want to map.
- * @return callable|array If all arguments are given result is returned. Passing just some or none will result in curry function return.
+ * @return callable|array If all arguments are given result is returned. Passing just some or none will result in curring function return.
  * Type of array will be same as type of returned values from given callback.
  */
 function map(...$v): array|callable
@@ -447,7 +447,7 @@ function map(...$v): array|callable
  *
  * @param callable(mixed, mixed): bool $fn Functions which accepts two arguments. First will be accumulator and second current value from array
  * @param array $input The input array
- * @return mixed If all arguments are given result is returned. Returned type will be same as <var>$fn</var> callback. Passing just some or none will result in curry function return.
+ * @return mixed If all arguments are given result is returned. Returned type will be same as <var>$fn</var> callback. Passing just some or none will result in curring function return.
  * @throws \InvalidArgumentException When array is empty and null initial value was passed.
  */
 function reduce(...$v): mixed
@@ -479,7 +479,7 @@ function reduce(...$v): mixed
  *
  * @param int $size Size of the tuples
  * @param array $input The input array
- * @return mixed If all arguments are given result is returned. Returned type will be same as <var>$fn</var> callback. Passing just some or none will result in curry function return.
+ * @return mixed If all arguments are given result is returned. Returned type will be same as <var>$fn</var> callback. Passing just some or none will result in curring function return.
  */
 #[ShouldNotBeImplementedInWrapper]
 function tuples(mixed...$v): callable|array

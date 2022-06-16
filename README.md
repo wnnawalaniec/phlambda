@@ -83,7 +83,7 @@ and exists only for chaining purposes.
 [Here you can find documentation.](https://wnnawalaniec.github.io/phlambda/packages/Application.html)
 
 # Currying
-In this library all function are automatically curried. If you don't know what curry functions let me try to change it.
+In this library all function are automatically curried. If you don't know what curring functions are let me try to change it.
 According to [Wikipedia](https://en.wikipedia.org/wiki/Currying):
 > In mathematics and computer science, currying is the technique of converting a function that takes multiple arguments into a sequence of functions that each takes a single argument.
 

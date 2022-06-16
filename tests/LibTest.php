@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Tests\Wojciech\Phlambda;
 
-use Wojciech\Phlambda\Internal\ShouldNotBeImplementedInWrapper;
+use Wojciech\Phlambda\Internal\Attributes\ShouldNotBeImplementedInWrapper;
 use Wojciech\Phlambda\Wrapper;
 use function Wojciech\Phlambda\_;
 use function Wojciech\Phlambda\both;
@@ -11,7 +11,7 @@ use function Wojciech\Phlambda\matches;
 use function Wojciech\Phlambda\startsWith;
 
 /**
- * This is set of tests ensuring that chosen library guides are respected.
+ * This is set of tests ensuring that library guides are respected.
  */
 class LibTest extends BaseTest
 {
