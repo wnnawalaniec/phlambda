@@ -111,6 +111,13 @@
 
 <dl class="phpdocumentor-table-of-contents">
                             <dt class="phpdocumentor-table-of-contents__entry -function -">
+    <a href="namespaces/wojciech-phlambda.html#function_curryN">curryN()</a>
+    <span>
+                                &nbsp;: callable    </span>
+</dt>
+<dd>Returns n currying function.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -function -">
     <a href="namespaces/wojciech-phlambda.html#function_curry3">curry3()</a>
     <span>
                                 &nbsp;: callable    </span>
@@ -143,6 +150,55 @@
             <a href="files/curry.html#functions" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_curryN">
+        curryN()
+        <a href="namespaces/wojciech-phlambda.html#function_curryN" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="curry.php"><a href="files/curry.html"><abbr title="curry.php">curry.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">15</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns n currying function.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                    <span class="phpdocumentor-signature__name">curryN</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fn</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$n</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$fn</span>
+                : <span class="phpdocumentor-signature__argument__return-type">callable</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>callable accepting $n elements</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$n</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>number of arguments accepted by given $fn function</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">callable</span>
+            &mdash;
+        
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
     <h4 class="phpdocumentor-element__name" id="function_curry3">
         curry3()
         <a href="namespaces/wojciech-phlambda.html#function_curry3" class="headerlink"><i class="fas fa-link"></i></a>
@@ -150,7 +206,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="curry.php"><a href="files/curry.html"><abbr title="curry.php">curry.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">14</span>
+    <span class="phpdocumentor-element-found-in__line">26</span>
 
     </aside>
 
@@ -158,7 +214,7 @@
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">curry3</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fn</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
+                    <span class="phpdocumentor-signature__name">curry3</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fn</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
@@ -190,7 +246,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="curry.php"><a href="files/curry.html"><abbr title="curry.php">curry.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">33</span>
+    <span class="phpdocumentor-element-found-in__line">38</span>
 
     </aside>
 
@@ -198,7 +254,7 @@
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">curry2</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fn</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
+                    <span class="phpdocumentor-signature__name">curry2</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fn</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
@@ -230,7 +286,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="curry.php"><a href="files/curry.html"><abbr title="curry.php">curry.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">51</span>
+    <span class="phpdocumentor-element-found-in__line">50</span>
 
     </aside>
 
@@ -238,7 +294,7 @@
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">curry</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fn</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
+                    <span class="phpdocumentor-signature__name">curry</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fn</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>

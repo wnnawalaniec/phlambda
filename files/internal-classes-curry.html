@@ -89,62 +89,31 @@
 
             <div class="phpdocumentor-column -eight phpdocumentor-content">
                     <ul class="phpdocumentor-breadcrumbs">
-            <li class="phpdocumentor-breadcrumb"><a href="namespaces/wojciech.html">Wojciech</a></li>
-            <li class="phpdocumentor-breadcrumb"><a href="namespaces/wojciech-phlambda.html">Phlambda</a></li>
-            <li class="phpdocumentor-breadcrumb"><a href="namespaces/wojciech-phlambda-internal.html">Internal</a></li>
     </ul>
 
-    <article class="phpdocumentor-element -class">
-        <h2 class="phpdocumentor-content__title">
-    ShouldNotBeImplementedInWrapper
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">Curry.php</h2>
 
+        
+    <section class="phpdocumentor-description"></section>
+
+
+
+
+
+
+<h3 id="interfaces_class_traits">
+    Interfaces, Classes, Traits and Enums
+    <a href="#interfaces_class_traits" class="headerlink"><i class="fas fa-link"></i></a>
+</h3>
+
+<dl class="phpdocumentor-table-of-contents">
     
-            <div class="phpdocumentor-element__package">
-            in package
-            <ul class="phpdocumentor-breadcrumbs">
-                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Application.html">Application</a></li>
-                            </ul>
-        </div>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Wojciech-Phlambda-Internal-Classes-Curry.html"><abbr title="\Wojciech\Phlambda\Internal\Classes\Curry">Curry</abbr></a></dt>
+        <dd>Internal class that encapsulates curring functions generation.</dd>
     
     
-    </h2>
-
-        <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Internal/ShouldNotBeImplementedInWrapper.php"><a href="files/internal-shouldnotbeimplementedinwrapper.html"><abbr title="Internal/ShouldNotBeImplementedInWrapper.php">ShouldNotBeImplementedInWrapper.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">14</span>
-
-    </aside>
-
-            <p class="phpdocumentor-summary">Attribute to mark methods that are not supposed to be implemented by Wrapper.</p>
-
-
-
-    <h5 class="phpdocumentor-tag-list__heading" id="tags">
-        Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
-    </h5>
-    <dl class="phpdocumentor-tag-list">
-                                    <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">see</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                                    <span class="phpdocumentor-tag-link"><a href="classes/Wojciech-Phlambda-Wrapper.html"><abbr title="\Wojciech\Phlambda\Wrapper">Wrapper</abbr></a></span>
-                                        
-                                             
-                                    </dd>
-                                                <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">codeCoverageIgnore</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                                
-                                             
-                                    </dd>
-                        </dl>
-
-
-
-
+    </dl>
 
 
 
@@ -153,70 +122,6 @@
         
 
         
-
-        
-        
-    <script type="text/javascript">
-        function loadExternalCodeSnippets(line) {
-            Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach((pre) => {
-                var src = pre.getAttribute('data-src').replace( /\\/g, '/');
-                var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
-                var language = 'php';
-
-                var code = document.createElement('code');
-                code.className = 'language-' + language;
-
-                pre.textContent = '';
-
-                pre.setAttribute('data-line', line)
-                code.textContent = 'Loading…';
-
-                pre.appendChild(code);
-
-                var xhr = new XMLHttpRequest();
-
-                xhr.open('GET', src, true);
-
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState == 4) {
-
-                        if (xhr.status < 400 && xhr.responseText) {
-                            code.textContent = xhr.responseText;
-
-                            Prism.highlightElement(code);
-                        }
-                        else if (xhr.status >= 400) {
-                            code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
-                        }
-                        else {
-                            code.textContent = '✖ Error: File does not exist, is empty or trying to view from localhost';
-                        }
-                    }
-                };
-
-                xhr.send(null);
-            });
-        }
-
-        var modals = document.querySelectorAll("[data-modal]");
-
-        modals.forEach(function (trigger) {
-            trigger.addEventListener("click", function (event) {
-                //event.preventDefault();
-                const modal = document.getElementById(trigger.dataset.modal);
-                modal.classList.add("phpdocumentor-modal__open");
-                loadExternalCodeSnippets(trigger.dataset.line)
-                const exits = modal.querySelectorAll("[data-exit-button]");
-                exits.forEach(function (exit) {
-                    exit.addEventListener("click", function (event) {
-                        event.preventDefault();
-                        modal.classList.remove("phpdocumentor-modal__open");
-                    });
-                });
-            });
-        });
-    </script>
-
     </article>
                 <section data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
     <section class="phpdocumentor-search-results__dialog">
@@ -231,7 +136,7 @@
 </section>
             </div>
         </div>
-        <a href="classes/Wojciech-Phlambda-Internal-ShouldNotBeImplementedInWrapper.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="files/internal-classes-curry.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

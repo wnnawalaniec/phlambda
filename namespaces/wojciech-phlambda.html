@@ -245,6 +245,13 @@
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="namespaces/wojciech-phlambda.html#constant_curryN">curryN</a>
+    <span>
+        &nbsp;= &#039;\\Wojciech\\Phlambda\\curryN&#039;                            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
     <a href="namespaces/wojciech-phlambda.html#constant_dec">dec</a>
     <span>
         &nbsp;= &#039;\\Wojciech\\Phlambda\\dec&#039;                            </span>
@@ -460,7 +467,7 @@ there is any which doesn&#039;t.</dd>
     <span>
                                 &nbsp;: callable|array&lt;string|int, mixed&gt;    </span>
 </dt>
-<dd>Applies given function to each element of the array and return new one with the results.</dd>
+<dd>Returns elements from first array, that are not present in second</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -function -">
     <a href="namespaces/wojciech-phlambda.html#function_drop">drop()</a>
@@ -538,6 +545,13 @@ there is any which doesn&#039;t.</dd>
                                 &nbsp;: <a href="classes/Wojciech-Phlambda-Wrapper.html"><abbr title="\Wojciech\Phlambda\Wrapper">Wrapper</abbr></a>    </span>
 </dt>
 <dd>Wraps array with Wrapper object.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -function -">
+    <a href="namespaces/wojciech-phlambda.html#function_curryN">curryN()</a>
+    <span>
+                                &nbsp;: callable    </span>
+</dt>
+<dd>Returns n currying function.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -function -">
     <a href="namespaces/wojciech-phlambda.html#function_curry3">curry3()</a>
@@ -746,7 +760,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="constants.php"><a href="files/constants.html"><abbr title="constants.php">constants.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">31</span>
+    <span class="phpdocumentor-element-found-in__line">32</span>
 
     </aside>
 
@@ -775,7 +789,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="constants.php"><a href="files/constants.html"><abbr title="constants.php">constants.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">36</span>
+    <span class="phpdocumentor-element-found-in__line">37</span>
 
     </aside>
 
@@ -804,7 +818,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="constants.php"><a href="files/constants.html"><abbr title="constants.php">constants.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">45</span>
+    <span class="phpdocumentor-element-found-in__line">46</span>
 
     </aside>
 
@@ -833,7 +847,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="constants.php"><a href="files/constants.html"><abbr title="constants.php">constants.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">37</span>
+    <span class="phpdocumentor-element-found-in__line">38</span>
 
     </aside>
 
@@ -978,7 +992,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="constants.php"><a href="files/constants.html"><abbr title="constants.php">constants.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">44</span>
+    <span class="phpdocumentor-element-found-in__line">45</span>
 
     </aside>
 
@@ -1007,7 +1021,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="constants.php"><a href="files/constants.html"><abbr title="constants.php">constants.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">32</span>
+    <span class="phpdocumentor-element-found-in__line">33</span>
 
     </aside>
 
@@ -1036,7 +1050,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="constants.php"><a href="files/constants.html"><abbr title="constants.php">constants.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">50</span>
+    <span class="phpdocumentor-element-found-in__line">51</span>
 
     </aside>
 
@@ -1123,7 +1137,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="constants.php"><a href="files/constants.html"><abbr title="constants.php">constants.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">30</span>
+    <span class="phpdocumentor-element-found-in__line">31</span>
 
     </aside>
 
@@ -1152,7 +1166,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="constants.php"><a href="files/constants.html"><abbr title="constants.php">constants.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">29</span>
+    <span class="phpdocumentor-element-found-in__line">30</span>
 
     </aside>
 
@@ -1181,7 +1195,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="constants.php"><a href="files/constants.html"><abbr title="constants.php">constants.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">28</span>
+    <span class="phpdocumentor-element-found-in__line">29</span>
 
     </aside>
 
@@ -1202,6 +1216,35 @@ there is any which doesn&#039;t.</dd>
 
 </article>
                     <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_curryN">
+        curryN
+        <a href="namespaces/wojciech-phlambda.html#constant_curryN" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="constants.php"><a href="files/constants.html"><abbr title="constants.php">constants.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">28</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">curryN</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;\\Wojciech\\Phlambda\\curryN&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
     <h4 class="phpdocumentor-element__name" id="constant_dec">
         dec
         <a href="namespaces/wojciech-phlambda.html#constant_dec" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1210,7 +1253,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="constants.php"><a href="files/constants.html"><abbr title="constants.php">constants.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">39</span>
+    <span class="phpdocumentor-element-found-in__line">40</span>
 
     </aside>
 
@@ -1268,7 +1311,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="constants.php"><a href="files/constants.html"><abbr title="constants.php">constants.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">41</span>
+    <span class="phpdocumentor-element-found-in__line">42</span>
 
     </aside>
 
@@ -1413,7 +1456,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="constants.php"><a href="files/constants.html"><abbr title="constants.php">constants.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">33</span>
+    <span class="phpdocumentor-element-found-in__line">34</span>
 
     </aside>
 
@@ -1442,7 +1485,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="constants.php"><a href="files/constants.html"><abbr title="constants.php">constants.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">48</span>
+    <span class="phpdocumentor-element-found-in__line">49</span>
 
     </aside>
 
@@ -1558,7 +1601,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="constants.php"><a href="files/constants.html"><abbr title="constants.php">constants.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">40</span>
+    <span class="phpdocumentor-element-found-in__line">41</span>
 
     </aside>
 
@@ -1616,7 +1659,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="constants.php"><a href="files/constants.html"><abbr title="constants.php">constants.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">49</span>
+    <span class="phpdocumentor-element-found-in__line">50</span>
 
     </aside>
 
@@ -1645,7 +1688,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="constants.php"><a href="files/constants.html"><abbr title="constants.php">constants.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">42</span>
+    <span class="phpdocumentor-element-found-in__line">43</span>
 
     </aside>
 
@@ -1674,7 +1717,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="constants.php"><a href="files/constants.html"><abbr title="constants.php">constants.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">35</span>
+    <span class="phpdocumentor-element-found-in__line">36</span>
 
     </aside>
 
@@ -1703,7 +1746,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="constants.php"><a href="files/constants.html"><abbr title="constants.php">constants.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">34</span>
+    <span class="phpdocumentor-element-found-in__line">35</span>
 
     </aside>
 
@@ -1761,7 +1804,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="constants.php"><a href="files/constants.html"><abbr title="constants.php">constants.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">47</span>
+    <span class="phpdocumentor-element-found-in__line">48</span>
 
     </aside>
 
@@ -1790,7 +1833,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="constants.php"><a href="files/constants.html"><abbr title="constants.php">constants.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">38</span>
+    <span class="phpdocumentor-element-found-in__line">39</span>
 
     </aside>
 
@@ -1819,7 +1862,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="constants.php"><a href="files/constants.html"><abbr title="constants.php">constants.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">43</span>
+    <span class="phpdocumentor-element-found-in__line">44</span>
 
     </aside>
 
@@ -1848,7 +1891,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="constants.php"><a href="files/constants.html"><abbr title="constants.php">constants.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">46</span>
+    <span class="phpdocumentor-element-found-in__line">47</span>
 
     </aside>
 
@@ -1920,7 +1963,7 @@ there is any which doesn&#039;t.</dd>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">adjust</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int|callable|array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span></code>
+                    <span class="phpdocumentor-signature__name">adjust</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int|callable|array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span></code>
 
         <section class="phpdocumentor-description"><p>Applies a function to the value at given index, returning new copy of the input array with the element at given
 index replaced with the result of the function. Index is 0 based, and negative numbers can be used to point element
@@ -1948,7 +1991,7 @@ If index is greater than the size of array unchanged copy is returned.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
 </section>
 
     
@@ -1970,7 +2013,7 @@ there is any which doesn&#039;t.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">all</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|bool</span></code>
+                    <span class="phpdocumentor-signature__name">all</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|bool</span></code>
 
         <section class="phpdocumentor-description"><p>It checks all the array elements with given predicate and returns true if all matches.
 False is returned when at least one is not matching.</p>
@@ -2016,7 +2059,7 @@ if ($below18($someUsers)) { // you can use that in code like normal function
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|bool</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
 </section>
 
     
@@ -2037,7 +2080,7 @@ if ($below18($someUsers)) { // you can use that in code like normal function
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">any</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span></code>
+                    <span class="phpdocumentor-signature__name">any</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span></code>
 
         <section class="phpdocumentor-description"><p>It checks all the array elements with given predicate and returns true if any matches.</p>
 <p>Basic usage may look like this:</p>
@@ -2076,7 +2119,7 @@ if ($below18($someUsers)) { // you can use that in code like normal function
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
 </section>
 
     
@@ -2097,7 +2140,7 @@ if ($below18($someUsers)) { // you can use that in code like normal function
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">append</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span></code>
+                    <span class="phpdocumentor-signature__name">append</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span></code>
 
         <section class="phpdocumentor-description"><p>Appends element to the end of the given array and returns new array.</p>
 <p>Basic usage may look like this:</p>
@@ -2136,7 +2179,7 @@ if ($below18($someUsers)) { // you can use that in code like normal function
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
 </section>
 
     
@@ -2157,7 +2200,7 @@ if ($below18($someUsers)) { // you can use that in code like normal function
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">concat</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string|array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|array&lt;string|int, mixed&gt;|callable</span></code>
+                    <span class="phpdocumentor-signature__name">concat</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string|array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|array&lt;string|int, mixed&gt;|callable</span></code>
 
         <section class="phpdocumentor-description"><p>This function concat given parameters and return single value.
 Returned value is of same type as passed arguments. If two strings
@@ -2219,7 +2262,7 @@ keys will behave see it's documentation.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">string|array&lt;string|int, mixed&gt;|callable</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Returned type will be same as passed parameters. Passing just some or none will result in curry function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Returned type will be same as passed parameters. Passing just some or none will result in curring function return.</p>
 </section>
 
     
@@ -2240,7 +2283,7 @@ keys will behave see it's documentation.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">collectBy</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable|array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|callable</span></code>
+                    <span class="phpdocumentor-signature__name">collectBy</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable|array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|callable</span></code>
 
         <section class="phpdocumentor-description"><p>Example use:</p>
 <blockquote><pre class="prettyprint">
@@ -2284,7 +2327,7 @@ fn ($x) => $x['type'],
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|callable</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Returned type will be same as passed parameters. Passing just some or none will result in curry function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Returned type will be same as passed parameters. Passing just some or none will result in curring function return.</p>
 </section>
 
     
@@ -2301,15 +2344,15 @@ fn ($x) => $x['type'],
 
     </aside>
 
-        <p class="phpdocumentor-summary">Applies given function to each element of the array and return new one with the results.</p>
+        <p class="phpdocumentor-summary">Returns elements from first array, that are not present in second</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">diff</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span></code>
+                    <span class="phpdocumentor-signature__name">diff</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span></code>
 
-        <section class="phpdocumentor-description"><p>It works like <code class="prettyprint">array_map</code>. Exactly like this.</p>
+        <section class="phpdocumentor-description"><p>It works just like array_diff.</p>
 <p>Basic usage may look like this:</p>
-<blockquote><pre class="prettyprint">map(toString(), [1, 2, 3]); // it will return ['1', '2', '3']</pre></blockquote>
+<blockquote><pre class="prettyprint">diff([1, 2, 3], [3, 4, 5]); // it will return [1, 2]</pre></blockquote>
 </section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
@@ -2334,7 +2377,7 @@ fn ($x) => $x['type'],
                     <span class="phpdocumentor-tag__name">see</span>
                 </dt>
                 <dd class="phpdocumentor-tag-list__definition">
-                                                                                    <span class="phpdocumentor-tag-link"><a href="namespaces/wojciech-phlambda.html#function_flatMap"><abbr title="\Wojciech\Phlambda\flatMap()">flatMap()</abbr></a></span>
+                                                                                    <span class="phpdocumentor-tag-link"><abbr title="\Wojciech\Phlambda\array_diff()">array_diff()</abbr></span>
                                         
                                              
                                     </dd>
@@ -2343,7 +2386,7 @@ fn ($x) => $x['type'],
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.
 Type of array will be same as type of returned values from given callback.</p>
 </section>
 
@@ -2365,7 +2408,7 @@ Type of array will be same as type of returned values from given callback.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">drop</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int|string|array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;|string</span></code>
+                    <span class="phpdocumentor-signature__name">drop</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int|string|array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;|string</span></code>
 
         <section class="phpdocumentor-description"><p>Number of the elements can exceed size of the given array/string, in that case empty array/string will be returned.
 If negative number will be given, unchanged array/string is returned.
@@ -2407,7 +2450,7 @@ For strings, <code class="prettyprint">mbstring</code> functions are used.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;|string</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
 </section>
 
     
@@ -2428,7 +2471,7 @@ For strings, <code class="prettyprint">mbstring</code> functions are used.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">dropLast</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int|string|array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;|string</span></code>
+                    <span class="phpdocumentor-signature__name">dropLast</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int|string|array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;|string</span></code>
 
         <section class="phpdocumentor-description"><p>Number of the elements can exceed size of the given array/string, in that case empty array/string will be returned.
 If negative number will be given, unchanged array/string is returned.
@@ -2471,7 +2514,7 @@ For strings, <code class="prettyprint">mbstring</code> functions are used.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;|string</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
 </section>
 
     
@@ -2492,7 +2535,7 @@ For strings, <code class="prettyprint">mbstring</code> functions are used.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">dropLastWhile</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable|string|array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;|string</span></code>
+                    <span class="phpdocumentor-signature__name">dropLastWhile</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable|string|array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;|string</span></code>
 
         <section class="phpdocumentor-description"><p>It passes each value from the right to the supplied predicate function, skipping elements until
 the predicate function returns <code class="prettyprint">false</code>. The predicate function is applied to one argument: (value).</p>
@@ -2533,7 +2576,7 @@ the predicate function returns <code class="prettyprint">false</code>. The predi
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;|string</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
 </section>
 
     
@@ -2554,7 +2597,7 @@ the predicate function returns <code class="prettyprint">false</code>. The predi
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">dropRepeats</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span></code>
+                    <span class="phpdocumentor-signature__name">dropRepeats</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span></code>
 
         <section class="phpdocumentor-description"><p>Keep in mind that your keys won't be preserved. Elements are considered as repeated when they are the same (<code class="prettyprint">===</code>).
 Note: <code class="prettyprint">array_unique</code> is not used in that case as it's not strictly comparing elements - it seems 1 and '1' as same
@@ -2581,7 +2624,7 @@ solution.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
 </section>
 
     
@@ -2602,7 +2645,7 @@ solution.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">filter</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;|callable&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span></code>
+                    <span class="phpdocumentor-signature__name">filter</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;|callable&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span></code>
 
         <section class="phpdocumentor-description"><p>Basic usage may look like this:</p>
 <blockquote><pre class="prettyprint">filter(below(3), [1, 2, 3]); // it will return [1, 2]</pre></blockquote>
@@ -2625,7 +2668,7 @@ solution.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
 </section>
 
     
@@ -2646,7 +2689,7 @@ solution.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">flatMap</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;|callable&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span></code>
+                    <span class="phpdocumentor-signature__name">flatMap</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;|callable&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span></code>
 
         <section class="phpdocumentor-description"><p>It's like map but if callback returns array it is merged into result.</p>
 <p>Basic usage may look like this:</p>
@@ -2695,7 +2738,7 @@ flatMap($duplicate, [1, 2, 3]); // it will return [1, 1, 2, 2, 3, 3]
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
 </section>
 
     
@@ -2716,7 +2759,7 @@ flatMap($duplicate, [1, 2, 3]); // it will return [1, 1, 2, 2, 3, 3]
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">flat</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span></code>
+                    <span class="phpdocumentor-signature__name">flat</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span></code>
 
         <section class="phpdocumentor-description"><p>It makes multi-dimension array flatter. If first argument will be true, it will do this recursively.</p>
 <p>Basic usage may look like this:</p>
@@ -2759,7 +2802,7 @@ flat(true, [[[1]], [[2]], [[3]]]); // it will return [1, 2, 3]
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
 </section>
 
     
@@ -2780,7 +2823,7 @@ flat(true, [[[1]], [[2]], [[3]]]); // it will return [1, 2, 3]
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">map</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span></code>
+                    <span class="phpdocumentor-signature__name">map</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span></code>
 
         <section class="phpdocumentor-description"><p>It works like <code class="prettyprint">array_map</code>. Exactly like this.</p>
 <p>Basic usage may look like this:</p>
@@ -2818,7 +2861,7 @@ flat(true, [[[1]], [[2]], [[3]]]); // it will return [1, 2, 3]
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.
 Type of array will be same as type of returned values from given callback.</p>
 </section>
 
@@ -2840,7 +2883,7 @@ Type of array will be same as type of returned values from given callback.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">reduce</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">reduce</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
         <section class="phpdocumentor-description"><p>This function iterates through whole array accumulating its values together using
 given callback. It also requires initial value but this can be set to null, but keep
@@ -2885,7 +2928,7 @@ be thrown.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">mixed</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Returned type will be same as <var>$fn</var> callback. Passing just some or none will result in curry function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Returned type will be same as <var>$fn</var> callback. Passing just some or none will result in curring function return.</p>
 </section>
 
     
@@ -2906,7 +2949,7 @@ be thrown.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">tuples</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">tuples</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
         <section class="phpdocumentor-description"><p>If n is greater than the length of the list, an empty list is returned. Keys are preserved.</p>
 <p>Example use:</p>
@@ -2933,7 +2976,7 @@ be thrown.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">mixed</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Returned type will be same as <var>$fn</var> callback. Passing just some or none will result in curry function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Returned type will be same as <var>$fn</var> callback. Passing just some or none will result in curring function return.</p>
 </section>
 
     
@@ -2954,7 +2997,7 @@ be thrown.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">_</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$array</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Wojciech-Phlambda-Wrapper.html"><abbr title="\Wojciech\Phlambda\Wrapper">Wrapper</abbr></a></span></code>
+                    <span class="phpdocumentor-signature__name">_</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$array</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Wojciech-Phlambda-Wrapper.html"><abbr title="\Wojciech\Phlambda\Wrapper">Wrapper</abbr></a></span></code>
 
         <section class="phpdocumentor-description"><p>Example:</p>
 <blockquote><pre class="prettyprint">
@@ -2999,6 +3042,55 @@ _([1,2,3,4,5])
     
 </article>
                     <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_curryN">
+        curryN()
+        <a href="namespaces/wojciech-phlambda.html#function_curryN" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="curry.php"><a href="files/curry.html"><abbr title="curry.php">curry.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">15</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns n currying function.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                    <span class="phpdocumentor-signature__name">curryN</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fn</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$n</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$fn</span>
+                : <span class="phpdocumentor-signature__argument__return-type">callable</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>callable accepting $n elements</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$n</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>number of arguments accepted by given $fn function</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">callable</span>
+            &mdash;
+        
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
     <h4 class="phpdocumentor-element__name" id="function_curry3">
         curry3()
         <a href="namespaces/wojciech-phlambda.html#function_curry3" class="headerlink"><i class="fas fa-link"></i></a>
@@ -3006,7 +3098,7 @@ _([1,2,3,4,5])
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="curry.php"><a href="files/curry.html"><abbr title="curry.php">curry.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">14</span>
+    <span class="phpdocumentor-element-found-in__line">26</span>
 
     </aside>
 
@@ -3014,7 +3106,7 @@ _([1,2,3,4,5])
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">curry3</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fn</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
+                    <span class="phpdocumentor-signature__name">curry3</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fn</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
@@ -3046,7 +3138,7 @@ _([1,2,3,4,5])
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="curry.php"><a href="files/curry.html"><abbr title="curry.php">curry.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">33</span>
+    <span class="phpdocumentor-element-found-in__line">38</span>
 
     </aside>
 
@@ -3054,7 +3146,7 @@ _([1,2,3,4,5])
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">curry2</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fn</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
+                    <span class="phpdocumentor-signature__name">curry2</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fn</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
@@ -3086,7 +3178,7 @@ _([1,2,3,4,5])
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="curry.php"><a href="files/curry.html"><abbr title="curry.php">curry.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">51</span>
+    <span class="phpdocumentor-element-found-in__line">50</span>
 
     </aside>
 
@@ -3094,7 +3186,7 @@ _([1,2,3,4,5])
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">curry</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fn</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
+                    <span class="phpdocumentor-signature__name">curry</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fn</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
@@ -3134,7 +3226,7 @@ _([1,2,3,4,5])
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">_and</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
+                    <span class="phpdocumentor-signature__name">_and</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
 
         <section class="phpdocumentor-description"><p>Example:</p>
 <blockquote><pre class="prettyprint">_and(true, true); // it will return true</pre></blockquote>
@@ -3190,7 +3282,7 @@ _([1,2,3,4,5])
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">both</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
+                    <span class="phpdocumentor-signature__name">both</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
 
         <section class="phpdocumentor-description"><p>This functions accepts two predicates and then return function accepting one parameter and calling both predicates
 with that parameter. Then <code class="prettyprint">&amp;&amp;</code> of both results is returned.
@@ -3250,7 +3342,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">either</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
+                    <span class="phpdocumentor-signature__name">either</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
 
         <section class="phpdocumentor-description"><p>This functions accepts two predicates and then return function accepting one parameter and calling both predicates
 with that parameter. Then <code class="prettyprint">||</code> of both results is returned.
@@ -3311,7 +3403,7 @@ Keep in mind that both given functions will be called.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">not</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
+                    <span class="phpdocumentor-signature__name">not</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
 
         <section class="phpdocumentor-description"><p>Example:</p>
 <blockquote><pre class="prettyprint">not(true); // it will return false</pre></blockquote>
@@ -3354,7 +3446,7 @@ Keep in mind that both given functions will be called.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">neither</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
+                    <span class="phpdocumentor-signature__name">neither</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
 
         <section class="phpdocumentor-description"><p>This functions accepts two predicates and then return function accepting one parameter and calling both predicates
 with that parameter. Then negation of <code class="prettyprint">&amp;&amp;</code> operation on both results is returned.
@@ -3415,7 +3507,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">_or</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
+                    <span class="phpdocumentor-signature__name">_or</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
 
         <section class="phpdocumentor-description"><p>Example:</p>
 <blockquote><pre class="prettyprint">_or(false, true); // it will return true</pre></blockquote>
@@ -3472,7 +3564,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">add</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|float|int</span></code>
+                    <span class="phpdocumentor-signature__name">add</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|float|int</span></code>
 
         <section class="phpdocumentor-description"><p>Returns float if at least one number is float.</p>
 </section>
@@ -3494,7 +3586,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|float|int</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
 </section>
 
     
@@ -3515,7 +3607,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">subtract</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|float|int</span></code>
+                    <span class="phpdocumentor-signature__name">subtract</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|float|int</span></code>
 
         <section class="phpdocumentor-description"><p>Returns float if at least one number is float.</p>
 </section>
@@ -3537,7 +3629,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|float|int</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
 </section>
 
     
@@ -3558,7 +3650,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">dec</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|float|int</span></code>
+                    <span class="phpdocumentor-signature__name">dec</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|float|int</span></code>
 
         <section class="phpdocumentor-description"><p>Return type is same as given number.</p>
 </section>
@@ -3580,7 +3672,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|float|int</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
 </section>
 
     
@@ -3601,7 +3693,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">inc</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|float|int</span></code>
+                    <span class="phpdocumentor-signature__name">inc</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|float|int</span></code>
 
         <section class="phpdocumentor-description"><p>Return type is same as given number.</p>
 </section>
@@ -3623,7 +3715,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|float|int</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
 </section>
 
     
@@ -3644,7 +3736,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">divide</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|float|int</span></code>
+                    <span class="phpdocumentor-signature__name">divide</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|float|int</span></code>
 
         <section class="phpdocumentor-description"><p>Returns float if at least one number is float.</p>
 </section>
@@ -3666,7 +3758,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|float|int</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
 </section>
 
     
@@ -3687,7 +3779,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">multiply</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|float|int</span></code>
+                    <span class="phpdocumentor-signature__name">multiply</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|float|int</span></code>
 
         <section class="phpdocumentor-description"><p>Returns float if at least one number is float.</p>
 </section>
@@ -3709,7 +3801,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|float|int</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
 </section>
 
     
@@ -3730,7 +3822,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">sum</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|float|int</span></code>
+                    <span class="phpdocumentor-signature__name">sum</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|float|int</span></code>
 
         <section class="phpdocumentor-description"><p>Returns float if at least one number is float.</p>
 </section>
@@ -3752,7 +3844,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|float|int</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
 </section>
 
     
@@ -3772,7 +3864,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">below</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">float|int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$a</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
+                    <span class="phpdocumentor-signature__name">below</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">float|int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$a</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3811,7 +3903,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">above</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">float|int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$a</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
+                    <span class="phpdocumentor-signature__name">above</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">float|int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$a</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -3851,7 +3943,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">clamp</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|mixed</span></code>
+                    <span class="phpdocumentor-signature__name">clamp</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|mixed</span></code>
 
         <section class="phpdocumentor-description"><p>Can be used with anything comparable like <code class="prettyprint">int</code>, <code class="prettyprint">string</code>, <code class="prettyprint">\DateTime</code>, etc.</p>
 <p>Basic usage may look like this:</p>
@@ -3877,7 +3969,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|mixed</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
 </section>
 
     
@@ -3898,7 +3990,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">toString</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|callable</span></code>
+                    <span class="phpdocumentor-signature__name">toString</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|callable</span></code>
 
         <section class="phpdocumentor-description"><blockquote><pre class="prettyprint">toString(1) // it will return '1'</pre></blockquote>
 <blockquote><pre class="prettyprint">toString(true) // it will return '1'</pre></blockquote>
@@ -3922,7 +4014,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">string|callable</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
 </section>
 
     
@@ -3943,7 +4035,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">startsWith</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|callable</span></code>
+                    <span class="phpdocumentor-signature__name">startsWith</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|callable</span></code>
 
         <section class="phpdocumentor-description"><blockquote><pre class="prettyprint">startsWith('Lorem ipsum', 'Lorem ipsum 123') // it will return true</pre></blockquote>
 <blockquote><pre class="prettyprint">startsWith(' Lorem ipsum', 'Lorem ipsum 123') // it will return false</pre></blockquote>
@@ -3967,7 +4059,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">bool|callable</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
 </section>
 
     
@@ -3988,7 +4080,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">endsWith</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|callable</span></code>
+                    <span class="phpdocumentor-signature__name">endsWith</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|callable</span></code>
 
         <section class="phpdocumentor-description"><blockquote><pre class="prettyprint">endsWith('123', 'Lorem ipsum 123') // it will return true</pre></blockquote>
 <blockquote><pre class="prettyprint">endsWith('123 ', 'Lorem ipsum 123') // it will return false</pre></blockquote>
@@ -4012,7 +4104,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">bool|callable</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
 </section>
 
     
@@ -4033,7 +4125,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">matches</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|callable</span></code>
+                    <span class="phpdocumentor-signature__name">matches</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|callable</span></code>
 
         <section class="phpdocumentor-description"><blockquote><pre class="prettyprint">matches('/([a-z]a)/', 'bananas') // it will return ['ba', 'na', 'na']</pre></blockquote>
 <blockquote><pre class="prettyprint">matches('/a/', 'b') // it will return []</pre></blockquote>
@@ -4056,7 +4148,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">bool|callable</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curry function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
 </section>
 
     

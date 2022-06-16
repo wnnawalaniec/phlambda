@@ -89,10 +89,36 @@
 
             <div class="phpdocumentor-column -eight phpdocumentor-content">
                     <ul class="phpdocumentor-breadcrumbs">
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/wojciech.html">Wojciech</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/wojciech-phlambda.html">Phlambda</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/wojciech-phlambda-internal.html">Internal</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/wojciech-phlambda-internal-exceptions.html">Exceptions</a></li>
     </ul>
 
-    <article class="phpdocumentor-element -file">
-        <h2 class="phpdocumentor-content__title">relation.php</h2>
+    <article class="phpdocumentor-element -class">
+        <h2 class="phpdocumentor-content__title">
+    TooMuchArgumentsGiven
+
+        <span class="phpdocumentor-element__extends">
+        extends <abbr title="\RuntimeException">RuntimeException</abbr>
+    </span>
+    
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Application.html">Application</a></li>
+                            </ul>
+        </div>
+    
+    
+    </h2>
+
+        <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Internal/Exceptions/TooMuchArgumentsGiven.php"><a href="files/internal-exceptions-toomuchargumentsgiven.html"><abbr title="Internal/Exceptions/TooMuchArgumentsGiven.php">TooMuchArgumentsGiven.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">6</span>
+
+    </aside>
 
         
     <section class="phpdocumentor-description"></section>
@@ -110,54 +136,55 @@
 </h3>
 
 <dl class="phpdocumentor-table-of-contents">
-                            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="namespaces/wojciech-phlambda.html#function_clamp">clamp()</a>
+                        <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Wojciech-Phlambda-Internal-Exceptions-TooMuchArgumentsGiven.html#method_create">create()</a>
     <span>
-                                &nbsp;: callable|mixed    </span>
+                                &nbsp;: self    </span>
 </dt>
-<dd>Restricts value to given minimum and maximum.</dd>
+<dd></dd>
 
-    </dl>
+        </dl>
 
 
 
         
 
-            <section class="phpdocumentor-functions">
-        <h3 class="phpdocumentor-elements__header" id="functions">
-            Functions
-            <a href="files/relation.html#functions" class="headerlink"><i class="fas fa-link"></i></a>
+        
+
+            <section class="phpdocumentor-methods">
+        <h3 class="phpdocumentor-elements__header" id="methods">
+            Methods
+            <a href="classes/Wojciech-Phlambda-Internal-Exceptions-TooMuchArgumentsGiven.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
-                    <article class="phpdocumentor-element -function - ">
-    <h4 class="phpdocumentor-element__name" id="function_clamp">
-        clamp()
-        <a href="namespaces/wojciech-phlambda.html#function_clamp" class="headerlink"><i class="fas fa-link"></i></a>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_create">
+        create()
+        <a href="classes/Wojciech-Phlambda-Internal-Exceptions-TooMuchArgumentsGiven.html#method_create" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="relation.php"><a href="files/relation.html"><abbr title="relation.php">relation.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Internal/Exceptions/TooMuchArgumentsGiven.php"><a href="files/internal-exceptions-toomuchargumentsgiven.html"><abbr title="Internal/Exceptions/TooMuchArgumentsGiven.php">TooMuchArgumentsGiven.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">23</span>
+    <span class="phpdocumentor-element-found-in__line">8</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Restricts value to given minimum and maximum.</p>
-
+    
     <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility"></span>
-                    <span class="phpdocumentor-signature__name">clamp</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|mixed</span></code>
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">create</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$expectedNumber</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">self</span></code>
 
-        <section class="phpdocumentor-description"><p>Can be used with anything comparable like <code class="prettyprint">int</code>, <code class="prettyprint">string</code>, <code class="prettyprint">\DateTime</code>, etc.</p>
-<p>Basic usage may look like this:</p>
-<blockquote><pre class="prettyprint">clamp(1, 10, 0); // it will return 1</pre></blockquote>
-<blockquote><pre class="prettyprint">clamp(1, 10, 15); // it will return 10</pre></blockquote>
-<blockquote><pre class="prettyprint">clamp(1, 10, 6); // it will return 6</pre></blockquote>
-</section>
+        <section class="phpdocumentor-description"></section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$v</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                <span class="phpdocumentor-signature__argument__name">$expectedNumber</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"></section>
@@ -168,14 +195,74 @@
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">callable|mixed</span>
+    <span class="phpdocumentor-signature__response_type">self</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
-</section>
-
+        
     
 </article>
             </section>
+
+        
+    <script type="text/javascript">
+        function loadExternalCodeSnippets(line) {
+            Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach((pre) => {
+                var src = pre.getAttribute('data-src').replace( /\\/g, '/');
+                var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+                var language = 'php';
+
+                var code = document.createElement('code');
+                code.className = 'language-' + language;
+
+                pre.textContent = '';
+
+                pre.setAttribute('data-line', line)
+                code.textContent = 'Loading…';
+
+                pre.appendChild(code);
+
+                var xhr = new XMLHttpRequest();
+
+                xhr.open('GET', src, true);
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4) {
+
+                        if (xhr.status < 400 && xhr.responseText) {
+                            code.textContent = xhr.responseText;
+
+                            Prism.highlightElement(code);
+                        }
+                        else if (xhr.status >= 400) {
+                            code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                        }
+                        else {
+                            code.textContent = '✖ Error: File does not exist, is empty or trying to view from localhost';
+                        }
+                    }
+                };
+
+                xhr.send(null);
+            });
+        }
+
+        var modals = document.querySelectorAll("[data-modal]");
+
+        modals.forEach(function (trigger) {
+            trigger.addEventListener("click", function (event) {
+                //event.preventDefault();
+                const modal = document.getElementById(trigger.dataset.modal);
+                modal.classList.add("phpdocumentor-modal__open");
+                loadExternalCodeSnippets(trigger.dataset.line)
+                const exits = modal.querySelectorAll("[data-exit-button]");
+                exits.forEach(function (exit) {
+                    exit.addEventListener("click", function (event) {
+                        event.preventDefault();
+                        modal.classList.remove("phpdocumentor-modal__open");
+                    });
+                });
+            });
+        });
+    </script>
 
     </article>
                 <section data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
@@ -191,7 +278,7 @@
 </section>
             </div>
         </div>
-        <a href="files/relation.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/Wojciech-Phlambda-Internal-Exceptions-TooMuchArgumentsGiven.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 
