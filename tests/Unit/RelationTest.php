@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Tests\Wojciech\Phlambda;
+namespace Tests\Wojciech\Phlambda\Unit;
 
 use function Wojciech\Phlambda\clamp;
 

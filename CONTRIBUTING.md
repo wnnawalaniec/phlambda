@@ -11,11 +11,11 @@ If you have suggestion or question please use [discussion page](https://github.c
 # Developing guide
 If you want to help, you must follow points:
 - all functions must be tested
-- all functions must be automatically curring
+- all functions must be automatically currying
 - all functions must be implemented in `Wrapper` (it's assured by tests)
   - if function shouldn't be implemented e.g. it's predicate or some math operation attribute `ShouldNotBeImplementedInWrapper` must be added
 - all function must be documented
-  - because `...$v` is used for curring, `@param` should be used to document order and type of params
+  - because `...$v` is used for currying, `@param` should be used to document order and type of params
   - type declarations (both return and arguments) must be used
   - similar functions should be linked with `@see`
   - at least one example must be given

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Tests\Wojciech\Phlambda;
+namespace Tests\Wojciech\Phlambda\Unit;
 
 use Wojciech\Phlambda\Wrapper;
 use function Wojciech\Phlambda\_;

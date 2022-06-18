@@ -3,18 +3,20 @@ declare(strict_types=1);
 
 namespace Wojciech\Phlambda;
 
-use Wojciech\Phlambda\Internal\Classes\Curry;
 use Wojciech\Phlambda\Internal\Attributes\ShouldNotBeImplementedInWrapper;
+use Wojciech\Phlambda\Internal\Classes\CurryingFunction;
+use Wojciech\Phlambda\Internal\Classes\Placeholder;
 
 /**
  * Returns n currying function.
  *
- * @param callable $fn callable accepting $n elements
- * @param int $n number of arguments accepted by given $fn function
+ * @param callable $callback callable accepting $n elements
+ * @param int $numberOfExpectedArguments number of arguments accepted by given $fn function
  */
 #[ShouldNotBeImplementedInWrapper]
-function curryN(callable $fn, int $n): callable {
-    return new Curry($fn, $n);
+function curryN(callable $callback, int $numberOfExpectedArguments): callable
+{
+    return new CurryingFunction($callback, $numberOfExpectedArguments);
 }
 
 /**
@@ -51,4 +53,13 @@ function curry2(callable $fn): callable
 function curry(callable $fn): callable
 {
     return curryN($fn, 1);
+}
+
+/**
+ * Returns placeholder for omitting some arguments in currying functions.
+ */
+#[ShouldNotBeImplementedInWrapper]
+function __(): Placeholder
+{
+    return Placeholder::create();
 }

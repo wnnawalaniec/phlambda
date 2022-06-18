@@ -18,7 +18,7 @@ use Wojciech\Phlambda\Internal\Attributes\ShouldNotBeImplementedInWrapper;
  * @param mixed $min Minimum value
  * @param mixed $max Maximum value
  * @param mixed $item Value to be clamped
- * @return callable|mixed If all arguments are given result is returned. Passing just some or none will result in curring function return.
+ * @return callable|mixed If all arguments are given result is returned. Passing just some or none will result in currying function return.
  */
 #[ShouldNotBeImplementedInWrapper]
 function clamp(...$v): mixed

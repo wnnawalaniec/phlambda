@@ -12,7 +12,7 @@ use Wojciech\Phlambda\Internal\Attributes\ShouldNotBeImplementedInWrapper;
  *
  * @param int|float $a
  * @param int|float $b
- * @return callable|float|int If all arguments are given result is returned. Passing just some or none will result in curring function return.
+ * @return callable|float|int If all arguments are given result is returned. Passing just some or none will result in currying function return.
  */
 #[ShouldNotBeImplementedInWrapper]
 function add(mixed ...$v): callable|float|int
@@ -27,7 +27,7 @@ function add(mixed ...$v): callable|float|int
  *
  * @param int|float $a
  * @param int|float $b
- * @return callable|float|int If all arguments are given result is returned. Passing just some or none will result in curring function return.
+ * @return callable|float|int If all arguments are given result is returned. Passing just some or none will result in currying function return.
  */
 #[ShouldNotBeImplementedInWrapper]
 function subtract(mixed ...$v): callable|float|int
@@ -41,7 +41,7 @@ function subtract(mixed ...$v): callable|float|int
  * Return type is same as given number.
  *
  * @param int|float $a
- * @return callable|float|int If all arguments are given result is returned. Passing just some or none will result in curring function return.
+ * @return callable|float|int If all arguments are given result is returned. Passing just some or none will result in currying function return.
  */
 #[ShouldNotBeImplementedInWrapper]
 function dec(mixed ...$v): callable|float|int
@@ -56,7 +56,7 @@ function dec(mixed ...$v): callable|float|int
  *
  * @param int|float $a
  * @param int|float $b
- * @return callable|float|int If all arguments are given result is returned. Passing just some or none will result in curring function return.
+ * @return callable|float|int If all arguments are given result is returned. Passing just some or none will result in currying function return.
  */
 #[ShouldNotBeImplementedInWrapper]
 function inc(mixed ...$v): callable|float|int
@@ -71,7 +71,7 @@ function inc(mixed ...$v): callable|float|int
  *
  * @param int|float $a
  * @param int|float $b
- * @return callable|float|int If all arguments are given result is returned. Passing just some or none will result in curring function return.
+ * @return callable|float|int If all arguments are given result is returned. Passing just some or none will result in currying function return.
  */
 #[ShouldNotBeImplementedInWrapper]
 function divide(mixed ...$v): callable|float|int
@@ -86,7 +86,7 @@ function divide(mixed ...$v): callable|float|int
  *
  * @param int|float $a
  * @param int|float $b
- * @return callable|float|int If all arguments are given result is returned. Passing just some or none will result in curring function return.
+ * @return callable|float|int If all arguments are given result is returned. Passing just some or none will result in currying function return.
  */
 #[ShouldNotBeImplementedInWrapper]
 function multiply(mixed ...$v): callable|float|int
@@ -101,7 +101,7 @@ function multiply(mixed ...$v): callable|float|int
  *
  * @param int|float $a
  * @param int|float $b
- * @return callable|float|int If all arguments are given result is returned. Passing just some or none will result in curring function return.
+ * @return callable|float|int If all arguments are given result is returned. Passing just some or none will result in currying function return.
  */
 #[ShouldNotBeImplementedInWrapper]
 function sum(mixed ...$v): callable|float|int

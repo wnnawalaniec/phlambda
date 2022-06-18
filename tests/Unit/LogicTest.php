@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Tests\Wojciech\Phlambda;
+namespace Tests\Wojciech\Phlambda\Unit;
 
 use function Wojciech\Phlambda\_and;
 use function Wojciech\Phlambda\_or;
@@ -41,6 +41,7 @@ class LogicTest extends BaseTest
     {
         $this->assertSame(true, not(false));
         $this->assertSame(false, not(true));
+        $this->assertSame(true, not(above(5))(5));
     }
 
     public function testNeither(): void

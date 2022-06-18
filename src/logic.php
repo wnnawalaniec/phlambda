@@ -68,18 +68,26 @@ function either(callable...$v): callable
 
 /**
  * Function returns inverted result of the input.
+ * When callback is given it will return function that will run that callback and return inverted result.
+ * Note that this callback is supposed to return boolean.
  *
  * Example:
  * <blockquote><pre>not(true); // it will return false</pre></blockquote>
  * <blockquote><pre>not(false); // it will return true</pre></blockquote>
+ * <blockquote><pre>not(above(5)); // it will return function accepting number and returning true if that number is not
+ * above 5</pre></blockquote>
  *
- * @param bool $input
+ * @param bool|callable $input
  * @return callable
  */
 #[ShouldNotBeImplementedInWrapper]
-function not(bool...$v): bool|callable
+function not(bool|callable $input): bool|callable
 {
-    return curry(fn (bool $input) => !$input)(...$v);
+    if (is_bool($input)) {
+        return curry(fn (bool $input) => !$input)($input);
+    }
+
+    return curry(fn (mixed...$args) => !$input(...$args));
 }
 
 /**

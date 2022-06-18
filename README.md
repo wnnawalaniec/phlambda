@@ -15,7 +15,7 @@ Small library for PHP with set of usefull functions for functional programming.
 
 Features:
  - set of useful functions helpful in functional programming
- - all functions are automatically curried
+ - all functions are automatically currying
  - every array can be wrapped with special class which allows for method chaining
  - first param is always function and the data to be operated will be last param
  
@@ -83,7 +83,8 @@ and exists only for chaining purposes.
 [Here you can find documentation.](https://wnnawalaniec.github.io/phlambda/packages/Application.html)
 
 # Currying
-In this library all function are automatically curried. If you don't know what curring functions are let me try to change it.
+What makes that library different from other functional libraries for PHP is that all function are automatically curried.
+If you don't know what currying functions are let me try to change it.
 According to [Wikipedia](https://en.wikipedia.org/wiki/Currying):
 > In mathematics and computer science, currying is the technique of converting a function that takes multiple arguments into a sequence of functions that each takes a single argument.
 
@@ -93,9 +94,21 @@ Let's see an example:
 $array = ['a', 'b', 'c'];
 $result = reduce(\Wojciech\Phlambda\concat, '', $array); // $result = 'abc'
 
-// and we can use it like cirrying function:
+// and we can use it like currying function:
 $concat = reduce(\Wojciech\Phlambda\concat, ''); // now it will return callback accepting last param from reduce - an array
 $result = $concat($array); // $result = 'abc'
+```
+
+Because I've decided to implement currying, I've also added placeholder feature. A placeholder is special type you can 
+pass to currying function, if you want to postpone passing of some arguments.
+
+Example of placeholder usage:
+```php
+$array = [1, 2, 3];
+$reducer = reduce(__, __, $array);
+
+$sum = $reducer(sum, 0);
+$multiplication = $reducer(multiply, 0);
 ```
 
 # Development Guides
