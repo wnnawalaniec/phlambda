@@ -348,7 +348,7 @@ Keep in mind that both given functions will be called.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="logic.php"><a href="files/logic.html"><abbr title="logic.php">logic.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">79</span>
+    <span class="phpdocumentor-element-found-in__line">83</span>
 
     </aside>
 
@@ -356,22 +356,25 @@ Keep in mind that both given functions will be called.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                    <span class="phpdocumentor-signature__name">not</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
+                    <span class="phpdocumentor-signature__name">not</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool|callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$input</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
 
-        <section class="phpdocumentor-description"><p>Example:</p>
+        <section class="phpdocumentor-description"><p>When callback is given it will return function that will run that callback and return inverted result.
+Note that this callback is supposed to return boolean.</p>
+<p>Example:</p>
 <blockquote><pre class="prettyprint">not(true); // it will return false</pre></blockquote>
 <blockquote><pre class="prettyprint">not(false); // it will return true</pre></blockquote>
+<blockquote><pre class="prettyprint">not(above(5)); // it will return function accepting number and returning true if that number is not
+above 5</pre></blockquote>
 </section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$v</span>
-                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                <span class="phpdocumentor-signature__argument__name">$input</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool|callable</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
             </dl>
 
@@ -391,7 +394,7 @@ Keep in mind that both given functions will be called.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="logic.php"><a href="files/logic.html"><abbr title="logic.php">logic.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">101</span>
+    <span class="phpdocumentor-element-found-in__line">109</span>
 
     </aside>
 
@@ -452,7 +455,7 @@ Keep in mind that if first function will return <code class="prettyprint">false<
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="logic.php"><a href="files/logic.html"><abbr title="logic.php">logic.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">119</span>
+    <span class="phpdocumentor-element-found-in__line">127</span>
 
     </aside>
 

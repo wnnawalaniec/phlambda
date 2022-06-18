@@ -256,7 +256,7 @@ there is any which doesn&#039;t.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">25</span>
+    <span class="phpdocumentor-element-found-in__line">26</span>
 
     </aside>
 
@@ -264,7 +264,7 @@ there is any which doesn&#039;t.</dd>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                    <span class="phpdocumentor-signature__name">adjust</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int|callable|array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span></code>
+                    <span class="phpdocumentor-signature__name">adjust</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int|callable|array&lt;string|int, mixed&gt;|<a href="classes/Wojciech-Phlambda-Internal-Classes-Placeholder.html"><abbr title="\Wojciech\Phlambda\Internal\Classes\Placeholder">Placeholder</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span></code>
 
         <section class="phpdocumentor-description"><p>Applies a function to the value at given index, returning new copy of the input array with the element at given
 index replaced with the result of the function. Index is 0 based, and negative numbers can be used to point element
@@ -279,7 +279,7 @@ If index is greater than the size of array unchanged copy is returned.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$v</span>
-                : <span class="phpdocumentor-signature__argument__return-type">int|callable|array&lt;string|int, mixed&gt;</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int|callable|array&lt;string|int, mixed&gt;|<a href="classes/Wojciech-Phlambda-Internal-Classes-Placeholder.html"><abbr title="\Wojciech\Phlambda\Internal\Classes\Placeholder">Placeholder</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"></section>
@@ -292,7 +292,7 @@ If index is greater than the size of array unchanged copy is returned.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in currying function return.</p>
 </section>
 
     
@@ -305,7 +305,7 @@ If index is greater than the size of array unchanged copy is returned.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">64</span>
+    <span class="phpdocumentor-element-found-in__line">65</span>
 
     </aside>
 
@@ -322,7 +322,7 @@ False is returned when at least one is not matching.</p>
 <blockquote><pre class="prettyprint">all(below(4), [1,2,3]); // it will return true</pre></blockquote>
 <p>You can also use it that way:</p>
 <blockquote><pre class="prettyprint">
-$below18 = all(below(18)); // it will return curring function
+$below18 = all(below(18)); // it will return currying function
 if ($below18($someUsers)) { // you can use that in code like normal function
  ...
 };
@@ -360,7 +360,7 @@ if ($below18($someUsers)) { // you can use that in code like normal function
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|bool</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in currying function return.</p>
 </section>
 
     
@@ -373,7 +373,7 @@ if ($below18($someUsers)) { // you can use that in code like normal function
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">83</span>
+    <span class="phpdocumentor-element-found-in__line">84</span>
 
     </aside>
 
@@ -420,7 +420,7 @@ if ($below18($someUsers)) { // you can use that in code like normal function
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in currying function return.</p>
 </section>
 
     
@@ -433,7 +433,7 @@ if ($below18($someUsers)) { // you can use that in code like normal function
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">102</span>
+    <span class="phpdocumentor-element-found-in__line">103</span>
 
     </aside>
 
@@ -480,7 +480,7 @@ if ($below18($someUsers)) { // you can use that in code like normal function
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in currying function return.</p>
 </section>
 
     
@@ -493,7 +493,7 @@ if ($below18($someUsers)) { // you can use that in code like normal function
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">129</span>
+    <span class="phpdocumentor-element-found-in__line">130</span>
 
     </aside>
 
@@ -563,7 +563,7 @@ keys will behave see it's documentation.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">string|array&lt;string|int, mixed&gt;|callable</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Returned type will be same as passed parameters. Passing just some or none will result in curring function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Returned type will be same as passed parameters. Passing just some or none will result in currying function return.</p>
 </section>
 
     
@@ -576,7 +576,7 @@ keys will behave see it's documentation.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">176</span>
+    <span class="phpdocumentor-element-found-in__line">177</span>
 
     </aside>
 
@@ -628,7 +628,7 @@ fn ($x) => $x['type'],
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;|callable</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Returned type will be same as passed parameters. Passing just some or none will result in curring function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Returned type will be same as passed parameters. Passing just some or none will result in currying function return.</p>
 </section>
 
     
@@ -641,7 +641,7 @@ fn ($x) => $x['type'],
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">208</span>
+    <span class="phpdocumentor-element-found-in__line">209</span>
 
     </aside>
 
@@ -687,7 +687,7 @@ fn ($x) => $x['type'],
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in currying function return.
 Type of array will be same as type of returned values from given callback.</p>
 </section>
 
@@ -701,7 +701,7 @@ Type of array will be same as type of returned values from given callback.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">230</span>
+    <span class="phpdocumentor-element-found-in__line">231</span>
 
     </aside>
 
@@ -751,7 +751,7 @@ For strings, <code class="prettyprint">mbstring</code> functions are used.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;|string</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in currying function return.</p>
 </section>
 
     
@@ -764,7 +764,7 @@ For strings, <code class="prettyprint">mbstring</code> functions are used.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">262</span>
+    <span class="phpdocumentor-element-found-in__line">263</span>
 
     </aside>
 
@@ -815,7 +815,7 @@ For strings, <code class="prettyprint">mbstring</code> functions are used.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;|string</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in currying function return.</p>
 </section>
 
     
@@ -828,7 +828,7 @@ For strings, <code class="prettyprint">mbstring</code> functions are used.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">292</span>
+    <span class="phpdocumentor-element-found-in__line">293</span>
 
     </aside>
 
@@ -877,7 +877,7 @@ the predicate function returns <code class="prettyprint">false</code>. The predi
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;|string</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in currying function return.</p>
 </section>
 
     
@@ -890,7 +890,7 @@ the predicate function returns <code class="prettyprint">false</code>. The predi
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">324</span>
+    <span class="phpdocumentor-element-found-in__line">325</span>
 
     </aside>
 
@@ -925,7 +925,7 @@ solution.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in currying function return.</p>
 </section>
 
     
@@ -938,7 +938,7 @@ solution.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">347</span>
+    <span class="phpdocumentor-element-found-in__line">348</span>
 
     </aside>
 
@@ -969,7 +969,7 @@ solution.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in currying function return.</p>
 </section>
 
     
@@ -982,7 +982,7 @@ solution.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">369</span>
+    <span class="phpdocumentor-element-found-in__line">370</span>
 
     </aside>
 
@@ -1039,7 +1039,7 @@ flatMap($duplicate, [1, 2, 3]); // it will return [1, 1, 2, 2, 3, 3]
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in currying function return.</p>
 </section>
 
     
@@ -1052,7 +1052,7 @@ flatMap($duplicate, [1, 2, 3]); // it will return [1, 1, 2, 2, 3, 3]
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">394</span>
+    <span class="phpdocumentor-element-found-in__line">395</span>
 
     </aside>
 
@@ -1103,7 +1103,7 @@ flat(true, [[[1]], [[2]], [[3]]]); // it will return [1, 2, 3]
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in currying function return.</p>
 </section>
 
     
@@ -1116,7 +1116,7 @@ flat(true, [[[1]], [[2]], [[3]]]); // it will return [1, 2, 3]
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">430</span>
+    <span class="phpdocumentor-element-found-in__line">431</span>
 
     </aside>
 
@@ -1162,7 +1162,7 @@ flat(true, [[[1]], [[2]], [[3]]]); // it will return [1, 2, 3]
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">callable|array&lt;string|int, mixed&gt;</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in curring function return.
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Passing just some or none will result in currying function return.
 Type of array will be same as type of returned values from given callback.</p>
 </section>
 
@@ -1176,7 +1176,7 @@ Type of array will be same as type of returned values from given callback.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">453</span>
+    <span class="phpdocumentor-element-found-in__line">454</span>
 
     </aside>
 
@@ -1193,7 +1193,7 @@ be thrown.</p>
 <p>Example use:</p>
 <blockquote><pre class="prettyprint">reduce(concat(), '1', ['2', '3', '4'])  // Returns '1234'</pre></blockquote>
 <blockquote><pre class="prettyprint">reduce(concat(), null, ['2', '3', '4'])  // Returns '234'</pre></blockquote>
-<blockquote><pre class="prettyprint">reduce(concat(), '')  // Returns curring function accepting array as param</pre></blockquote>
+<blockquote><pre class="prettyprint">reduce(concat(), '')  // Returns currying function accepting array as param</pre></blockquote>
 </section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
@@ -1229,7 +1229,7 @@ be thrown.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">mixed</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Returned type will be same as <var>$fn</var> callback. Passing just some or none will result in curring function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Returned type will be same as <var>$fn</var> callback. Passing just some or none will result in currying function return.</p>
 </section>
 
     
@@ -1242,7 +1242,7 @@ be thrown.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">484</span>
+    <span class="phpdocumentor-element-found-in__line">485</span>
 
     </aside>
 
@@ -1277,7 +1277,7 @@ be thrown.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">mixed</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Returned type will be same as <var>$fn</var> callback. Passing just some or none will result in curring function return.</p>
+            <section class="phpdocumentor-description"><p>If all arguments are given result is returned. Returned type will be same as <var>$fn</var> callback. Passing just some or none will result in currying function return.</p>
 </section>
 
     
@@ -1290,7 +1290,7 @@ be thrown.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="array.php"><a href="files/array.html"><abbr title="array.php">array.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">517</span>
+    <span class="phpdocumentor-element-found-in__line">518</span>
 
     </aside>
 

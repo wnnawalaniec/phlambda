@@ -97,7 +97,7 @@
 
     <article class="phpdocumentor-element -class">
         <h2 class="phpdocumentor-content__title">
-    Curry
+    CurryingFunction
 
     
             <div class="phpdocumentor-element__package">
@@ -111,14 +111,18 @@
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Internal/Classes/Curry.php"><a href="files/internal-classes-curry.html"><abbr title="Internal/Classes/Curry.php">Curry.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Internal/Classes/CurryingFunction.php"><a href="files/internal-classes-curryingfunction.html"><abbr title="Internal/Classes/CurryingFunction.php">CurryingFunction.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">11</span>
+    <span class="phpdocumentor-element-found-in__line">15</span>
 
     </aside>
 
-            <p class="phpdocumentor-summary">Internal class that encapsulates curring functions generation.</p>
+            <p class="phpdocumentor-summary">Internal class that encapsulates currying functions generation and logic.</p>
 
+    <section class="phpdocumentor-description"><p>currying function is a function which accepts some arguments and allows to
+partially fill those arguments in steps.</p>
+<p>Example of currying function f(a1, a2): <code class="prettyprint">f(a1)(a2);</code></p>
+</section>
 
 
 
@@ -133,29 +137,36 @@
 </h3>
 
 <dl class="phpdocumentor-table-of-contents">
-                    <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Wojciech-Phlambda-Internal-Classes-Curry.html#property_callable">$callable</a>
+                    <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#property_passedArguments">$passedArguments</a>
+    <span>
+                        &nbsp;: array&lt;string|int, mixed&gt;            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#property_callable">$callable</a>
     <span>
                         &nbsp;: <abbr title="\Closure">Closure</abbr>            </span>
 </dt>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Wojciech-Phlambda-Internal-Classes-Curry.html#property_numberOfExpectedArguments">$numberOfExpectedArguments</a>
+    <a href="classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#property_numberOfExpectedArguments">$numberOfExpectedArguments</a>
     <span>
                         &nbsp;: int            </span>
 </dt>
 <dd></dd>
 
                 <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Wojciech-Phlambda-Internal-Classes-Curry.html#method___construct">__construct()</a>
+    <a href="classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#method___construct">__construct()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Wojciech-Phlambda-Internal-Classes-Curry.html#method___invoke">__invoke()</a>
+    <a href="classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#method___invoke">__invoke()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
@@ -165,23 +176,44 @@ given to this method, 3 things can happen:
 will be returned.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/Wojciech-Phlambda-Internal-Classes-Curry.html#method_isExpectedNumberOfArgumentsGiven">isExpectedNumberOfArgumentsGiven()</a>
+    <a href="classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#method_areAllPassed">areAllPassed()</a>
     <span>
                                 &nbsp;: bool    </span>
 </dt>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/Wojciech-Phlambda-Internal-Classes-Curry.html#method_isMoreThenExpectedArgumentsGiven">isMoreThenExpectedArgumentsGiven()</a>
+    <a href="classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#method_isMoreThenExpectedArgumentsGiven">isMoreThenExpectedArgumentsGiven()</a>
     <span>
                                 &nbsp;: bool    </span>
 </dt>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/Wojciech-Phlambda-Internal-Classes-Curry.html#method_noArgumentsAreGiven">noArgumentsAreGiven()</a>
+    <a href="classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#method_noArgumentsAreGiven">noArgumentsAreGiven()</a>
     <span>
                                 &nbsp;: bool    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#method_numberOfExpectedArguments">numberOfExpectedArguments()</a>
+    <span>
+                                &nbsp;: int    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#method_replacePlaceholderWithArgument">replacePlaceholderWithArgument()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#method_updatePassedArguments">updatePassedArguments()</a>
+    <span>
+                                &nbsp;: void    </span>
 </dt>
 <dd></dd>
 
@@ -195,8 +227,42 @@ will be returned.</dd>
     <section class="phpdocumentor-properties">
         <h3 class="phpdocumentor-elements__header" id="properties">
             Properties
-            <a href="classes/Wojciech-Phlambda-Internal-Classes-Curry.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_passedArguments">
+        $passedArguments
+        <a href="classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#property_passedArguments" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Internal/Classes/CurryingFunction.php"><a href="files/internal-classes-curryingfunction.html"><abbr title="Internal/Classes/CurryingFunction.php">CurryingFunction.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">94</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+        <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+    <span class="phpdocumentor-signature__name">$passedArguments</span>
+    </code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
                     <article
         class="
             phpdocumentor-element
@@ -206,14 +272,14 @@ will be returned.</dd>
 >
     <h4 class="phpdocumentor-element__name" id="property_callable">
         $callable
-        <a href="classes/Wojciech-Phlambda-Internal-Classes-Curry.html#property_callable" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#property_callable" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Internal/Classes/Curry.php"><a href="files/internal-classes-curry.html"><abbr title="Internal/Classes/Curry.php">Curry.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Internal/Classes/CurryingFunction.php"><a href="files/internal-classes-curryingfunction.html"><abbr title="Internal/Classes/CurryingFunction.php">CurryingFunction.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">13</span>
+    <span class="phpdocumentor-element-found-in__line">17</span>
 
     </aside>
 
@@ -240,14 +306,14 @@ will be returned.</dd>
 >
     <h4 class="phpdocumentor-element__name" id="property_numberOfExpectedArguments">
         $numberOfExpectedArguments
-        <a href="classes/Wojciech-Phlambda-Internal-Classes-Curry.html#property_numberOfExpectedArguments" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#property_numberOfExpectedArguments" class="headerlink"><i class="fas fa-link"></i></a>
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Internal/Classes/Curry.php"><a href="files/internal-classes-curry.html"><abbr title="Internal/Classes/Curry.php">Curry.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Internal/Classes/CurryingFunction.php"><a href="files/internal-classes-curryingfunction.html"><abbr title="Internal/Classes/CurryingFunction.php">CurryingFunction.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">13</span>
+    <span class="phpdocumentor-element-found-in__line">17</span>
 
     </aside>
 
@@ -270,7 +336,7 @@ will be returned.</dd>
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/Wojciech-Phlambda-Internal-Classes-Curry.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="phpdocumentor-element
@@ -280,12 +346,12 @@ will be returned.</dd>
 >
     <h4 class="phpdocumentor-element__name" id="method___construct">
         __construct()
-        <a href="classes/Wojciech-Phlambda-Internal-Classes-Curry.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Internal/Classes/Curry.php"><a href="files/internal-classes-curry.html"><abbr title="Internal/Classes/Curry.php">Curry.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Internal/Classes/CurryingFunction.php"><a href="files/internal-classes-curryingfunction.html"><abbr title="Internal/Classes/CurryingFunction.php">CurryingFunction.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">13</span>
+    <span class="phpdocumentor-element-found-in__line">17</span>
 
     </aside>
 
@@ -332,12 +398,12 @@ will be returned.</dd>
 >
     <h4 class="phpdocumentor-element__name" id="method___invoke">
         __invoke()
-        <a href="classes/Wojciech-Phlambda-Internal-Classes-Curry.html#method___invoke" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#method___invoke" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Internal/Classes/Curry.php"><a href="files/internal-classes-curry.html"><abbr title="Internal/Classes/Curry.php">Curry.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Internal/Classes/CurryingFunction.php"><a href="files/internal-classes-curryingfunction.html"><abbr title="Internal/Classes/CurryingFunction.php">CurryingFunction.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">25</span>
+    <span class="phpdocumentor-element-found-in__line">35</span>
 
     </aside>
 
@@ -348,18 +414,20 @@ will be returned.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">__invoke</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">__invoke</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$arguments</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
         <section class="phpdocumentor-description"><ul>
 <li>when 0 arguments are passed, just instance of called object is returned</li>
 <li>when less than expected number of arguments are given, another Curry object is created expecting rest of arguments</li>
 </ul>
+<p>Keep in mind, that calling currying function with just some arguments will result in creation of new instance of
+currying function.</p>
 </section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$v</span>
+                <span class="phpdocumentor-signature__argument__name">$arguments</span>
                 : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
@@ -398,12 +466,12 @@ will be returned.</p>
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_isExpectedNumberOfArgumentsGiven">
-        isExpectedNumberOfArgumentsGiven()
-        <a href="classes/Wojciech-Phlambda-Internal-Classes-Curry.html#method_isExpectedNumberOfArgumentsGiven" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_areAllPassed">
+        areAllPassed()
+        <a href="classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#method_areAllPassed" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Internal/Classes/Curry.php"><a href="files/internal-classes-curry.html"><abbr title="Internal/Classes/Curry.php">Curry.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Internal/Classes/CurryingFunction.php"><a href="files/internal-classes-curryingfunction.html"><abbr title="Internal/Classes/CurryingFunction.php">CurryingFunction.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">56</span>
 
@@ -412,22 +480,11 @@ will be returned.</p>
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-                    <span class="phpdocumentor-signature__name">isExpectedNumberOfArgumentsGiven</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+                    <span class="phpdocumentor-signature__name">areAllPassed</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
         <section class="phpdocumentor-description"></section>
 
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$v</span>
-                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
-            </dd>
-            </dl>
-
+    
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
@@ -444,26 +501,26 @@ will be returned.</p>
 >
     <h4 class="phpdocumentor-element__name" id="method_isMoreThenExpectedArgumentsGiven">
         isMoreThenExpectedArgumentsGiven()
-        <a href="classes/Wojciech-Phlambda-Internal-Classes-Curry.html#method_isMoreThenExpectedArgumentsGiven" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#method_isMoreThenExpectedArgumentsGiven" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Internal/Classes/Curry.php"><a href="files/internal-classes-curry.html"><abbr title="Internal/Classes/Curry.php">Curry.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Internal/Classes/CurryingFunction.php"><a href="files/internal-classes-curryingfunction.html"><abbr title="Internal/Classes/CurryingFunction.php">CurryingFunction.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">51</span>
+    <span class="phpdocumentor-element-found-in__line">46</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-                    <span class="phpdocumentor-signature__name">isMoreThenExpectedArgumentsGiven</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+                    <span class="phpdocumentor-signature__name">isMoreThenExpectedArgumentsGiven</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$arguments</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
         <section class="phpdocumentor-description"></section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$v</span>
+                <span class="phpdocumentor-signature__argument__name">$arguments</span>
                 : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
@@ -488,26 +545,26 @@ will be returned.</p>
 >
     <h4 class="phpdocumentor-element__name" id="method_noArgumentsAreGiven">
         noArgumentsAreGiven()
-        <a href="classes/Wojciech-Phlambda-Internal-Classes-Curry.html#method_noArgumentsAreGiven" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#method_noArgumentsAreGiven" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="Internal/Classes/Curry.php"><a href="files/internal-classes-curry.html"><abbr title="Internal/Classes/Curry.php">Curry.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="Internal/Classes/CurryingFunction.php"><a href="files/internal-classes-curryingfunction.html"><abbr title="Internal/Classes/CurryingFunction.php">CurryingFunction.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">46</span>
+    <span class="phpdocumentor-element-found-in__line">61</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-                    <span class="phpdocumentor-signature__name">noArgumentsAreGiven</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$v</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+                    <span class="phpdocumentor-signature__name">noArgumentsAreGiven</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$arguments</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
         <section class="phpdocumentor-description"></section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$v</span>
+                <span class="phpdocumentor-signature__argument__name">$arguments</span>
                 : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
@@ -520,6 +577,135 @@ will be returned.</p>
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">bool</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_numberOfExpectedArguments">
+        numberOfExpectedArguments()
+        <a href="classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#method_numberOfExpectedArguments" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Internal/Classes/CurryingFunction.php"><a href="files/internal-classes-curryingfunction.html"><abbr title="Internal/Classes/CurryingFunction.php">CurryingFunction.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">51</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+                    <span class="phpdocumentor-signature__name">numberOfExpectedArguments</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">int</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_replacePlaceholderWithArgument">
+        replacePlaceholderWithArgument()
+        <a href="classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#method_replacePlaceholderWithArgument" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Internal/Classes/CurryingFunction.php"><a href="files/internal-classes-curryingfunction.html"><abbr title="Internal/Classes/CurryingFunction.php">CurryingFunction.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">79</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+                    <span class="phpdocumentor-signature__name">replacePlaceholderWithArgument</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$argument</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$placeholdersToSkip</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$argument</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$placeholdersToSkip</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_updatePassedArguments">
+        updatePassedArguments()
+        <a href="classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#method_updatePassedArguments" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="Internal/Classes/CurryingFunction.php"><a href="files/internal-classes-curryingfunction.html"><abbr title="Internal/Classes/CurryingFunction.php">CurryingFunction.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">66</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+                    <span class="phpdocumentor-signature__name">updatePassedArguments</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$arguments</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$arguments</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
             &mdash;
         
     
@@ -602,7 +788,7 @@ will be returned.</p>
 </section>
             </div>
         </div>
-        <a href="classes/Wojciech-Phlambda-Internal-Classes-Curry.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 
