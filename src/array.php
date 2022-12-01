@@ -324,7 +324,7 @@ function dropLastWhile(callable|string|array...$v): callable|string|array
  */
 function dropRepeats(array...$v): callable|array
 {
-    return curry(function (array $input) {
+    return curry1(function (array $input) {
         $result = [];
         foreach ($input as $value) {
             if (!in_array($value, $result, true)) {

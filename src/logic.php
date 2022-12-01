@@ -84,10 +84,10 @@ function either(callable...$v): callable
 function not(bool|callable $input): bool|callable
 {
     if (is_bool($input)) {
-        return curry(fn (bool $input) => !$input)($input);
+        return curry1(fn (bool $input) => !$input)($input);
     }
 
-    return curry(fn (mixed...$args) => !$input(...$args));
+    return curry1(fn (mixed...$args) => !$input(...$args));
 }
 
 /**
