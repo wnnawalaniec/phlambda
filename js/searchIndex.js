@@ -181,6 +181,11 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/wojciech-phlambda.html#constant__"
         },                {
+            "fqsen": "\\Wojciech\\Phlambda\\curry",
+            "name": "curry",
+            "summary": "",
+            "url": "namespaces/wojciech-phlambda.html#constant_curry"
+        },                {
             "fqsen": "\\Wojciech\\Phlambda\\curryN",
             "name": "curryN",
             "summary": "",
@@ -196,10 +201,10 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/wojciech-phlambda.html#constant_curry2"
         },                {
-            "fqsen": "\\Wojciech\\Phlambda\\curry",
-            "name": "curry",
+            "fqsen": "\\Wojciech\\Phlambda\\curry1",
+            "name": "curry1",
             "summary": "",
-            "url": "namespaces/wojciech-phlambda.html#constant_curry"
+            "url": "namespaces/wojciech-phlambda.html#constant_curry1"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\__",
             "name": "__",
@@ -311,9 +316,14 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/wojciech-phlambda.html#constant_clamp"
         },                {
+            "fqsen": "\\Wojciech\\Phlambda\\curry\u0028\u0029",
+            "name": "curry",
+            "summary": "Returns\u0020currying\u0020function.\u0020Uses\u0020reflection\u0020to\u0020automatically\u0020detect\u0020number\u0020of\u0020parameters\u0020given\u0020callback\u0020is\u0020accepting.",
+            "url": "namespaces/wojciech-phlambda.html#function_curry"
+        },                {
             "fqsen": "\\Wojciech\\Phlambda\\curryN\u0028\u0029",
             "name": "curryN",
-            "summary": "Returns\u0020n\u0020currying\u0020function.",
+            "summary": "Returns\u0020currying\u0020function\u0020expecting\u0020n\u0020parameters.",
             "url": "namespaces/wojciech-phlambda.html#function_curryN"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\curry3\u0028\u0029",
@@ -326,10 +336,10 @@ Search.appendIndex(
             "summary": "Returns\u0020currying\u0020function\u0020awaiting\u00202\u0020arguments.",
             "url": "namespaces/wojciech-phlambda.html#function_curry2"
         },                {
-            "fqsen": "\\Wojciech\\Phlambda\\curry\u0028\u0029",
-            "name": "curry",
+            "fqsen": "\\Wojciech\\Phlambda\\curry1\u0028\u0029",
+            "name": "curry1",
             "summary": "Returns\u0020currying\u0020function\u0020awaiting\u00201\u0020argument.",
-            "url": "namespaces/wojciech-phlambda.html#function_curry"
+            "url": "namespaces/wojciech-phlambda.html#function_curry1"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\__\u0028\u0029",
             "name": "__",
@@ -340,61 +350,6 @@ Search.appendIndex(
             "name": "ShouldNotBeImplementedInWrapper",
             "summary": "Attribute\u0020to\u0020mark\u0020methods\u0020that\u0020are\u0020not\u0020supposed\u0020to\u0020be\u0020implemented\u0020by\u0020Wrapper.",
             "url": "classes/Wojciech-Phlambda-Internal-Attributes-ShouldNotBeImplementedInWrapper.html"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\Internal\\Classes\\CurryingFunction",
-            "name": "CurryingFunction",
-            "summary": "Internal\u0020class\u0020that\u0020encapsulates\u0020currying\u0020functions\u0020generation\u0020and\u0020logic.",
-            "url": "classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\Internal\\Classes\\CurryingFunction\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "",
-            "url": "classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#method___construct"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\Internal\\Classes\\CurryingFunction\u003A\u003A__invoke\u0028\u0029",
-            "name": "__invoke",
-            "summary": "Depend\u0020on\u0020number\u0020of\u0020expected\u0020arguments\u0020given\u0020in\u0020constructor\u0020and\u0020number\u0020of\u0020arguments\ngiven\u0020to\u0020this\u0020method,\u00203\u0020things\u0020can\u0020happen\u003A\n\u0020\u002D\u0020when\u0020number\u0020of\u0020arguments\u0020equals\u0020expected\u0020number,\u0020given\u0020callable\u0020will\u0020be\u0020called\u0020with\u0020all\u0020arguments\u0020and\u0020result\nwill\u0020be\u0020returned.",
-            "url": "classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#method___invoke"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\Internal\\Classes\\CurryingFunction\u003A\u003AisMoreThenExpectedArgumentsGiven\u0028\u0029",
-            "name": "isMoreThenExpectedArgumentsGiven",
-            "summary": "",
-            "url": "classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#method_isMoreThenExpectedArgumentsGiven"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\Internal\\Classes\\CurryingFunction\u003A\u003A\u0024numberOfExpectedArguments",
-            "name": "numberOfExpectedArguments",
-            "summary": "",
-            "url": "classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#property_numberOfExpectedArguments"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\Internal\\Classes\\CurryingFunction\u003A\u003AareAllPassed\u0028\u0029",
-            "name": "areAllPassed",
-            "summary": "",
-            "url": "classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#method_areAllPassed"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\Internal\\Classes\\CurryingFunction\u003A\u003AnoArgumentsAreGiven\u0028\u0029",
-            "name": "noArgumentsAreGiven",
-            "summary": "",
-            "url": "classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#method_noArgumentsAreGiven"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\Internal\\Classes\\CurryingFunction\u003A\u003AupdatePassedArguments\u0028\u0029",
-            "name": "updatePassedArguments",
-            "summary": "",
-            "url": "classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#method_updatePassedArguments"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\Internal\\Classes\\CurryingFunction\u003A\u003AreplacePlaceholderWithArgument\u0028\u0029",
-            "name": "replacePlaceholderWithArgument",
-            "summary": "",
-            "url": "classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#method_replacePlaceholderWithArgument"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\Internal\\Classes\\CurryingFunction\u003A\u003A\u0024callable",
-            "name": "callable",
-            "summary": "",
-            "url": "classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#property_callable"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\Internal\\Classes\\CurryingFunction\u003A\u003A\u0024passedArguments",
-            "name": "passedArguments",
-            "summary": "",
-            "url": "classes/Wojciech-Phlambda-Internal-Classes-CurryingFunction.html#property_passedArguments"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\Internal\\Classes\\Placeholder",
             "name": "Placeholder",
@@ -415,16 +370,6 @@ Search.appendIndex(
             "name": "filterPlaceholders",
             "summary": "Returns\u0020new\u0020array\u0020without\u0020placeholders.",
             "url": "classes/Wojciech-Phlambda-Internal-Classes-Placeholder.html#method_filterPlaceholders"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\Internal\\Exceptions\\TooMuchArgumentsGiven",
-            "name": "TooMuchArgumentsGiven",
-            "summary": "",
-            "url": "classes/Wojciech-Phlambda-Internal-Exceptions-TooMuchArgumentsGiven.html"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\Internal\\Exceptions\\TooMuchArgumentsGiven\u003A\u003Acreate\u0028\u0029",
-            "name": "create",
-            "summary": "",
-            "url": "classes/Wojciech-Phlambda-Internal-Exceptions-TooMuchArgumentsGiven.html#method_create"
         },                {
             "fqsen": "\\Wojciech\\Phlambda\\_and\u0028\u0029",
             "name": "_and",
@@ -680,10 +625,5 @@ Search.appendIndex(
             "name": "Classes",
             "summary": "",
             "url": "namespaces/wojciech-phlambda-internal-classes.html"
-        },                {
-            "fqsen": "\\Wojciech\\Phlambda\\Internal\\Exceptions",
-            "name": "Exceptions",
-            "summary": "",
-            "url": "namespaces/wojciech-phlambda-internal-exceptions.html"
         }            ]
 );

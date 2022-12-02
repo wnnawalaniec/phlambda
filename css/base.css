@@ -25,7 +25,7 @@
     --primary-color-saturation: 57%;
     --primary-color: hsl(var(--primary-color-hue), var(--primary-color-saturation), 60%);
     --primary-color-darken: hsl(var(--primary-color-hue), var(--primary-color-saturation), 40%);
-    --primary-color-darker: hsl(var(--primary-color-hue), var(--primary-color-saturation), 20%);
+    --primary-color-darker: hsl(var(--primary-color-hue), var(--primary-color-saturation), 25%);
     --primary-color-darkest: hsl(var(--primary-color-hue), var(--primary-color-saturation), 10%);
     --primary-color-lighten: hsl(var(--primary-color-hue), var(--primary-color-saturation), 80%);
     --primary-color-lighter: hsl(var(--primary-color-hue), var(--primary-color-saturation), 99%);
@@ -44,8 +44,8 @@
     --button-text-color: #555;
     --button-text-color-primary: white;
     --popover-background-color: rgba(255, 255, 255, 0.75);
-    --link-color-primary: var(--primary-color-darken);
-    --link-hover-color-primary: var(--primary-color-darker);
+    --link-color-primary: var(--primary-color-darker);
+    --link-hover-color-primary: var(--primary-color-darkest);
     --form-field-border-color: var(--dark-gray);
     --form-field-color: #fff;
     --admonition-success-color: var(--primary-color);
@@ -458,8 +458,15 @@ div.phpdocumentor-list > ul,
 ol.phpdocumentor-list,
 ul.phpdocumentor-list {
     margin-top: 0;
-    padding-left: 1rem;
-    margin-bottom: var(--spacing-md);
+    padding-left: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+.phpdocumentor-column ul.-clean,
+div.phpdocumentor-list > ul.-clean,
+ul.phpdocumentor-list.-clean {
+    list-style: none;
+    padding-left: 0;
 }
 
 dl {
@@ -473,7 +480,7 @@ ul.phpdocumentor-list ol.phpdocumentor-list,
 ol.phpdocumentor-list ol.phpdocumentor-list,
 ol.phpdocumentor-list ul.phpdocumentor-list {
     font-size: var(--text-sm);
-    margin: var(--spacing-xs) 0 var(--spacing-xs) calc(var(--spacing-xs) * 2);
+    margin: 0 0 0 calc(var(--spacing-xs) * 2);
 }
 
 .phpdocumentor-column ul li,
@@ -543,6 +550,26 @@ td.phpdocumentor-cell:first-child {
 th.phpdocumentor-heading:last-child,
 td.phpdocumentor-cell:last-child {
     padding-right: 0;
+}
+.phpdocumentor-label-line {
+    display: flex; flex-direction: row; gap: 1rem
+}
+
+.phpdocumentor-label {
+    background: #f6f6f6;
+    border-radius: .25rem;
+    font-size: 80%;
+    display: inline-block;
+    overflow: hidden
+}
+
+.phpdocumentor-label span {
+    display: inline-block;
+    padding: .125rem .5rem;
+}
+
+.phpdocumentor-label--success span:last-of-type {
+    background: #abe1ab;
 }
 
 .phpdocumentor-header {
@@ -628,7 +655,7 @@ td.phpdocumentor-cell:last-child {
 
 @media (min-width: 1000px) {
     .phpdocumentor-title {
-        width: 30.6666666667%;
+        width: 22%;
         border-right: var(--sidebar-border-color) solid 1px;
     }
 
@@ -1053,6 +1080,7 @@ td.phpdocumentor-cell:last-child {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 
 .phpdocumentor-modal__open {
@@ -1089,6 +1117,56 @@ td.phpdocumentor-cell:last-child {
     border: 0px;
     font-weight: bold;
     cursor: pointer;
+}
+.phpdocumentor-on-this-page__sidebar {
+    display: none;
+}
+
+.phpdocumentor-on-this-page__title {
+    display: block;
+    font-weight: bold;
+    margin-bottom: var(--spacing-sm);
+    color: var(--link-color-primary);
+}
+
+@media (min-width: 1000px) {
+    .phpdocumentor-on-this-page__sidebar {
+        display: block;
+        position: relative;
+    }
+
+    .phpdocumentor-on-this-page__content::-webkit-scrollbar,
+    [scrollbars]::-webkit-scrollbar {
+        height: 8px;
+        width: 8px;
+    }
+
+    .phpdocumentor-on-this-page__content::-webkit-scrollbar-corner,
+    [scrollbars]::-webkit-scrollbar-corner {
+        background: 0;
+    }
+
+    .phpdocumentor-on-this-page__content::-webkit-scrollbar-thumb,
+    [scrollbars]::-webkit-scrollbar-thumb {
+        background: rgba(128,134,139,0.26);
+        border-radius: 8px;
+    }
+
+    .phpdocumentor-on-this-page__content {
+        position: fixed;
+        height: calc(100vh - var(--header-height));
+        overflow-y: auto;
+        border-left: 1px solid var(--sidebar-border-color);
+        padding-left: var(--spacing-lg);
+        font-size: 90%;
+        width: calc(18% - var(--spacing-xs) - var(--spacing-xs)); /* This magic number probably indicates a problem, revisit this */
+        right: var(--spacing-xs);
+    }
+
+    .phpdocumentor-on-this-page__content li {
+        word-break: break-all;
+        line-height: normal;
+    }
 }
 
 /* Used for screen readers and such */
