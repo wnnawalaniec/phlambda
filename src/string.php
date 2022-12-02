@@ -18,7 +18,7 @@ use Wojciech\Phlambda\Internal\Attributes\ShouldNotBeImplementedInWrapper;
 #[ShouldNotBeImplementedInWrapper]
 function toString(mixed...$v): string|callable
 {
-    return curry(fn (mixed $item) => (string) $item)(...$v);
+    return curry1(fn (mixed $item) => (string) $item)(...$v);
 }
 
 /**

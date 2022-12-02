@@ -40,5 +40,10 @@
         "phpunit/phpunit": "^9.5",
         "infection/infection": "^0.25.5",
         "nette/php-generator": "^3.6"
+    },
+    "config": {
+        "allow-plugins": {
+            "infection/extension-installer": true
+        }
     }
 }
