@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Tests\Wojciech\Phlambda\Unit;
+namespace Tests\Phlambda\Unit;
 
 use PHPUnit\Framework\TestCase;
 

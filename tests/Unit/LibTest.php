@@ -1,14 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace Tests\Wojciech\Phlambda\Unit;
+namespace Tests\Phlambda\Unit;
 
-use Wojciech\Phlambda\Internal\Attributes\ShouldNotBeImplementedInWrapper;
-use Wojciech\Phlambda\Wrapper;
-use function Wojciech\Phlambda\_;
-use function Wojciech\Phlambda\both;
-use function Wojciech\Phlambda\matches;
-use function Wojciech\Phlambda\startsWith;
+use Phlambda\Internal\Attributes\ShouldNotBeImplementedInWrapper;
+use Phlambda\Internal\Wrapper;
+use function Phlambda\_;
+use function Phlambda\both;
+use function Phlambda\matches;
+use function Phlambda\startsWith;
 
 /**
  * This is set of tests ensuring that library guides are respected.
@@ -23,7 +23,7 @@ class LibTest extends BaseTest
         };
 
         $allFunctionsInNamespace = _(get_defined_functions()['user'])
-            ->filter(both(startsWith('wojciech\phlambda'), $shouldBeImplementedInWrapper))
+            ->filter(both(startsWith('Phlambda'), $shouldBeImplementedInWrapper))
             ->flatMap(matches('/wojciech\\\\phlambda\\\\\K\w+/'));
 
         $wrapperReflection = new \ReflectionClass(Wrapper::class);
@@ -48,13 +48,13 @@ class LibTest extends BaseTest
     public function testThereIsConstWithNamespaceOfEachFunction(): void
     {
         $allFunctionsInNamespace = _(get_defined_functions()['user'])
-            ->filter(startsWith('wojciech\phlambda'))
+            ->filter(startsWith('Phlambda'))
             ->flatMap(matches('/wojciech\\\\phlambda\\\\\K\w+/'));
 
         $definedConstantsInNamespace = _(array_values(get_defined_constants(true)['user']))
             ->filter('is_string')
             ->map('strtolower')
-            ->filter(startsWith('\wojciech\phlambda'))
+            ->filter(startsWith('\Phlambda'))
             ->flatMap(matches('/wojciech\\\\phlambda\\\\\K\w+/'));
 
         $this->assertEmpty(
@@ -71,13 +71,13 @@ class LibTest extends BaseTest
     public function testAllConstWithFunctionsNamespacesHasSameNameAsFunction(): void
     {
         $allFunctionsInNamespace = _(get_defined_functions()['user'])
-            ->filter(startsWith('wojciech\phlambda'))
+            ->filter(startsWith('Phlambda'))
             ->flatMap(matches('/wojciech\\\\phlambda\\\\\K\w+/'));
 
         $definedConstantsInNamespace = _(array_keys(get_defined_constants(true)['user']))
             ->filter('is_string')
             ->map('strtolower')
-            ->filter(startsWith('wojciech\phlambda'))
+            ->filter(startsWith('Phlambda'))
             ->flatMap(matches('/wojciech\\\\phlambda\\\\\K\w+/'));
 
         $this->assertEmpty(

@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Wojciech\Phlambda\Internal\Attributes;
+namespace Phlambda\Internal\Attributes;
 
-use Wojciech\Phlambda\Wrapper;
+use Phlambda\Internal\Wrapper;
 
 /**
  * Attribute to mark methods that are not supposed to be implemented by Wrapper.

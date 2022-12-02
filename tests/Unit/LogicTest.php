@@ -1,16 +1,16 @@
 <?php
 declare(strict_types=1);
 
-namespace Tests\Wojciech\Phlambda\Unit;
+namespace Tests\Phlambda\Unit;
 
-use function Wojciech\Phlambda\_and;
-use function Wojciech\Phlambda\_or;
-use function Wojciech\Phlambda\above;
-use function Wojciech\Phlambda\below;
-use function Wojciech\Phlambda\both;
-use function Wojciech\Phlambda\either;
-use function Wojciech\Phlambda\neither;
-use function Wojciech\Phlambda\not;
+use function Phlambda\_and;
+use function Phlambda\_or;
+use function Phlambda\above;
+use function Phlambda\below;
+use function Phlambda\both;
+use function Phlambda\either;
+use function Phlambda\neither;
+use function Phlambda\not;
 
 class LogicTest extends BaseTest
 {

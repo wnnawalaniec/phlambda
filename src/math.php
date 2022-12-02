@@ -1,9 +1,9 @@
 <?php /** @noinspection PhpDocSignatureInspection */
 declare(strict_types=1);
 
-namespace Wojciech\Phlambda;
+namespace Phlambda;
 
-use Wojciech\Phlambda\Internal\Attributes\ShouldNotBeImplementedInWrapper;
+use Phlambda\Internal\Attributes\ShouldNotBeImplementedInWrapper;
 
 /**
  * Returns sum of two numbers.

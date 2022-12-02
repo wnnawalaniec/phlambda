@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace Tests\Wojciech\Phlambda\Unit;
+namespace Tests\Phlambda\Unit;
 
-use function Wojciech\Phlambda\endsWith;
-use function Wojciech\Phlambda\matches;
-use function Wojciech\Phlambda\startsWith;
-use function Wojciech\Phlambda\toString;
+use function Phlambda\endsWith;
+use function Phlambda\matches;
+use function Phlambda\startsWith;
+use function Phlambda\toString;
 
 class StringTest extends BaseTest
 {

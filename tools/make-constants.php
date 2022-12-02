@@ -1,15 +1,15 @@
 <?php
 declare(strict_types=1);
 
-namespace Tools\Wojciech\Phlambda;
+namespace Tools\Phlambda;
 
-use function Wojciech\Phlambda\_;
-use function Wojciech\Phlambda\matches;
-use function Wojciech\Phlambda\startsWith;
+use function Phlambda\_;
+use function Phlambda\matches;
+use function Phlambda\startsWith;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-const target_namespace = 'Wojciech\Phlambda';
+const target_namespace = 'Phlambda';
 
 $file = new \Nette\PhpGenerator\PhpFile();
 $file->addComment('This file is auto-generated (`make generate-constants`)');
@@ -19,7 +19,7 @@ $file->addNamespace(target_namespace);
 $declaredFunctions = _(get_defined_functions()['user'])
     ->filter(startsWith(strtolower(target_namespace)))
     ->flatMap(fn (string $name) => (new \ReflectionFunction($name))->getName())
-    ->flatMap(matches('/Wojciech\\\\Phlambda\\\\\K\w+/'))
+    ->flatMap(matches('/Phlambda\\\\\K\w+/'))
     ->toArray();
 
 $fileContent = (string) $file;

@@ -7,7 +7,7 @@
     "homepage": "https://github.com/wnnawalaniec/phlambda",
     "autoload": {
         "psr-4": {
-            "Wojciech\\Phlambda\\": "src/"
+            "Phlambda\\": "src/"
         },
         "files": [
             "src/array.php",
@@ -22,8 +22,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\Wojciech\\Phlambda\\": "tests/",
-            "Tools\\Wojciech\\Phlambda\\": "tools/"
+            "Tests\\Phlambda\\": "tests/",
+            "Tools\\Phlambda\\": "tools/"
         }
     },
     "authors": [

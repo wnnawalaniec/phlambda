@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace Tests\Wojciech\Phlambda\Unit\Internal\Classes;
+namespace Tests\Phlambda\Unit\Internal;
 
 use PHPUnit\Framework\TestCase;
-use Wojciech\Phlambda\Internal\Classes\Placeholder;
-use function Wojciech\Phlambda\__;
-use const Wojciech\Phlambda\__;
+use Phlambda\Internal\Placeholder;
+use function Phlambda\__;
+use const Phlambda\__;
 
 class PlaceholderTest extends TestCase
 {

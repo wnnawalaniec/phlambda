@@ -1,7 +1,21 @@
 <?php
 declare(strict_types=1);
 
-namespace Wojciech\Phlambda;
+namespace Phlambda\Internal;
+
+use function Phlambda\adjust;
+use function Phlambda\all;
+use function Phlambda\any;
+use function Phlambda\append;
+use function Phlambda\concat;
+use function Phlambda\diff;
+use function Phlambda\drop;
+use function Phlambda\dropLast;
+use function Phlambda\dropRepeats;
+use function Phlambda\filter;
+use function Phlambda\flatMap;
+use function Phlambda\map;
+use function Phlambda\reduce;
 
 /**
  * This class is a wrapper for arrays, so you can chain functions from that library in nice fashion.

@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Tests\Wojciech\Phlambda\Unit;
+namespace Tests\Phlambda\Unit;
 
-use Wojciech\Phlambda\Internal\Attributes\ShouldNotBeImplementedInWrapper;
-use Wojciech\Phlambda\Wrapper;
-use function Wojciech\Phlambda\{_,
+use Phlambda\Internal\Attributes\ShouldNotBeImplementedInWrapper;
+use Phlambda\Internal\Wrapper;
+use function Phlambda\{_,
     above,
     adjust,
     all,
@@ -25,11 +25,11 @@ use function Wojciech\Phlambda\{_,
     multiply,
     reduce,
     tuples};
-use const Wojciech\Phlambda\_;
-use const Wojciech\Phlambda\add;
-use const Wojciech\Phlambda\concat;
-use const Wojciech\Phlambda\inc;
-use const Wojciech\Phlambda\toString;
+use const Phlambda\_;
+use const Phlambda\add;
+use const Phlambda\concat;
+use const Phlambda\inc;
+use const Phlambda\toString;
 
 class ArrayTest extends BaseTest
 {

@@ -1,16 +1,16 @@
 <?php
 declare(strict_types=1);
 
-namespace Tests\Wojciech\Phlambda\Unit;
+namespace Tests\Phlambda\Unit;
 
-use Tests\Wojciech\Phlambda\Support\ExceptionAssertions;
-use Tests\Wojciech\Phlambda\Support\ClassToCall;
-use function Wojciech\Phlambda\curry;
-use function Wojciech\Phlambda\curry1;
-use function Wojciech\Phlambda\curry2;
-use function Wojciech\Phlambda\curry3;
-use const Wojciech\Phlambda\__;
-use const Wojciech\Phlambda\inc;
+use Tests\Phlambda\Support\ExceptionAssertions;
+use Tests\Phlambda\Support\ClassToCall;
+use function Phlambda\curry;
+use function Phlambda\curry1;
+use function Phlambda\curry2;
+use function Phlambda\curry3;
+use const Phlambda\__;
+use const Phlambda\inc;
 
 class CurryTest extends BaseTest
 {
@@ -61,7 +61,7 @@ class CurryTest extends BaseTest
     {
         $this->assertSame('call', curry([new ClassToCall(), 'call'])());
         $this->assertSame('static', curry([new ClassToCall(), 'staticCall'])());
-        $this->assertSame('static', curry('\Tests\Wojciech\Phlambda\Support\ClassToCall::staticCall')());
+        $this->assertSame('static', curry('\Tests\Phlambda\Support\ClassToCall::staticCall')());
         $this->assertSame('static', curry([ClassToCall::class, 'staticCall'])());
     }
 

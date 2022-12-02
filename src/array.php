@@ -1,10 +1,11 @@
 <?php /** @noinspection PhpDocSignatureInspection */
 declare(strict_types=1);
 
-namespace Wojciech\Phlambda;
+namespace Phlambda;
 
-use Wojciech\Phlambda\Internal\Attributes\ShouldNotBeImplementedInWrapper;
-use Wojciech\Phlambda\Internal\Classes\Placeholder;
+use Phlambda\Internal\Attributes\ShouldNotBeImplementedInWrapper;
+use Phlambda\Internal\Placeholder;
+use Phlambda\Internal\Wrapper;
 
 /**
  * Return copy of an array with replaced element at given index.

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Tests\Wojciech\Phlambda\Support;
+namespace Tests\Phlambda\Support;
 
 class ClassToCall
 {

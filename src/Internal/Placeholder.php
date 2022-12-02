@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Wojciech\Phlambda\Internal\Classes;
+namespace Phlambda\Internal;
 
-use const Wojciech\Phlambda\__;
+use const Phlambda\__;
 
 /**
  * Object used in currying functions to omit some parameter.

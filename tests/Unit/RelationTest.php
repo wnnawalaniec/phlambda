@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Tests\Wojciech\Phlambda\Unit;
+namespace Tests\Phlambda\Unit;
 
-use function Wojciech\Phlambda\clamp;
+use function Phlambda\clamp;
 
 class RelationTest extends BaseTest
 {

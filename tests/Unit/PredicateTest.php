@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace Tests\Wojciech\Phlambda\Unit;
+namespace Tests\Phlambda\Unit;
 
-use Wojciech\Phlambda\Internal\Classes\Placeholder;
-use function Wojciech\Phlambda\above;
-use function Wojciech\Phlambda\below;
-use function Wojciech\Phlambda\ofType;
+use Phlambda\Internal\Placeholder;
+use function Phlambda\above;
+use function Phlambda\below;
+use function Phlambda\ofType;
 
 class PredicateTest extends BaseTest
 {

@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Tests\Wojciech\Phlambda\Unit;
+namespace Tests\Phlambda\Unit;
 
-use function Wojciech\Phlambda\{dec, divide, inc, multiply, subtract, sum};
+use function Phlambda\{dec, divide, inc, multiply, subtract, sum};
 
 class MathTest extends BaseTest
 {

@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Wojciech\Phlambda;
+namespace Phlambda;
 
-use Wojciech\Phlambda\Internal\Attributes\ShouldNotBeImplementedInWrapper;
+use Phlambda\Internal\Attributes\ShouldNotBeImplementedInWrapper;
 
 /**
  * Returns function checking if given value is below expected.

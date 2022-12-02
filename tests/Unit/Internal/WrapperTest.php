@@ -1,14 +1,15 @@
 <?php
 declare(strict_types=1);
 
-namespace Tests\Wojciech\Phlambda\Unit;
+namespace Tests\Phlambda\Unit\Internal;
 
-use Wojciech\Phlambda\Wrapper;
-use function Wojciech\Phlambda\_;
-use function Wojciech\Phlambda\below;
-use const Wojciech\Phlambda\add;
-use const Wojciech\Phlambda\inc;
-use const Wojciech\Phlambda\toString;
+use Tests\Phlambda\Unit\BaseTest;
+use Phlambda\Internal\Wrapper;
+use function Phlambda\_;
+use function Phlambda\below;
+use const Phlambda\add;
+use const Phlambda\inc;
+use const Phlambda\toString;
 
 class WrapperTest extends BaseTest
 {
