@@ -26,6 +26,7 @@ const reduce = '\Wojciech\Phlambda\reduce';
 const tuples = '\Wojciech\Phlambda\tuples'; 
 const _ = '\Wojciech\Phlambda\_'; 
 const curry = '\Wojciech\Phlambda\curry'; 
+const curryN = '\Wojciech\Phlambda\curryN'; 
 const curry3 = '\Wojciech\Phlambda\curry3'; 
 const curry2 = '\Wojciech\Phlambda\curry2'; 
 const curry1 = '\Wojciech\Phlambda\curry1'; 

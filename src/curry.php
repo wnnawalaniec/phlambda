@@ -5,41 +5,81 @@ namespace Wojciech\Phlambda;
 
 use ReflectionFunction;
 use ReflectionMethod;
-use ReflectionObject;
 use Wojciech\Phlambda\Internal\Attributes\ShouldNotBeImplementedInWrapper;
 use Wojciech\Phlambda\Internal\Classes\Placeholder;
 
 /**
  * Returns currying function. Uses reflection to automatically detect number of parameters given callback is accepting.
  *
- * @param callable $callback callable accepting $n elements
+ * @param callable $callback callable to be curried
  * @return callable
  * @throws \ReflectionException
  */
 #[ShouldNotBeImplementedInWrapper]
 function curry(callable $callback): callable
 {
-    if(is_array($callback)) {
+    if (\is_array($callback) && \count($callback) === 2) { // method reference like [$this, 'method']
         $reflector = new ReflectionMethod($callback[0], $callback[1]);
-    } elseif(is_string($callback)) {
+    } elseif (\is_string($callback) && \strpos($callback, '::', 1)) { // method reference like Class::Method
+        $reflector = new ReflectionMethod($callback);
+    } elseif (\is_object($callback) && \method_exists($callback, '__invoke')) {
+        $reflector = new ReflectionMethod($callback, '__invoke');
+    } else {
         $reflector = new ReflectionFunction($callback);
-    } elseif(is_a($callback, 'Closure') || is_callable($callback)) {
-        $objReflector = new ReflectionObject($callback);
-        $reflector    = $objReflector->getMethod('__invoke');
     }
 
-    return functionRequiringNParameters($reflector->getNumberOfRequiredParameters(), $callback);
+    return curryN($reflector->getNumberOfRequiredParameters(), $callback);
 }
 
+/**
+ * Returns currying function expecting n parameters.
+ *
+ * @var int $argumentsCount number of expected parameters
+ * @var callable $callback function to be curried accepting n params
+ */
 #[ShouldNotBeImplementedInWrapper]
-function functionRequiringNParameters(int $n, callable $fn, mixed ...$args): callable
+function curryN(int $argumentsCount, callable $callback): callable
 {
-    // This will return new function every time curry function is called without args
-    return function (mixed ...$args2) use ($n, $fn, $args) {
-        $arguments = [...$args, ...$args2];
-        if (count($arguments) >= $n) return $fn(...$arguments);
-        return functionRequiringNParameters($n, $fn, ...$arguments);
+    $accumulator = function (mixed ...$arguments) use ($argumentsCount, $callback, &$accumulator) {
+        return function (mixed ...$newArguments) use ($argumentsCount, $callback, $arguments, $accumulator) {
+            if (empty($arguments)) {
+                $arguments = $newArguments;
+            } else {
+                $placeholdersToSkipReplace = 0;
+                foreach ($newArguments as $newArgument) {
+                    $replaced = false;
+                    foreach ($arguments as $idx => $argument) {
+                        // Both are placeholders
+                        if (Placeholder::isPlaceholder($argument) && Placeholder::isPlaceholder($newArgument)) {
+                            $placeholdersToSkipReplace++;
+                            break;
+                        }
+                        // If any argument is placeholder and new one is not, replace it
+                        if (Placeholder::isPlaceholder($argument) && !Placeholder::isPlaceholder($newArgument)) {
+                            if ($placeholdersToSkipReplace > 0) continue;
+                            $arguments[$idx] = $newArgument;
+                            $replaced = true;
+                            break;
+                        }
+                    }
+
+                    // if new argument wasn't replacing any existing placeholder, and it's not placeholder itself add it to arguments
+                    if (!$replaced && !Placeholder::isPlaceholder($newArgument)) {
+                        $arguments[] = $newArgument;
+                    }
+                }
+            }
+
+            // no placeholders, all actual arguments are given
+            if (\count(Placeholder::filterPlaceholders($arguments)) >= $argumentsCount) {
+                return \call_user_func_array($callback, $arguments);
+            }
+
+            return $accumulator(...$arguments);
+        };
     };
+
+    return $accumulator();
 }
 
 /**
@@ -51,7 +91,7 @@ function functionRequiringNParameters(int $n, callable $fn, mixed ...$args): cal
 #[ShouldNotBeImplementedInWrapper]
 function curry3(callable $callback): callable
 {
-    return functionRequiringNParameters(3, $callback);
+    return curryN(3, $callback);
 }
 
 /**
@@ -63,7 +103,7 @@ function curry3(callable $callback): callable
 #[ShouldNotBeImplementedInWrapper]
 function curry2(callable $callback): callable
 {
-    return functionRequiringNParameters(2, $callback);
+    return curryN(2, $callback);
 }
 
 /**
@@ -75,7 +115,7 @@ function curry2(callable $callback): callable
 #[ShouldNotBeImplementedInWrapper]
 function curry1(callable $callback): callable
 {
-    return functionRequiringNParameters(1, $callback);
+    return curryN(1, $callback);
 }
 
 /**

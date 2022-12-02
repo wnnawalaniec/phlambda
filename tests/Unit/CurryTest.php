@@ -4,11 +4,12 @@ declare(strict_types=1);
 namespace Tests\Wojciech\Phlambda\Unit;
 
 use Tests\Wojciech\Phlambda\Support\ExceptionAssertions;
+use Tests\Wojciech\Phlambda\Support\ClassToCall;
 use function Wojciech\Phlambda\curry;
 use function Wojciech\Phlambda\curry1;
 use function Wojciech\Phlambda\curry2;
 use function Wojciech\Phlambda\curry3;
-use const Wojciech\Phlambda\curry;
+use const Wojciech\Phlambda\__;
 use const Wojciech\Phlambda\inc;
 
 class CurryTest extends BaseTest
@@ -42,27 +43,40 @@ class CurryTest extends BaseTest
     public function testCurring_AnonymousFunctionGiven_CurringFunctionReturned(): void
     {
         $someCallback = fn ($a) => $a;
-
-        $curryingFunction = curry($someCallback);
-
-        $this->assertSame('a', $curryingFunction('a'));
+        $this->assertSame('a', curry($someCallback)('a'));
     }
 
     public function testCurring_ClosureGiven_CurringFunctionReturned(): void
     {
         $closure = new class() { public function __invoke($a) {return $a; }};
-
-        $curryingFunction = curry($closure);
-
-        $this->assertSame('a', $curryingFunction('a'));
+        $this->assertSame('a', curry($closure)('a'));
     }
 
     public function testCurring_StringWithFunctionNameGiven_CurringFunctionReturned(): void
     {
-        $string = inc;
+        $this->assertSame(2, curry(inc)(1));
+    }
 
-        $curryingFunction = curry($string);
+    public function testCurring_ArrayFunctionGiven_CurringFunctionReturned(): void
+    {
+        $this->assertSame('call', curry([new ClassToCall(), 'call'])());
+        $this->assertSame('static', curry([new ClassToCall(), 'staticCall'])());
+        $this->assertSame('static', curry('\Tests\Wojciech\Phlambda\Support\ClassToCall::staticCall')());
+        $this->assertSame('static', curry([ClassToCall::class, 'staticCall'])());
+    }
 
-        $this->assertSame(2, $curryingFunction(1));
+    public function testPlaceholders(): void
+    {
+        $currying = curry3(fn($a, $b, $c) => $a.$b.$c);
+        $this->assertSame('abc', $currying(__, __, __)('a', 'b', 'c'));
+        $this->assertSame('abc', $currying(__, __, __)('a', 'b', 'c'));
+        $this->assertSame('abc', $currying(__, __, __)('a')('b')('c'));
+        $this->assertSame('abc', $currying(__, 'b', 'c')('a'));
+        $this->assertSame('abc', $currying('a', __, 'c')('b'));
+        $this->assertSame('abc', $currying('a', 'b', __)('c'));
+        $this->assertSame('abc', $currying(__, 'b', __)('a', 'c'));
+        $this->assertSame('abc', $currying(__, 'b')('a', 'c'));
+        $this->assertSame('abc', $currying(__, 'b')('a')('c'));
+        $this->assertSame('abc', $currying(__, 'b')(__, 'c')('a'));
     }
 }
